@@ -38,7 +38,7 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity /*implements View.OnClickListener*/{
     private Banner banner;
-    private ArrayList<Integer> list_path;   //网页 String 本地 Integer
+    private ArrayList<Integer> list_path;   //网页 String 本地 Integer yinyingy
     private ArrayList<String> list_title;
 
    /* private Button mBtnScenery;
