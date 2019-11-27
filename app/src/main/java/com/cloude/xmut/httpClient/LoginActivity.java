@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cloude.xmut.MainActivity;
+import com.cloude.xmut.My_information;
 import com.cloude.xmut.R;
 
 public class LoginActivity extends Activity {
@@ -45,7 +46,7 @@ public class LoginActivity extends Activity {
                         //登录成功
                         else {
                             Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
-                            Intent intent=new Intent (LoginActivity.this, MainActivity.class);
+                            Intent intent=new Intent (LoginActivity.this, My_information.class);
                             startActivity(intent);
                         }
                     }
