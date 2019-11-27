@@ -26,6 +26,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.cloude.xmut.animation.SceneryActivity;
+import com.cloude.xmut.httpClient.LoginActivity;
+import com.cloude.xmut.httpClient.RegisterActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -342,15 +344,15 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
- //       Button my_button = (Button) findViewById(R.id.my);  //我的
-  //      my_button.setOnClickListener(new View.OnClickListener() {
-   //         @Override
-    //        public void onClick(View view) {
-    //            String url = "";
-     //           startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));//支付宝店铺码。
-//
-     //       }
-     //   });
+        Button my_button = (Button) findViewById(R.id.my);  //我的
+        my_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent (MainActivity.this, LoginActivity.class);
+                startActivity(intent1);
+
+            }
+        });
 
 
     }

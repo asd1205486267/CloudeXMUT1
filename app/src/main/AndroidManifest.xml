@@ -22,6 +22,8 @@
 
 
         <activity android:name=".WebViews"></activity>
+        <activity android:name=".httpClient.LoginActivity"></activity>
+        <activity android:name=".httpClient.RegisterActivity"></activity>
 
         <activity
             android:name=".zxing.android.CaptureActivity"
