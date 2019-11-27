@@ -26,6 +26,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.cloude.xmut.animation.SceneryActivity;
+import com.cloude.xmut.httpClient.LoginActivity;
+import com.cloude.xmut.httpClient.RegisterActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
