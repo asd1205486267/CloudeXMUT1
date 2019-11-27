@@ -40,7 +40,7 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity /*implements View.OnClickListener*/{
     private Banner banner;
-    private ArrayList<Integer> list_path;   //网页 String 本地 Integer
+    private ArrayList<Integer> list_path;   //网页 String 本地 Integer 广泛大使馆
     private ArrayList<String> list_title;
 
    /* private Button mBtnScenery;
@@ -344,12 +344,12 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
-       Button my_button = (Button) findViewById(R.id.my);  //我的
+        Button my_button = (Button) findViewById(R.id.my);  //我的
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, My_information.class);
-                startActivity(intent);
+                Intent intent1=new Intent (MainActivity.this, LoginActivity.class);
+                startActivity(intent1);
 
             }
         });
