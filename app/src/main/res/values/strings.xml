@@ -145,7 +145,10 @@
     <string name="password_login">密  码：</string>
     <string name="password_login2">确认密码:</string>
     <string name="login_button"> 登    录</string>
-    <string name="register_button">注    册</string>
+    <string name="register_button">注册用户</string>
+    <string name="username_Login">用户名</string>、
+    <string name="password_Login">密码</string>
+    <string name="Forget_password_Login">忘记密码</string>
 
     <string name="viewfinderview_status_text1">将二维码/条码放入取景框内</string>
     <string name="viewfinderview_status_text2">即可自动扫描</string>

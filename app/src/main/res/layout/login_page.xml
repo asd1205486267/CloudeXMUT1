@@ -8,64 +8,106 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/name_login"
-            android:textSize="30sp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:layout_marginTop="@dimen/half_normal_padding"
+        android:layout_marginBottom="@dimen/half_normal_padding">
         <EditText
             android:id="@+id/account"
-            android:layout_width="0dip"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight='1'
             android:inputType="text"
-            android:textSize="30sp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:hint="@string/username_Login"
+            android:background="@drawable/circular_shape"
             >
             <requestFocus/>
         </EditText>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/password_login"
-            android:textSize="30sp"/>
+            android:src="@drawable/ic_user_without_color"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/half_normal_padding"
+            android:layout_marginTop="@dimen/standard_padding" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/standard_padding"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:layout_marginRight="@dimen/normal_padding"
+        android:layout_marginTop="@dimen/half_normal_padding"
+        android:layout_marginBottom="@dimen/standard_padding">
         <EditText
             android:id="@+id/password"
-            android:layout_width="0dip"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight='1'
+            android:hint="@string/password_Login"
+            android:gravity="center"
             android:inputType="textPassword"
-            android:textSize="30sp"
+            android:textSize="25sp"
+            android:background="@drawable/circular_shape"
             >
         </EditText>
-    </LinearLayout>
-    <Button
-        android:id="@+id/login"
-        android:layout_width="200sp"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_without_color"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/half_normal_padding"
+            android:layout_marginTop="@dimen/standard_padding" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login_button"
-        android:layout_marginStart="120sp"
-        android:layout_marginLeft="120sp"
-        android:textSize="30sp"/>
+        android:layout_marginBottom="@dimen/normal_padding">
     <Button
         android:id="@+id/Register"
-        android:layout_width="200sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/nocolor"
         android:text="@string/register_button"
-        android:layout_marginStart="120sp"
-        android:layout_marginLeft="120sp"
-        android:textSize="30sp"/>
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:textSize="20dp" />
 
+        <Button
+            android:id="@+id/Forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/normal_padding"
+            android:layout_alignParentRight="true"
+            android:background="@color/nocolor"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:text="@string/Forget_password_Login"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/circular_shape"/>
     <TextView
         android:id="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="nothing"
         android:textSize="30sp"/>
+
 </LinearLayout>
