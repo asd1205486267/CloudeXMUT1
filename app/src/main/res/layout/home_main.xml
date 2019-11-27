@@ -1,0 +1,59 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:stretchColumns="0,2,4,6,8">
+
+    <!--   设置居中android:gravity="center_vertical"   -->
+
+
+
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+    </TableRow>
+
+
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/ic_chat_with_color"
+            android:text="聊天"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/ic_home"
+            android:text="主页"            />
+
+        <TextView android:layout_width="wrap_content"/>
+
+        <Button
+            android:id="@+id/love"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/ic_wall_with_color"
+            android:text="表白墙"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/ic_user_with_color"
+            android:text="我的"            />
+        <TextView android:layout_width="wrap_content"/>
+
+    </TableRow>
+
+
+</TableLayout>

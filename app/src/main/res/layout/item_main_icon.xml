@@ -1,0 +1,238 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:stretchColumns="0,2,4,6,8">
+
+<!--   设置居中android:gravity="center_vertical"   -->
+
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+    </TableRow>
+
+<!--    <TableRow>-->
+<!--        <TextView android:layout_width="match_parent"/>-->
+<!--        <TextView-->
+<!--            android:text="学校资源"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_span="7"-->
+<!--            android:textColor="@color/black"/>-->
+<!--        <TextView android:layout_width="match_parent"/>-->
+<!--    </TableRow>-->
+
+    <TableRow>
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/mainpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/high_school_small"
+            android:text="学校主页"
+            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/jiaowu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/study_small"
+            android:text="教务系统"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/myinformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/id_card_small"
+            android:text="统一认证"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/allresource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/open_book_small"
+            android:text="所有资源"            />
+        <TextView android:layout_width="wrap_content"/>
+    </TableRow>
+
+<!--    <TableRow>-->
+<!--        <TextView android:layout_width="match_parent"/>-->
+<!--        <TextView-->
+<!--            android:text="校内网"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_span="7"-->
+<!--            android:textColor="@color/black"/>-->
+<!--        <TextView android:layout_width="match_parent"/>-->
+<!--    </TableRow>-->
+
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/course_small"
+            android:text="课程中心"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/lab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/lab_small"
+            android:text="实验中心"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/library_small"
+            android:text="图书馆"            />
+<!--        <Button-->
+<!--            android:id="@+id/wrench"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/nocolor"-->
+<!--            android:drawableTop="@drawable/wrench_small"-->
+<!--            android:text="校园维修"            />-->
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/volunteer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/lovehand_small"
+            android:text="志愿者"            />
+        <TextView android:layout_width="wrap_content"/>
+    </TableRow>
+
+<!--    <TableRow>-->
+<!--        <TextView android:layout_width="match_parent"/>-->
+<!--        <TextView-->
+<!--            android:text="其他资源"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_span="7"-->
+<!--            android:textColor="@color/black"   />-->
+<!--        <TextView android:layout_width="match_parent"/>-->
+<!--    </TableRow>-->
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/lovehelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/hands_small"
+            android:text="乐帮帮"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/xiaotucao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/view_eye_small"
+            android:text="小吐槽"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/calendar_small"
+            android:text="理工校历"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/storeonline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/store_small"
+            android:text="文化集市" />
+<!--        <Button-->
+<!--            android:id="@+id/course_table"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/nocolor"-->
+<!--            android:drawableTop="@drawable/course_table_small"-->
+<!--            android:text="今日安排"            />-->
+        <TextView android:layout_width="wrap_content"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/map_small"
+            android:text="全景理工"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/news_small"
+            android:text="理工新闻"            />
+
+<!--        <Button-->
+<!--            android:id="@+id/todayvoice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/nocolor"-->
+<!--            android:drawableTop="@drawable/play_music_small"-->
+<!--            android:text="校园电台"            />-->
+        <TextView android:layout_width="wrap_content"/>
+
+        <Button
+            android:id="@+id/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/payment_small"
+            android:text="奖励作者"            />
+        <TextView android:layout_width="wrap_content"/>
+        <Button
+            android:id="@+id/suggestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nocolor"
+            android:drawableTop="@drawable/question_small"
+            android:text="意见反馈"            />
+        <TextView android:layout_width="wrap_content"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_height="wrap_content" />
+    </TableRow>
+
+
+
+
+
+</TableLayout>
