@@ -22,7 +22,7 @@
 
 
         <activity android:name=".WebViews"></activity>
-
+        <activity android:name=".My_information"></activity>
         <activity
             android:name=".zxing.android.CaptureActivity"
             android:configChanges="orientation|screenSize"
