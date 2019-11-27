@@ -80,7 +80,7 @@
         android:gravity="center"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="@dimen/normal_padding"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
         <Button
             android:id="@+id/Forget_password"
@@ -92,15 +92,17 @@
             android:gravity="center"
             android:layout_gravity="right"
             android:text="@string/Forget_password_Login"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </RelativeLayout>
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login_button"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:gravity="center"
+        android:layout_marginLeft="100dip"
+        android:layout_marginRight="100dip"
         android:layout_gravity="center"
         android:background="@drawable/circular_shape"/>
     <TextView
