@@ -18,7 +18,7 @@ public class My_information extends MainActivity{
 
 
         TextView usname=(TextView)findViewById(R.id.name1);
-        usname.setText(Post_to_login.ress);
+//        usname.setText(Post_to_login.ress);
         //   Button set_button = (Button) findViewById(R.id.set);  //设置
         //  set_button.setOnClickListener(new View.OnClickListener() {
         //      @Override
