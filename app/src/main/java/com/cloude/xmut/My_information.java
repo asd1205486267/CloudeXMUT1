@@ -5,6 +5,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.cloude.xmut.httpClient.LoginActivity;
+import com.cloude.xmut.httpClient.Post_to_login;
 
 public class My_information extends MainActivity{
     @Override
@@ -13,7 +17,8 @@ public class My_information extends MainActivity{
         setContentView(R.layout.my_infor);
 
 
-
+        TextView usname=(TextView)findViewById(R.id.name1);
+        usname.setText(Post_to_login.ress);
         //   Button set_button = (Button) findViewById(R.id.set);  //设置
         //  set_button.setOnClickListener(new View.OnClickListener() {
         //      @Override
@@ -48,9 +53,12 @@ public class My_information extends MainActivity{
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(My_information.this, My_information.class);
-                startActivity(intent);
-
+//                if(Post_to_login.ress!=null) {
+//                    Intent intent = new Intent(My_information.this, My_information.class);
+//                    startActivity(intent);
+//                }else{
+//
+//                }
             }
         });
 

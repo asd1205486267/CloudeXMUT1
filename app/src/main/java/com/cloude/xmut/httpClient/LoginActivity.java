@@ -14,7 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.util.List;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.client.CookieStore;
+import org.apache.http.impl.client.DefaultHttpClient;
 import com.cloude.xmut.MainActivity;
 import com.cloude.xmut.My_information;
 import com.cloude.xmut.R;
@@ -25,6 +28,9 @@ public class LoginActivity extends Activity {
     private Button button1;			//登录按钮
     private Button button2;			//注册按钮
     private TextView textView_response;
+    private DefaultHttpClient httpClient;
+    private  String ress;
+    public static  String test="null";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +84,7 @@ public class LoginActivity extends Activity {
                 startActivity(intent1);
             }
         });
+
     }
     private void init() {
         name = (EditText)findViewById(R.id.account);

@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.cloude.xmut.animation.SceneryActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
+import com.cloude.xmut.httpClient.Post_to_login;
 import com.cloude.xmut.httpClient.RegisterActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
 import com.youth.banner.Banner;
@@ -328,8 +329,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
 
             }
         });
@@ -348,9 +349,13 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent (MainActivity.this, LoginActivity.class);
-                startActivity(intent1);
-
+                if(Post_to_login.ress!=null){
+                    Intent intent0=new Intent (MainActivity.this, My_information.class);
+                    startActivity(intent0);
+                }else {
+                    Intent intent1 = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent1);
+                }
             }
         });
 
