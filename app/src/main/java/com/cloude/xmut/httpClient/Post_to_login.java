@@ -14,11 +14,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.client.CookieStore;
 public class Post_to_login {
-    private String url = "http://47.97.160.39:8080/Server_of_Client/LoginServlet";
+    private String url = "http://47.97.160.39:8080/Server_of_Client/Check_Login_Servlet";
     //服务器返回的结果
     String result = "";
-
+    private DefaultHttpClient httpClient;  //---------------------new
+    public static String ress;
     /**
      * 使用Post方式向服务器发送请求并返回响应
      * @param username 传递给服务器的username
@@ -26,8 +29,13 @@ public class Post_to_login {
      * @return
      */
     public String doPost(String username, String password) throws IOException {
-        HttpClient httpClient = new DefaultHttpClient();
+        httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);
+        if(null != ress){        //-----------------------new
+            httpPost.setHeader("Cookie", ress);
+//            LoginActivity.test=ress;
+        }
+
         //将username与password参数装入List中
         NameValuePair param1 = new BasicNameValuePair("username", username);
         NameValuePair param2 = new BasicNameValuePair("password", password);
@@ -48,6 +56,14 @@ public class Post_to_login {
             String readLine = null;
             while((readLine = br.readLine()) != null){
                 result += readLine;
+            }
+            CookieStore mCookieStore = httpClient.getCookieStore();
+            List<Cookie> cookies = mCookieStore.getCookies();
+            for (int i = 0; i < cookies.size(); i++) {
+                if ("uname".equals(cookies.get(i).getName())) {
+                    ress = cookies.get(i).getValue();
+                    break;
+                }
             }
             inputStream.close();
             return result;
