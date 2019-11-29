@@ -9,6 +9,7 @@ import android.Manifest;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -349,12 +350,21 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Post_to_login.ress!=null){
-                    Intent intent0=new Intent (MainActivity.this, My_information.class);
-                    startActivity(intent0);
+//                if(Post_to_login.ress!=null){
+//                    Intent intent0=new Intent (MainActivity.this, My_information.class);
+//                    startActivity(intent0);
+//                }else {
+//                    Intent intent1 = new Intent(MainActivity.this, LoginActivity.class);
+//                    startActivity(intent1);
+//                }
+                SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
+                String p=sp.getString("uname","000");
+                if (!p.equals("000")){
+                    Intent intent10=new Intent (MainActivity.this, My_information.class);
+                    startActivity(intent10);
                 }else {
-                    Intent intent1 = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(intent1);
+                    Intent intent0 = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent0);
                 }
             }
         });

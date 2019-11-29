@@ -4,6 +4,7 @@ import android.app.Activity;
 import java.io.IOException;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -47,10 +48,15 @@ public class LoginActivity extends Activity {
                         textView_response.setText(responseResult);
                         //登录失败
                         if(responseResult.equals("false")){
-                            System.out.print("fail");
+                            Toast.makeText(LoginActivity.this, "登录失败！", Toast.LENGTH_LONG).show();
                         }
                         //登录成功
                         else {
+                            SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
+                            SharedPreferences.Editor editor=sp.edit();
+                            editor.putString("uname",Post_to_login.r1);
+                            editor.putString("pwd",Post_to_login.r2);
+                            editor.commit();
                             Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
                             Intent intent=new Intent (LoginActivity.this, My_information.class);
                             startActivity(intent);
