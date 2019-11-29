@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_in">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100sp">
+        android:layout_height="110sp">
 
     </LinearLayout>
 
@@ -23,8 +24,8 @@
             android:inputType="text"
             android:textSize="25sp"
             android:gravity="center"
-            android:hint="@string/username_Login"
-            android:background="@drawable/circular_shape"
+            android:hint="@string/user_name_Login"
+            android:background="@drawable/circular_without_color_shape"
             >
             <requestFocus/>
         </EditText>
@@ -51,11 +52,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight='1'
-            android:hint="@string/password_Login"
+            android:hint="@string/password_login"
             android:gravity="center"
             android:inputType="textPassword"
             android:textSize="25sp"
-            android:background="@drawable/circular_shape"
+            android:background="@drawable/circular_without_color_shape"
             >
         </EditText>
         <ImageView
@@ -66,34 +67,6 @@
             android:layout_marginLeft="@dimen/half_normal_padding"
             android:layout_marginTop="@dimen/standard_padding" />
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/normal_padding">
-    <Button
-        android:id="@+id/Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/nocolor"
-        android:text="@string/register_button"
-        android:gravity="center"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="@dimen/normal_padding"
-        android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/Forget_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/normal_padding"
-            android:layout_alignParentRight="true"
-            android:background="@color/nocolor"
-            android:gravity="center"
-            android:layout_gravity="right"
-            android:text="@string/Forget_password_Login"
-            android:textSize="20sp" />
-    </RelativeLayout>
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
@@ -101,10 +74,40 @@
         android:text="@string/login_button"
         android:textSize="30sp"
         android:gravity="center"
-        android:layout_marginLeft="100dip"
-        android:layout_marginRight="100dip"
+        android:layout_marginLeft="@dimen/normal_large_padding"
+        android:layout_marginRight="@dimen/normal_large_padding"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:layout_marginBottom="@dimen/half_normal_padding"
         android:layout_gravity="center"
-        android:background="@drawable/circular_shape"/>
+        android:background="@drawable/circular_with_color_shape"
+        android:backgroundTint="@color/Login_sign_up"/>
+    <Button
+        android:id="@+id/Forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/normal_double_padding"
+        android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_alignParentRight="true"
+        android:background="@color/nocolor"
+        android:gravity="center"
+        android:text="@string/forget_password_login"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_without_color_shape"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="@dimen/normal_large_padding"
+        android:layout_marginRight="@dimen/normal_large_padding"
+        android:text="@string/register_button"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="30sp" />
     <TextView
         android:id="@+id/textview"
         android:layout_width="match_parent"
