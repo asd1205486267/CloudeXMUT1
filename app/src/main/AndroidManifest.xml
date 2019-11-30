@@ -25,7 +25,7 @@
         <activity android:name=".httpClient.LoginActivity"></activity>
         <activity android:name=".httpClient.RegisterActivity"></activity>
 
-        <activity android:name=".My_information"></activity>
+        <activity android:name=".my_information.My_information"></activity>
         <activity
             android:name=".zxing.android.CaptureActivity"
             android:configChanges="orientation|screenSize"
@@ -34,6 +34,12 @@
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".animation.SceneryActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+
+
+
+
+
     </application>
 
     <!-- if you want to load images from a file OR from the internet -->

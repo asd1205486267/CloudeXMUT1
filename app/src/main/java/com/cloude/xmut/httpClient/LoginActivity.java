@@ -2,21 +2,18 @@ package com.cloude.xmut.httpClient;
 
 import android.app.Activity;
 import java.io.IOException;
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cloude.xmut.MainActivity;
-import com.cloude.xmut.My_information;
+import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.R;
 
 public class LoginActivity extends Activity {

@@ -21,12 +21,12 @@
             android:text="头像"   />
 
 
-        <ImageView
-            android:src="@drawable/image1"
-            android:id="@+id/image1"
+        <ImageButton
+            android:src="@drawable/my"
+            android:id="@+id/head_view"
             android:layout_width="70dp"
             android:layout_height="70dp"
-
+            android:background="@color/nocolor"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="20dp"
@@ -36,7 +36,7 @@
             android:layout_height="1dp"
             android:id="@+id/divide1"
             android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/image1"
+            app:layout_constraintTop_toBottomOf="@id/head_view"
             android:layout_marginTop="10dp"
             />
 

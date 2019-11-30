@@ -1,4 +1,4 @@
-package com.cloude.xmut;
+package com.cloude.xmut.my_information;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class My_information extends MainActivity{
+import com.cloude.xmut.MainActivity;
+import com.cloude.xmut.R;
+
+public class My_information extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_infor);
+
 
 
 
@@ -55,10 +59,9 @@ public class My_information extends MainActivity{
         });
 
 
+
+
     }
-
-
-
 
 
 
