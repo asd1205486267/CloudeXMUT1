@@ -37,6 +37,9 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
         init();
+        SharedPreferences sp=getSharedPreferences("New",MODE_PRIVATE);
+        String p=sp.getString("newname","");
+        name.setText(p);
         button1.setOnClickListener(new View.OnClickListener() {
 
             @Override

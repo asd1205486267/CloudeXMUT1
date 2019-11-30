@@ -2,6 +2,7 @@ package com.cloude.xmut.httpClient;
 import java.io.IOException;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -29,7 +30,7 @@ public class RegisterActivity extends Activity{
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                String user_name=account.getText().toString().trim();
+                final String user_name=account.getText().toString().trim();
                 String key1=password1.getText().toString().trim();
                 String key2=password2.getText().toString().trim();
                 if(user_name.equals("")) {
@@ -44,13 +45,17 @@ public class RegisterActivity extends Activity{
                     final Handler myHandler = new Handler(){
                         public void handleMessage(Message msg){
                             String responseResult = (String)msg.obj;
-                            //登录失败
+                            //注册失败
                             if(responseResult.equals("false")){
                                 System.out.print("fail");
                                 Toast.makeText(RegisterActivity.this, "用户名已被注册！", Toast.LENGTH_LONG).show();
                             }
-                            //登录成功
+                            //注册成功
                             else if(responseResult.equals("true")){
+                                SharedPreferences sp=getSharedPreferences("New",MODE_PRIVATE);
+                                SharedPreferences.Editor editor=sp.edit();
+                                editor.putString("newname",user_name);
+                                editor.commit();
                                 Toast.makeText(RegisterActivity.this, "注册成功！", Toast.LENGTH_LONG).show();
                                 Intent intent=new Intent (RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
