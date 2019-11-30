@@ -1,4 +1,4 @@
-package cn.bingoogolapple.photopicker;
+package cn.bingoogolapple1.photopicker;
 
 import androidx.databinding.BindingBuildInfo;
 

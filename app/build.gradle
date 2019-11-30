@@ -7,7 +7,7 @@ android {
     compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
     defaultConfig {
         applicationId "com.cloude.xmut.bingoogolapple1"
-        minSdkVersion  ANDROID_BUILD_MIN_SDK_VERSION as int
+        minSdkVersion  21
         targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
         versionCode VERSION_CODE as int
         versionName VERSION_NAME
@@ -22,10 +22,10 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-          //  signingConfig signingConfigs.release
+            //  signingConfig signingConfigs.release
         }
         debug {
-          //  signingConfig signingConfigs.release
+            //  signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -39,7 +39,7 @@ dependencies {
 
     implementation 'com.youth.banner:banner:1.4.9'  //图片滚动 Banner
     implementation 'com.github.bumptech.glide:glide:4.10.0' //Glide
-   // implementation 'com.journeyapps:zxing-android-embedded:3.6.0' //zxing二维码
+    // implementation 'com.journeyapps:zxing-android-embedded:3.6.0' //zxing二维码
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

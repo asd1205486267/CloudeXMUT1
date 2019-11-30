@@ -4,6 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/sign_up">
+    <Toolbar
+        android:id="@+id/register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/register_button"
+        android:background="@color/navigationBarColor"
+        >
+    </Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dip"/>
