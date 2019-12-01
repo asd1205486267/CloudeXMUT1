@@ -3,8 +3,8 @@
     package="cn.bingoogolapple1.photopicker.test" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="28" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"

@@ -3,9 +3,9 @@
 3    package="cn.bingoogolapple1.photopicker" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="14"
+6        android:minSdkVersion="21"
 6-->H:\Android\CloudeXmut1\lib\src\main\AndroidManifest.xml
-7        android:targetSdkVersion="28" />
+7        android:targetSdkVersion="29" />
 7-->H:\Android\CloudeXmut1\lib\src\main\AndroidManifest.xml
 8
 9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
