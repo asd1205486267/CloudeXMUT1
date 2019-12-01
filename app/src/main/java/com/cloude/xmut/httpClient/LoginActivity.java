@@ -2,17 +2,24 @@ package com.cloude.xmut.httpClient;
 
 import android.app.Activity;
 import java.io.IOException;
-
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.util.List;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.client.CookieStore;
+import org.apache.http.impl.client.DefaultHttpClient;
+import com.cloude.xmut.MainActivity;
 import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.R;
 
@@ -22,11 +29,17 @@ public class LoginActivity extends Activity {
     private Button button1;			//登录按钮
     private Button button2;			//注册按钮
     private TextView textView_response;
+    private DefaultHttpClient httpClient;
+    private  String ress;
+    public static  String test="null";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
         init();
+        SharedPreferences sp=getSharedPreferences("New",MODE_PRIVATE);
+        String p=sp.getString("newname","");
+        name.setText(p);
         button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -38,10 +51,15 @@ public class LoginActivity extends Activity {
                         textView_response.setText(responseResult);
                         //登录失败
                         if(responseResult.equals("false")){
-                            System.out.print("fail");
+                            Toast.makeText(LoginActivity.this, "登录失败！", Toast.LENGTH_LONG).show();
                         }
                         //登录成功
                         else {
+                            SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
+                            SharedPreferences.Editor editor=sp.edit();
+                            editor.putString("uname",Post_to_login.r1);
+                            editor.putString("pwd",Post_to_login.r2);
+                            editor.commit();
                             Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
                             Intent intent=new Intent (LoginActivity.this, My_information.class);
                             startActivity(intent);
@@ -75,6 +93,7 @@ public class LoginActivity extends Activity {
                 startActivity(intent1);
             }
         });
+
     }
     private void init() {
         name = (EditText)findViewById(R.id.account);

@@ -9,6 +9,7 @@ import android.Manifest;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -27,7 +28,10 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.cloude.xmut.animation.SceneryActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
+import com.cloude.xmut.httpClient.Post_to_login;
 import com.cloude.xmut.httpClient.RegisterActivity;
+
+import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.zxing.android.CaptureActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -328,8 +332,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+//               Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
 
             }
         });
@@ -344,15 +348,33 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
-        Button my_button = (Button) findViewById(R.id.my);  //我的
+
+       Button my_button = (Button) findViewById(R.id.my);  //我的
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent1=new Intent (MainActivity.this, LoginActivity.class);
-                startActivity(intent1);
+           public void onClick(View view) {
+//                if(Post_to_login.ress!=null){
+//                    Intent intent0=new Intent (MainActivity.this, My_information.class);
+//                    startActivity(intent0);
+//                }else {
+//                    Intent intent1 = new Intent(MainActivity.this, LoginActivity.class);
+//                    startActivity(intent1);
+//                }
+
+
+               SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
+              String p=sp.getString("uname","000");
+               if (!p.equals("000")){
+                  Intent intent10=new Intent (MainActivity.this, My_information.class);
+                   startActivity(intent10);
+             }else {
+                  Intent intent0 = new Intent(MainActivity.this, LoginActivity.class);
+                  startActivity(intent0);
+               }
+
 
             }
-        });
+       });
 
 
     }
