@@ -168,19 +168,6 @@ public class WebViews extends Activity {
                 // handleMessage(Message msg);// 进行其他处理
             }
 
-
-
-           @Override
-           public void onPageFinished(WebView view, String url) {
-               super.onPageFinished(view, url);
-               //这个是一定要加上那个的,配合scrollView和WebView的height=wrap_content属性使用
-               int w = View.MeasureSpec.makeMeasureSpec(0,
-                       View.MeasureSpec.UNSPECIFIED);
-               int h = View.MeasureSpec.makeMeasureSpec(0,
-                       View.MeasureSpec.UNSPECIFIED);
-               //重新测量
-               webView.measure(w, h);
-           }
         });
 
        /* webView.setWebChromeClient(new WebChromeClient() {   //判断页面加载过程
