@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Toolbar
+        android:id="@+id/web_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <com.cloude.xmut.animation.LoadingView
         android:id="@+id/day_night_view"
         android:layout_width="match_parent"
@@ -11,7 +16,6 @@
         android:layout_weight="1"
         android:visibility="visible"
         app:loading_renderer="DayNightLoadingRenderer" />
-
     <TextView
         android:id="@+id/processid"
         android:layout_width="match_parent"

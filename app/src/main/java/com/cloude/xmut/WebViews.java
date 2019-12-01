@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 
 import android.webkit.CookieManager;
@@ -24,6 +25,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 
 public class WebViews extends Activity {
@@ -37,6 +39,9 @@ public class WebViews extends Activity {
         String url= bundle.getString("ur");  //获取输入的网址
         init(url);
 
+        Toolbar toolbar =(Toolbar)findViewById(R.id.web_toolbar);
+        setActionBar(toolbar);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -174,6 +179,15 @@ public class WebViews extends Activity {
         }
     });*/
 
+        WebChromeClient wvcc = new WebChromeClient() {
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+                getActionBar().setTitle(title);
+                //title 就是网页的title
+            }
+        };
+        webView.setWebChromeClient(wvcc);
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -256,5 +270,13 @@ public class WebViews extends Activity {
 
 
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }
