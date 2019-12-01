@@ -522,8 +522,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
 
             }
         });
