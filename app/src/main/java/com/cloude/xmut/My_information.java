@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.httpClient.Post_to_login;
+import com.cloude.xmut.love.MomentListActivity;
 
 public class My_information extends MainActivity{
     @Override
@@ -43,8 +44,8 @@ public class My_information extends MainActivity{
         love_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));//支付宝店铺码。
+                Intent intent5=new Intent (My_information.this, MomentListActivity.class);
+                startActivity(intent5);
 
             }
         });
