@@ -116,11 +116,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textSize="25sp" />
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="nothing"
-        android:textSize="30sp"/>
 
 </LinearLayout>

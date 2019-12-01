@@ -11,6 +11,7 @@ import android.Manifest;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -30,6 +31,7 @@ import com.bumptech.glide.Glide;
 import com.cloude.xmut.animation.SceneryActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.httpClient.RegisterActivity;
+import com.cloude.xmut.love.MomentListActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -530,8 +532,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         love_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));//支付宝店铺码。
+                Intent intent5=new Intent (MainActivity.this, MomentListActivity.class);
+                startActivity(intent5);
 
             }
         });
@@ -540,9 +542,15 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent (MainActivity.this, LoginActivity.class);
-                startActivity(intent1);
-
+                SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
+                String p=sp.getString("uname","000");
+                if (!p.equals("000")){
+                    Intent intent10=new Intent (MainActivity.this, My_information.class);
+                    startActivity(intent10);
+                }else {
+                    Intent intent0 = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent0);
+                }
             }
         });
     }
