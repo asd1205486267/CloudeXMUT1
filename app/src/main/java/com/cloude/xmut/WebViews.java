@@ -25,7 +25,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toolbar;
 
 
@@ -40,7 +39,7 @@ public class WebViews extends Activity {
         String url= bundle.getString("ur");  //获取输入的网址
         init(url);
 
-        Toolbar toolbar =(Toolbar)findViewById(R.id.web_toolbar);
+        Toolbar toolbar =(Toolbar) findViewById(R.id.web_toolbar);
         setActionBar(toolbar);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -129,12 +128,12 @@ public class WebViews extends Activity {
                 if(newProgress>=100){
 //                    loading.setVisible(false,false);//加载完网页进度条消失
                     webView.setVisibility(View.VISIBLE);
-              //      loading.setVisibility(View.GONE);   //提示文字
+                    loading.setVisibility(View.GONE);   //提示文字
                 }
                 else{
                    /* ProgressBar.setVisibility(View.VISIBLE);//开始加载网页时显示进度条
                     ProgressBar.setProgress(newProgress);//设置进度值*/
-            //       loading.setVisibility(View.VISIBLE);
+                   loading.setVisibility(View.VISIBLE);
                    webView.setVisibility(View.GONE);
                 }
 
@@ -168,6 +167,20 @@ public class WebViews extends Activity {
                 handler.proceed();// 接受所有网站的证书
                 // handleMessage(Message msg);// 进行其他处理
             }
+
+
+
+           @Override
+           public void onPageFinished(WebView view, String url) {
+               super.onPageFinished(view, url);
+               //这个是一定要加上那个的,配合scrollView和WebView的height=wrap_content属性使用
+               int w = View.MeasureSpec.makeMeasureSpec(0,
+                       View.MeasureSpec.UNSPECIFIED);
+               int h = View.MeasureSpec.makeMeasureSpec(0,
+                       View.MeasureSpec.UNSPECIFIED);
+               //重新测量
+               webView.measure(w, h);
+           }
         });
 
        /* webView.setWebChromeClient(new WebChromeClient() {   //判断页面加载过程
