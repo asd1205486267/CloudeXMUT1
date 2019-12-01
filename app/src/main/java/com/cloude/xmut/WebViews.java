@@ -24,6 +24,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -47,7 +48,7 @@ public class WebViews extends Activity {
 
     private void init(String url) {
 
-        final TextView loading= (TextView) findViewById(R.id.processid);
+        final LinearLayout loading= (LinearLayout) findViewById(R.id.process_id);
 
         webView = (WebView) findViewById(R.id.web);
 
@@ -128,15 +129,23 @@ public class WebViews extends Activity {
                 if(newProgress>=100){
 //                    loading.setVisible(false,false);//加载完网页进度条消失
                     webView.setVisibility(View.VISIBLE);
-                    loading.setVisibility(View.GONE);   //提示文字
+              //      loading.setVisibility(View.GONE);   //提示文字
                 }
                 else{
                    /* ProgressBar.setVisibility(View.VISIBLE);//开始加载网页时显示进度条
                     ProgressBar.setProgress(newProgress);//设置进度值*/
-                   loading.setVisibility(View.VISIBLE);
+            //       loading.setVisibility(View.VISIBLE);
                    webView.setVisibility(View.GONE);
                 }
 
+            }
+
+
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+                getActionBar().setTitle(title);
+                //title 就是网页的title
             }
         });
 
@@ -179,15 +188,6 @@ public class WebViews extends Activity {
         }
     });*/
 
-        WebChromeClient wvcc = new WebChromeClient() {
-            @Override
-            public void onReceivedTitle(WebView view, String title) {
-                super.onReceivedTitle(view, title);
-                getActionBar().setTitle(title);
-                //title 就是网页的title
-            }
-        };
-        webView.setWebChromeClient(wvcc);
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
