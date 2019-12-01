@@ -2,7 +2,10 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/activity_mainpage"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,23 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-<!--        <Bar-->
-<!--            android:id="@+id/toolbarmain"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@color/colorAccent"-->
-<!--            android:title="@string/app_name"/>-->
-
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navigationBarColor"/>
         <com.youth.banner.Banner
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_below="@+id/toolbarmain"
+            android:layout_below="@+id/main_toolbar"
             android:layout_marginTop="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/toolbarmain"/>
+            app:layout_constraintTop_toBottomOf="@+id/main_toolbar"/>
         <include
             layout="@layout/item_main_icon"
             android:id="@+id/main"
@@ -46,8 +46,6 @@
             android:layout_below="@+id/banner"
 
             app:layout_constraintTop_toBottomOf="@+id/main" />
-
-
 
 
 

@@ -26,29 +26,34 @@
         <activity android:name=".httpClient.RegisterActivity"></activity>
         <activity android:name=".my_information.My_information"></activity>
 
-
+        <activity android:name=".My_information"></activity>
         <activity
             android:name=".zxing.android.CaptureActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity android:name=".animation.SceneryActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
+        <activity android:name=".animation.SceneryActivity" />
 
+        <activity
+            android:name=".love.MomentListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
 
-
-
+        <activity
+            android:name=".love.MomentAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
 
     </application>
+
 
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- android:usesCleartextTraffic="true"  可以支持 http链接 -->
 <!--    <uses-permission android:name="android.permission.VIBRATE" /> &lt;!&ndash; 震动权限 &ndash;&gt;-->
-<!--    <uses-permission android:name="android.permission.CAMERA" /> &lt;!&ndash; 摄像头权限 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.CAMERA" /> &lt;!&ndash; 摄像头权�?&ndash;&gt;-->
 <!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
 <!--    <uses-feature android:name="android.hardware.camera.autofocus" /> &lt;!&ndash; 自动聚焦权限 &ndash;&gt;-->
     <uses-permission android:name="android.permission.CAMERA" />

@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
+
 import java.util.List;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.client.CookieStore;
@@ -28,7 +30,6 @@ public class LoginActivity extends Activity {
     private EditText pwd;			//登录密码输入框
     private Button button1;			//登录按钮
     private Button button2;			//注册按钮
-    private TextView textView_response;
     private DefaultHttpClient httpClient;
     private  String ress;
     public static  String test="null";
@@ -48,7 +49,7 @@ public class LoginActivity extends Activity {
                 final Handler myHandler = new Handler(){
                     public void handleMessage(Message msg){
                         String responseResult = (String)msg.obj;
-                        textView_response.setText(responseResult);
+                        //textView_response.setText(responseResult);
                         //登录失败
                         if(responseResult.equals("false")){
                             Toast.makeText(LoginActivity.this, "登录失败！", Toast.LENGTH_LONG).show();
@@ -100,6 +101,22 @@ public class LoginActivity extends Activity {
         pwd = (EditText)findViewById(R.id.password);
         button1 = (Button)findViewById(R.id.login);
         button2 = (Button)findViewById(R.id.Register);
-        textView_response = (TextView)findViewById(R.id.textview);
+
+
+        Toolbar toolbar =(Toolbar)findViewById(R.id.login_toolbar);
+        setActionBar(toolbar);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

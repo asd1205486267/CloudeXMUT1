@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.cloude.xmut.R;
 
@@ -25,6 +26,12 @@ public class RegisterActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_page);
         init();
+
+        Toolbar toolbar =(Toolbar)findViewById(R.id.register_toolbar);
+        setActionBar(toolbar);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -87,5 +94,16 @@ public class RegisterActivity extends Activity{
         account=(EditText)findViewById(R.id.account_register);
         password1=(EditText)findViewById(R.id.password_register1);
         password2=(EditText)findViewById(R.id.password_register2);
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

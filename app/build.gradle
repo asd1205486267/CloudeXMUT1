@@ -6,14 +6,25 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.cloude.xmut"
-        minSdkVersion 15
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion  ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
     }
     buildTypes {
-        release {
+        release{
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //  signingConfig signingConfigs.release
+        }
+        debug {
+            //  signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -27,7 +38,9 @@ dependencies {
 
     implementation 'com.youth.banner:banner:1.4.9'  //图片滚动 Banner
     implementation 'com.github.bumptech.glide:glide:4.10.0' //Glide
-   // implementation 'com.journeyapps:zxing-android-embedded:3.6.0' //zxing二维码
+    // implementation 'com.journeyapps:zxing-android-embedded:3.6.0' //zxing二维码
+
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
@@ -36,4 +49,32 @@ dependencies {
     implementation 'com.google.zxing:core:3.4.0'
     implementation 'com.google.zxing:android-core:3.3.0'
     implementation 'com.android.support:appcompat-v7:29.2.1'
+
+    // 以下几个库是演示案例所使用到的
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+    implementation 'pub.devrel:easypermissions:1.0.1'
+    // 以上几个库是演示案例所使用到的
+
+//    implementation project(':library')
+
+    // -------------------- 以下4个库是必须依赖的 ----------------------------
+    implementation 'cn.bingoogolapple:bga-photopicker:2.0.2@aar'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'cn.bingoogolapple:bga-baseadapter:2.0.0@aar'
+    // -------------------- 以上4个库是必须依赖的 ----------------------------
+
+    // 目前支持常见的 4 种图片加载库，必须在下面四个图片加载库中选择一个添加依赖
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    implementation project(path: ':lib')
+//    implementation 'com.squareup.picasso:picasso:2.5.2'
+//    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+//    implementation 'org.xutils:xutils:3.8.3'
+
 }
+
