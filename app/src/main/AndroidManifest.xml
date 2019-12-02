@@ -12,8 +12,8 @@
         android:usesCleartextTraffic="true"
 
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"> 
-           <intent-filter>
+        <activity android:name=".MainActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,6 +24,7 @@
         <activity android:name=".WebViews"></activity>
         <activity android:name=".httpClient.LoginActivity"></activity>
         <activity android:name=".httpClient.RegisterActivity"></activity>
+        <activity android:name=".my_information.My_information"></activity>
 
         <activity android:name=".My_information"></activity>
         <activity
@@ -63,5 +64,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 创建与删除权限 -->
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
 
 </manifest>

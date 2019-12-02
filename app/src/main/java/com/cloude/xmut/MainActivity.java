@@ -30,7 +30,11 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.cloude.xmut.animation.SceneryActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
+
+
 import com.cloude.xmut.httpClient.RegisterActivity;
+
+import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.love.MomentListActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
 import com.youth.banner.Banner;
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
         //MovementMethod(ScrollingMovementMethod.getInstance());
+
        /* mBtnScenery = (Button) findViewById(R.id.news);
         mBtnScenery.setOnClickListener(this);*/
 

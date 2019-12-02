@@ -22,7 +22,7 @@ import org.apache.http.cookie.Cookie;
 import org.apache.http.client.CookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
 import com.cloude.xmut.MainActivity;
-import com.cloude.xmut.My_information;
+import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.R;
 
 public class LoginActivity extends Activity {

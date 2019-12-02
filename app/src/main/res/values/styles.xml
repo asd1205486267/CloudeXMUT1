@@ -11,6 +11,12 @@
         <item name="colorControlActivated">@color/colorPrimary</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>
     </style>
+
+
+<style name="AnimHorizontal" parent="@android:style/Animation">
+<item name="android:windowEnterAnimation">@anim/push_scale_left_in</item>
+<item name="android:windowExitAnimation">@anim/push_scale_left_out</item>
+</style>>
     <style name="MatchWrapTv" parent="MatchWrap">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@android:color/white</item>
