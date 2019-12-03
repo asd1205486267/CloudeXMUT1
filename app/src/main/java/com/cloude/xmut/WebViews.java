@@ -24,7 +24,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
 
@@ -39,7 +39,7 @@ public class WebViews extends Activity {
         String url= bundle.getString("ur");  //获取输入的网址
         init(url);
 
-        Toolbar toolbar =(Toolbar)findViewById(R.id.web_toolbar);
+        Toolbar toolbar =(Toolbar) findViewById(R.id.web_toolbar);
         setActionBar(toolbar);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -47,7 +47,7 @@ public class WebViews extends Activity {
 
     private void init(String url) {
 
-        final TextView loading= (TextView) findViewById(R.id.processid);
+        final LinearLayout loading= (LinearLayout) findViewById(R.id.process_id);
 
         webView = (WebView) findViewById(R.id.web);
 
@@ -138,6 +138,14 @@ public class WebViews extends Activity {
                 }
 
             }
+
+
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+                getActionBar().setTitle(title);
+                //title 就是网页的title
+            }
         });
 
         /**
@@ -159,6 +167,7 @@ public class WebViews extends Activity {
                 handler.proceed();// 接受所有网站的证书
                 // handleMessage(Message msg);// 进行其他处理
             }
+
         });
 
        /* webView.setWebChromeClient(new WebChromeClient() {   //判断页面加载过程
@@ -179,15 +188,6 @@ public class WebViews extends Activity {
         }
     });*/
 
-        WebChromeClient wvcc = new WebChromeClient() {
-            @Override
-            public void onReceivedTitle(WebView view, String title) {
-                super.onReceivedTitle(view, title);
-                getActionBar().setTitle(title);
-                //title 就是网页的title
-            }
-        };
-        webView.setWebChromeClient(wvcc);
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

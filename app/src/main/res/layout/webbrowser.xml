@@ -1,39 +1,23 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <Toolbar
         android:id="@+id/web_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <com.cloude.xmut.animation.LoadingView
-        android:id="@+id/day_night_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="visible"
-        app:loading_renderer="DayNightLoadingRenderer" />
-    <TextView
-        android:id="@+id/processid"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
-        android:text="Loading······"
-        android:textColor="@color/DoderBlue"
-        android:textSize="30dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:layout_marginBottom="100dp"
-        />
+        android:background="@color/navigationBarColor"/>
+    <include
+        android:id="@+id/process_id"
+        layout="@layout/process"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
 
     <WebView
         android:id="@+id/web"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        />
-
+        android:visibility="gone" />
 </LinearLayout>
