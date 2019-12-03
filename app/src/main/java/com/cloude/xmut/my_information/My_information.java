@@ -1,17 +1,25 @@
 package com.cloude.xmut.my_information;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Context;
+import android.content.CursorLoader;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,15 +35,26 @@ import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.httpClient.Post_to_login;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class My_information extends MainActivity{
 
-    public  static String path0=null;
+    public  String path0=null;
+    public  Uri uri1=null;
+    public  Uri uri2=null;
+    public  Uri imageUri=null;
+    public  Uri uritempFile=null;
+    public  Bitmap cropBitmap=null;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_infor);
 
+        //取消严格模式  FileProvider
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+            StrictMode.setVmPolicy( builder.build() );
+        }
 
         //   Button set_button = (Button) findViewById(R.id.set);  //设置
         //  set_button.setOnClickListener(new View.OnClickListener() {
@@ -136,12 +155,12 @@ public class My_information extends MainActivity{
                         //创建文件路径,头像保存的路径
                         File file =FileUitlity.getInstance(getApplicationContext()).makeDir("head_image");
                         //定义图片路径和名称
-                          path0 = file.getParent() + File.separatorChar + System.currentTimeMillis() + ".jpg";
+                          path0 = file.getParent() + "/head_image/" + System.currentTimeMillis() + ".jpg";
                         //图片质量
                         intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
                         //保存图片到Intent中，并通过Intent将照片传给系统裁剪器
-                        Uri uri=Uri.fromFile(new File(path0));
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+                        uri1=Uri.fromFile(new File(path0));
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, uri1);
                         //启动有返回的Intent，即返回裁剪好的图片到RoundImageView组件中显示
                         startActivityForResult(intent,1 );
                     }
@@ -199,58 +218,190 @@ public class My_information extends MainActivity{
         intent.putExtra("aspectY",1);
         intent.putExtra("aspectX",1);
         //设置裁剪框高宽
-        intent.putExtra("outputX",150);
-        intent.putExtra("outputY", 150);
+        intent.putExtra("outputX",200);
+        intent.putExtra("outputY", 200);
         //返回数据
+        intent.putExtra("outputFormat",Bitmap.CompressFormat.PNG.toString());
+     //   intent.putExtra("noFaceDetection",true);
 
         intent.putExtra("return-data",true);
+       // uritempFile = Uri.parse("file://" + "/" + Environment.getExternalStorageDirectory().getPath() + "/" + "small.jpg");
+    //    intent.putExtra(MediaStore.EXTRA_OUTPUT,uritempFile);
         startActivityForResult(intent,2);
     }
 
 
 
     //该方法实现通过何种方式跟换图片
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //获取组件
-        RoundImageView roundImageView = (RoundImageView)findViewById(R.id.roundImageView);
 
-        super.onActivityResult(requestCode, resultCode, data);
+
+        //获取组件
+        RoundImageView roundImageView = (RoundImageView) findViewById(R.id.roundImageView);
+
+        /*
+        try{
+            cropBitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uritempFile));
+        }catch(FileNotFoundException e){
+            e.printStackTrace();;
+        }
+
+         */
 
         //如果返回码不为-1，则表示不成功
-        if (resultCode != Activity.RESULT_OK){
+        if (resultCode != Activity.RESULT_OK) {
             return;
         }
 
-            if (requestCode == 0) {
-                //调用相册
-                Cursor cursor = this.getContentResolver().query(data.getData(),
-                        new String[]{MediaStore.Images.Media.DATA}, null, null, null);
-                //游标移到第一位，即从第一位开始读取
-                cursor.moveToFirst();
-                String path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
-                cursor.close();
-                //调用系统裁剪
-                startPhoneZoom(Uri.fromFile(new File(path)));
-            } else if (requestCode == 1) {
-                //相机返回结果，调用系统裁剪
-                startPhoneZoom(Uri.fromFile(new File(path0)));
-            } else if (requestCode == 2) {
-                //设置裁剪返回的位图
-                Bundle bundle = data.getExtras();
-                if (bundle != null) {
-                    Bitmap bitmap = bundle.getParcelable("data");
-                    //将裁剪后得到的位图在组件中显示
-                    roundImageView.setImageBitmap(bitmap);
-                }
+        if (requestCode == 0) {
+            //调用相册
 
+
+/*
+            try{
+                imageUri = data.getData();
+                Log.e("imageUri:",imageUri+"");
+                String selectPhoto = getRealPathFromUri(this,imageUri);
+                Log.e("selectPhoto:",selectPhoto);
+         //       setImageCompressBitmap(selectPhoto);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            startPhoneZoom(imageUri);
+*/
+
+
+            Cursor cursor = this.getContentResolver().query(data.getData(),
+                   new String[]{MediaStore.Images.Media.DATA}, null, null, null);
+            //游标移到第一位，即从第一位开始读取
+            cursor.moveToFirst();
+           String path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            cursor.close();
+            //调用系统裁剪
+            uri2=Uri.fromFile(new File(path));
+            startPhoneZoom(uri2);
+
+
+        } else if (requestCode == 1) {
+            //相机返回结果，调用系统裁剪
+            startPhoneZoom(uri1);
+        } else if (requestCode == 2) {
+            //设置裁剪返回的位图
+            Bundle bundle = data.getExtras();
+            if (bundle != null) {
+                Bitmap bitmap = bundle.getParcelable("data");
+                //将裁剪后得到的位图在组件中显示
+                roundImageView.setImageBitmap(bitmap);
             }
 
+        }
+
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 
 
+    /**
+     * 根据图片的Uri获取图片的绝对路径。@uri 图片的uri
+     * @return 如果Uri对应的图片存在,那么返回该图片的绝对路径,否则返回null
+     */
+    public static String getRealPathFromUri(Context context, Uri uri) {
+        if(context == null || uri == null) {
+            return null;
+        }
+        if("file".equalsIgnoreCase(uri.getScheme())) {
+            return getRealPathFromUri_Byfile(context,uri);
+        } else if("content".equalsIgnoreCase(uri.getScheme())) {
+            return getRealPathFromUri_Api11To18(context,uri);
+        }
+//        int sdkVersion = Build.VERSION.SDK_INT;
+//        if (sdkVersion < 11) {
+//            // SDK < Api11
+//            return getRealPathFromUri_BelowApi11(context, uri);
+//        }
+////        if (sdkVersion < 19) {
+////             SDK > 11 && SDK < 19
+////            return getRealPathFromUri_Api11To18(context, uri);
+//            return getRealPathFromUri_ByXiaomi(context, uri);
+////        }
+//        // SDK > 19
+        return getRealPathFromUri_AboveApi19(context, uri);//没用到
+    }
 
+    //针对图片URI格式为Uri:: file:///storage/emulated/0/DCIM/Camera/IMG_20170613_132837.jpg
+    private static String getRealPathFromUri_Byfile(Context context,Uri uri){
+        String uri2Str = uri.toString();
+        String filePath = uri2Str.substring(uri2Str.indexOf(":") + 3);
+        return filePath;
+    }
+
+    /**
+     * 适配api19以上,根据uri获取图片的绝对路径
+     */
+    @SuppressLint("NewApi")
+    private static String getRealPathFromUri_AboveApi19(Context context, Uri uri) {
+        String filePath = null;
+        String wholeID = null;
+
+        wholeID = DocumentsContract.getDocumentId(uri);
+
+        // 使用':'分割
+        String id = wholeID.split(":")[1];
+
+        String[] projection = { MediaStore.Images.Media.DATA };
+        String selection = MediaStore.Images.Media._ID + "=?";
+        String[] selectionArgs = { id };
+
+        Cursor cursor = context.getContentResolver().query(
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI, projection,
+                selection, selectionArgs, null);
+        int columnIndex = cursor.getColumnIndex(projection[0]);
+
+        if (cursor.moveToFirst()) {
+            filePath = cursor.getString(columnIndex);
+        }
+        cursor.close();
+        return filePath;
+    }
+
+    /**
+     * //适配api11-api18,根据uri获取图片的绝对路径。
+     * 针对图片URI格式为Uri:: content://media/external/images/media/1028
+     */
+    private static String getRealPathFromUri_Api11To18(Context context, Uri uri) {
+        String filePath = null;
+        String[] projection = { MediaStore.Images.Media.DATA };
+
+        CursorLoader loader = new CursorLoader(context, uri, projection, null,
+                null, null);
+        Cursor cursor = loader.loadInBackground();
+
+        if (cursor != null) {
+            cursor.moveToFirst();
+            filePath = cursor.getString(cursor.getColumnIndex(projection[0]));
+            cursor.close();
+        }
+        return filePath;
+    }
+
+    /**
+     * 适配api11以下(不包括api11),根据uri获取图片的绝对路径
+     */
+    private static String getRealPathFromUri_BelowApi11(Context context, Uri uri) {
+        String filePath = null;
+        String[] projection = { MediaStore.Images.Media.DATA };
+        Cursor cursor = context.getContentResolver().query(uri, projection,
+                null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+            filePath = cursor.getString(cursor.getColumnIndex(projection[0]));
+            cursor.close();
+        }
+        return filePath;
+    }
 
 
 

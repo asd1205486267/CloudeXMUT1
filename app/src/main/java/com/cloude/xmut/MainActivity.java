@@ -222,6 +222,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         Matcher isUrl = pattern.matcher(str);
         return isUrl.matches();
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  //扫描二维码的东西
         super.onActivityResult(requestCode, resultCode, data);
@@ -233,7 +234,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                 //返回的BitMap图像
                 Bitmap bitmap = data.getParcelableExtra(DECODED_BITMAP_KEY);
 
-                if (isUrl(data.getStringExtra(DECODED_CONTENT_KEY))){
+               if (isUrl(data.getStringExtra(DECODED_CONTENT_KEY))){
                     Intent intent = new Intent(MainActivity.this, WebViews.class);
                     String ur = data.getStringExtra(DECODED_CONTENT_KEY);  //传入的网址
                     Bundle bundle = new Bundle();
@@ -241,6 +242,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                     intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
                     startActivity(intent);
                 }
+
+
                 else {
                     Toast.makeText(this, data.getStringExtra(DECODED_CONTENT_KEY), Toast.LENGTH_SHORT).show();
                 }
