@@ -15,6 +15,7 @@
  limitations under the License.
  -->
 <resources>
+  <dimen name="main_boom_button">70dip</dimen>
   <dimen name="normal_large_padding">90dip</dimen>
   <dimen name="normal_small_large_padding">75dip</dimen>
   <dimen name="normal_double_padding">60dip</dimen>
