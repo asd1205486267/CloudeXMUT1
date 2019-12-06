@@ -55,7 +55,11 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
 
         main_bannner();
         button();
-        boom_button();
+
+        boom_button_school_innet();
+        boom_button_school_outnet();
+        boom_button_school_outnet_other();
+        boom_button_link_author();
 
         toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
@@ -226,45 +230,332 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
 
 
 
+
     /**********                               弹出式按钮                             *********/
-    public void boom_button(){
-        boomMenuButton = (BoomMenuButton) findViewById(R.id.bmb);
+    public void boom_button_school_innet(){
+        boomMenuButton = (BoomMenuButton) findViewById(R.id.school_innet);
         for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
             TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
                     .listener(new OnBMClickListener() {
                         @Override
                         public void onBoomButtonClick(int index) {
-                            Toast.makeText(MainActivity.this, "Clicked " + index, Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(MainActivity.this, "Clicked " + index, Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, WebViews.class);
+                            Bundle bundle = new Bundle();
+                            String ur;
+                            switch (index){
+                                case 0:
+                                    ur = "https://jw.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 1:
+                                    ur = "http://kczx.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 2:
+                                    ur = "http://lab.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 3:
+                                    ur = "https://lib.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 4:
+                                    ur = "http://zyz.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 5:
+                                    ur = "https://my.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                         /*        case 6:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                               case 7:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 8:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;*/
+                            }
+                            intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
+                            startActivity(intent);
                         }
                     })
-                    .normalImageRes(getImageResource())
-                    .normalText(getext());
+                    .normalImageRes(getImageResource_school_innet())
+                    .normalText(getext_school_innet());
             boomMenuButton.addBuilder(builder);
         }
-
     }
-    private static int index = 0;
-    static String getext() {
-        if (index >= text.length) index = 0;
-        return text[index++];
-
+    private static int index_school_innet = 0;
+    static String getext_school_innet() {
+        if (index_school_innet >= text_school_innet.length) index_school_innet = 0;
+        return text_school_innet[index_school_innet++];
     }
-    private static String [] text = new String[]{"111111","2222222","3333"
-
+    private static String [] text_school_innet = new String[]{"教务系统","课程中心","实验中心"
+            ,"图书馆","志愿者","信息门户"
+    };
+    private static int imageResourceIndex_school_innet = 0;
+    static int getImageResource_school_innet() {
+        if (imageResourceIndex_school_innet >= imageResources_school_innet.length) imageResourceIndex_school_innet = 0;
+        return imageResources_school_innet[imageResourceIndex_school_innet++];
+    }
+    private static int[] imageResources_school_innet = new int[]{
+            R.drawable.study_small,
+            R.drawable.course_small,
+            R.drawable.lab_small,
+            R.drawable.library_small,
+            R.drawable.lovehand_small,
+            R.drawable.id_card_small
     };
 
-
-    private static int imageResourceIndex = 0;
-    static int getImageResource() {
-        if (imageResourceIndex >= imageResources.length) imageResourceIndex = 0;
-        return imageResources[imageResourceIndex++];
+    /**********                           上面为第一个按钮  下面为第二个按钮                            *********/
+    public void boom_button_school_outnet(){
+        boomMenuButton = (BoomMenuButton) findViewById(R.id.school_outnet);
+        for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
+            TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+//                            Toast.makeText(MainActivity.this, "Clicked " + index, Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, WebViews.class);
+                            Bundle bundle = new Bundle();
+                            String ur;
+                            switch (index){
+                                case 0:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 1:
+                                    ur = "https://my.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 2:
+                                    ur = "https://webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 3:
+                                    ur = "http://yjs.xmut.edu.cn/bszn/201806/t20180615_213535.html";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 4:
+                                    ur = "https://xmut1981.kuaizhan.com/clubpc/forums/VoITQj2o62YvG2lU#!/topics/tags/all/pages/0";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 5:
+                                    ur = "https://xmut1981.kuaizhan.com/clubpc/forums/WQwDfb9lnhCdVcTq#!/topics/tags/all/pages/0";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 6:
+                                    ur = "https://xmut1981.kuaizhan.com/clubpc/forums/ViY8BpP84SuGmHXZ#!/topics/tags/all/pages/0";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 7:
+                                    ur = "http://3d.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                            /*    case 8:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;*/
+                            }
+                            intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
+                            startActivity(intent);
+                        }
+                    })
+                    .normalImageRes(getImageResource_school_outnet())
+                    .normalText(getext_school_outnet());
+            boomMenuButton.addBuilder(builder);
+        }
     }
-
-    private static int[] imageResources = new int[]{
-            R.drawable.bat,
-            R.drawable.bear,
+    private static int index_school_outnet = 0;
+    static String getext_school_outnet() {
+        if (index_school_outnet >= text_school_outnet.length) index_school_outnet = 0;
+        return text_school_outnet[index_school_outnet++];
+    }
+    private static String [] text_school_outnet = new String[]{"教务系统","信息门户","资源中心"
+            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工","理工新闻"
+    };
+    private static int imageResourceIndex_school_outnet = 0;
+    static int getImageResource_school_outnet() {
+        if (imageResourceIndex_school_outnet >= imageResources_school_outnet.length) imageResourceIndex_school_outnet = 0;
+        return imageResources_school_outnet[imageResourceIndex_school_outnet++];
+    }
+    private static int[] imageResources_school_outnet = new int[]{
             R.drawable.study_small,
-            R.drawable.map_small
+            R.drawable.id_card_small,
+            R.drawable.open_book_small,
+            R.drawable.calendar_small,
+            R.drawable.store_small,
+            R.drawable.view_eye_small,
+            R.drawable.hands_small,
+            R.drawable.map_small,
+            R.drawable.news_small
+    };
+
+    /**********                           上面为第二个按钮  下面为第三个按钮                            *********/
+    public void boom_button_school_outnet_other(){
+        boomMenuButton = (BoomMenuButton) findViewById(R.id.school_outnet_other);
+        for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
+            TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+                            Toast.makeText(MainActivity.this, "暂未添加" , Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, WebViews.class);
+                            Bundle bundle = new Bundle();
+                            String ur="";
+                            switch (index){
+                             /*   case 0:
+                                    ur = "http://www.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 1:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 2:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 3:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 4:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 5:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 6:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 7:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 8:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;*/
+                            }
+                            intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
+                            startActivity(intent);
+                        }
+                    })
+                    .normalImageRes(getImageResource_school_outnet_other())
+                    .normalText(getext_school_outnet_other());
+            boomMenuButton.addBuilder(builder);
+        }
+    }
+    private static int index_school_outnet_other = 0;
+    static String getext_school_outnet_other() {
+        if (index_school_outnet_other >= text_school_outnet_other.length) index_school_outnet_other = 0;
+        return text_school_outnet_other[index_school_outnet_other++];
+    }
+    private static String [] text_school_outnet_other = new String[]{"暂未添加","信息门户","资源中心"
+            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工","理工新闻"
+    };
+    private static int imageResourceIndex_school_outnet_other = 0;
+    static int getImageResource_school_outnet_other() {
+        if (imageResourceIndex_school_outnet_other >= imageResources_school_outnet_other.length) imageResourceIndex_school_outnet_other = 0;
+        return imageResources_school_outnet_other[imageResourceIndex_school_outnet_other++];
+    }
+    private static int[] imageResources_school_outnet_other = new int[]{
+            R.drawable.play_music_small,
+            R.drawable.id_card_small,
+            R.drawable.open_book_small,
+            R.drawable.calendar_small,
+            R.drawable.store_small,
+            R.drawable.view_eye_small,
+            R.drawable.hands_small,
+            R.drawable.map_small,
+            R.drawable.news_small
+    };
+
+    /**********                           上面为第三个按钮  下面为第四个按钮                            *********/
+    public void boom_button_link_author(){
+        boomMenuButton = (BoomMenuButton) findViewById(R.id.link_author);
+        for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
+            TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+//                            Toast.makeText(MainActivity.this, "Clicked " + index, Toast.LENGTH_SHORT).show();
+                            String ur="";
+                            switch (index){
+                                case 0:
+                                    ur = "mqqwpa://im/chat?chat_type=wpa&uin=1427703250";  //传入的网址
+                                    break;
+                                case 1:
+                                    ur = "mqqwpa://im/chat?chat_type=wpa&uin=2564836240";  //传入的网址
+                                    break;
+                                case 2:
+                                    ur = "mqqwpa://im/chat?chat_type=wpa&uin=1778763617";  //传入的网址
+                                    break;
+                                case 3:
+                                    ur = "mqqwpa://im/chat?chat_type=wpa&uin=1205486267";  //传入的网址
+                                    break;
+                                case 4:
+                                     ur = "https://ds.alipay.com/?from=mobilecodec&scheme=" +
+                                            "alipays%3A%2F%2Fplatformapi%2Fstartapp%3FsaId%3D10000007%26clientVersion%3D3.7.0.0718%26qrcode%3D" +
+                                            "https%253A%252F%252Fqr.alipay.com%252F00c09578wjcsxdblqzuzk66%253F_s%253Dweb-other";  //传入的网址
+                                    break;
+                           /*     case 5:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 6:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 7:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;
+                                case 8:
+                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
+                                    break;*/
+                            }
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(ur)));//指定的QQ号只需要修改uin后的值即可。
+                        }
+                    })
+                    .normalImageRes(getImageResource_link_author())
+                    .normalText(getext_link_author());
+            boomMenuButton.addBuilder(builder);
+        }
+    }
+    private static int index_link_author = 0;
+    static String getext_link_author() {
+        if (index_link_author >= text_link_author.length) index_link_author = 0;
+        return text_link_author[index_link_author++];
+    }
+    private static String [] text_link_author = new String[]{"联系作者1","联系作者2","联系作者3"
+            ,"联系作者4","奖励作者1","小吐槽","乐帮帮","全景理工","理工新闻"
+    };
+    private static int imageResourceIndex_link_author = 0;
+    static int getImageResource_link_author() {
+        if (imageResourceIndex_link_author >= imageResources_link_author.length) imageResourceIndex_link_author = 0;
+        return imageResources_link_author[imageResourceIndex_link_author++];
+    }
+    private static int[] imageResources_link_author = new int[]{
+            R.drawable.question_small,
+            R.drawable.question_small,
+            R.drawable.question_small,
+            R.drawable.question_small,
+            R.drawable.payment_small,
+           /* R.drawable.view_eye_small,
+            R.drawable.hands_small,
+            R.drawable.map_small,
+            R.drawable.news_small*/
     };
 
     /**********                               弹出式按钮                             *********/
