@@ -460,8 +460,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         if (index_school_outnet_other >= text_school_outnet_other.length) index_school_outnet_other = 0;
         return text_school_outnet_other[index_school_outnet_other++];
     }
-    private static String [] text_school_outnet_other = new String[]{"暂未添加","信息门户","资源中心"
-            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工","理工新闻"
+    private static String [] text_school_outnet_other = new String[]{"暂未添加"
     };
     private static int imageResourceIndex_school_outnet_other = 0;
     static int getImageResource_school_outnet_other() {
@@ -539,7 +538,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         return text_link_author[index_link_author++];
     }
     private static String [] text_link_author = new String[]{"联系作者1","联系作者2","联系作者3"
-            ,"联系作者4","奖励作者1","小吐槽","乐帮帮","全景理工","理工新闻"
+            ,"联系作者4","奖励作者1"
     };
     private static int imageResourceIndex_link_author = 0;
     static int getImageResource_link_author() {
