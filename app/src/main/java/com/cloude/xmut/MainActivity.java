@@ -32,6 +32,7 @@ import com.nightonke.boommenu.BoomMenuButton;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
+import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -106,6 +107,28 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
 
         banner.isAutoPlay(true); //设置是否为自动轮播，默认是“是”。
 
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+               Intent intent = new Intent(MainActivity.this, WebViews.class);
+                Bundle bundle = new Bundle();
+                String ur;
+                ur = " http://www.xmut.edu.cn/";  //传入的网址
+                bundle.putString("ur", ur);  //内容，名字
+             /*    switch (position)   //0就是第一张图 1是第二张图 以此类推
+                {
+                    case 0:ur = " http://www.xmut.edu.cn/";  //传入的网址
+                        bundle.putString("ur", ur);  //内容，名字
+                    break;
+                    case 1:ur = " http://www.xmut.edu.cn/";  //传入的网址
+                        bundle.putString("ur", ur);  //内容，名字
+                    break;
+                } */
+                intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
+                startActivity(intent);
+            }
+        });
+
         banner.setIndicatorGravity(BannerConfig.CENTER) //设置指示器的位置，小点点，左中右。
                 .start(); //必须最后调用的方法，启动轮播图。
 
@@ -117,6 +140,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             Glide.with(context).load((Integer) path).into(imageView);   //网页 String 本地 Integer
         }
     }
+
 
     /**********                                主页Banner轮播图                                   *********/
 
@@ -377,7 +401,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         return text_school_outnet[index_school_outnet++];
     }
     private static String [] text_school_outnet = new String[]{"教务系统","信息门户","资源中心"
-            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工","理工新闻"
+            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工",//"理工新闻"
     };
     private static int imageResourceIndex_school_outnet = 0;
     static int getImageResource_school_outnet() {
@@ -393,7 +417,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             R.drawable.view_eye_small,
             R.drawable.hands_small,
             R.drawable.map_small,
-            R.drawable.news_small
+          //  R.drawable.news_small
     };
 
     /**********                           上面为第二个按钮  下面为第三个按钮                            *********/
@@ -469,14 +493,14 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     }
     private static int[] imageResources_school_outnet_other = new int[]{
             R.drawable.play_music_small,
-            R.drawable.id_card_small,
+         /*   R.drawable.id_card_small,
             R.drawable.open_book_small,
             R.drawable.calendar_small,
             R.drawable.store_small,
             R.drawable.view_eye_small,
             R.drawable.hands_small,
             R.drawable.map_small,
-            R.drawable.news_small
+            R.drawable.news_small*/
     };
 
     /**********                           上面为第三个按钮  下面为第四个按钮                            *********/

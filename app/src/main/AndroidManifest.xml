@@ -21,7 +21,11 @@
         </activity>
 
 
-        <activity android:name=".WebViews"></activity>
+        <activity android:name=".WebViews"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensor">
+        </activity>
+
         <activity android:name=".httpClient.LoginActivity"></activity>
         <activity android:name=".httpClient.RegisterActivity"></activity>
         <activity android:name=".my_information.My_information"></activity>

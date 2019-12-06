@@ -42,6 +42,8 @@ public class RegisterActivity extends Activity{
                 String key2=password2.getText().toString().trim();
                 if(user_name.equals("")) {
                     account.setError("账号不能为空！");
+                }else if(user_name.length()!=10){
+                    account.setError("请输入正确的学号！");
                 }else if(key1.equals("")) {
                     password1.setError("密码不能为空！");
                 }else if(key2.equals("")) {
