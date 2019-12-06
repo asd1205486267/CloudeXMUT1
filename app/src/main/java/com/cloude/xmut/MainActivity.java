@@ -1,42 +1,34 @@
 package com.cloude.xmut;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import android.Manifest;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
-
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.ImageView;
-
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
-import com.cloude.xmut.animation.SceneryActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
-
-
-import com.cloude.xmut.httpClient.RegisterActivity;
-
 import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.love.MomentListActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
+import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
+import com.nightonke.boommenu.BoomButtons.TextOutsideCircleButton;
+import com.nightonke.boommenu.BoomMenuButton;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -50,28 +42,20 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     private Banner banner;
     private ArrayList<Integer> list_path;   //网页 String 本地 Integer 广泛大使馆
     private ArrayList<String> list_title;
-
     private Toolbar toolbar;
-   /* private Button mBtnScenery;
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.news:
-                SceneryActivity.startActivity(this);
-                break;
-            default:
-                break;
-        }
-    }*/
+    private BoomMenuButton boomMenuButton;  //弹出按钮
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)  //弹出按钮API
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         main_bannner();
         button();
-
+        boom_button();
 
         toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
@@ -83,6 +67,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
 
     }
 
+
+    /**********                                主页Banner轮播图                                   *********/
     public void main_bannner() {  //这里是主页的轮播图
         banner = (Banner) findViewById(R.id.banner);  //定位
 
@@ -128,25 +114,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         }
     }
 
-
-   /*  @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            // 隐藏导航栏
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            // 全屏(隐藏状态栏)
-                           | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            // 使用沉浸式必须加这个flag
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-            );
-        }
-    }*/
+    /**********                                主页Banner轮播图                                   *********/
 
 
     @Override
@@ -179,7 +147,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         return true;
     }
 
-
+    /**********                                 Zxing 扫码                                   *********/
     //zing 扫码
     private static final String DECODED_CONTENT_KEY = "codedContent";
     private static final String DECODED_BITMAP_KEY = "codedBitmap";
@@ -222,7 +190,6 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         Matcher isUrl = pattern.matcher(str);
         return isUrl.matches();
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  //扫描二维码的东西
         super.onActivityResult(requestCode, resultCode, data);
@@ -234,7 +201,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                 //返回的BitMap图像
                 Bitmap bitmap = data.getParcelableExtra(DECODED_BITMAP_KEY);
 
-               if (isUrl(data.getStringExtra(DECODED_CONTENT_KEY))){
+                if (isUrl(data.getStringExtra(DECODED_CONTENT_KEY))){
                     Intent intent = new Intent(MainActivity.this, WebViews.class);
                     String ur = data.getStringExtra(DECODED_CONTENT_KEY);  //传入的网址
                     Bundle bundle = new Bundle();
@@ -242,27 +209,65 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                     intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
                     startActivity(intent);
                 }
-
-
                 else {
                     Toast.makeText(this, data.getStringExtra(DECODED_CONTENT_KEY), Toast.LENGTH_SHORT).show();
                 }
 
                 //Toast.makeText(this, data.getStringExtra(DECODED_CONTENT_KEY), Toast.LENGTH_SHORT).show();
-             //   tv_scanResult.setText("你扫描到的内容是：" + content);
+                //   tv_scanResult.setText("你扫描到的内容是：" + content);
             }
             else {
                 Toast.makeText(this, "内容为空！", Toast.LENGTH_SHORT).show();
             }
         }
     }
+/**********                                 Zxing 扫码                                   *********/
 
 
 
 
+    /**********                               弹出式按钮                             *********/
+    public void boom_button(){
+        boomMenuButton = (BoomMenuButton) findViewById(R.id.bmb);
+        for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
+            TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+                            Toast.makeText(MainActivity.this, "Clicked " + index, Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .normalImageRes(getImageResource())
+                    .normalText(getext());
+            boomMenuButton.addBuilder(builder);
+        }
+
+    }
+    private static int index = 0;
+    static String getext() {
+        if (index >= text.length) index = 0;
+        return text[index++];
+
+    }
+    private static String [] text = new String[]{"111111","2222222","3333"
+
+    };
 
 
+    private static int imageResourceIndex = 0;
+    static int getImageResource() {
+        if (imageResourceIndex >= imageResources.length) imageResourceIndex = 0;
+        return imageResources[imageResourceIndex++];
+    }
 
+    private static int[] imageResources = new int[]{
+            R.drawable.bat,
+            R.drawable.bear,
+            R.drawable.study_small,
+            R.drawable.map_small
+    };
+
+    /**********                               弹出式按钮                             *********/
 
 
 
