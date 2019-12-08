@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/activity_mainpage"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/activity_mainpage"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-        <TextView
-            android:textSize="25sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="35dp"
-            android:layout_marginLeft="20dp"
-            android:text="头像"   />
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/head_button"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="5dp"
+        android:text="头像"   />
 
 
-     <com.cloude.xmut.my_information.RoundImageView
+    <com.cloude.xmut.my_information.RoundImageView
 
         android:id="@+id/roundImageView"
         android:src="@drawable/image1"
@@ -35,30 +37,32 @@
 
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/divide1"
-            android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/roundImageView"
-            android:layout_marginTop="10dp"
-            />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide1"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/roundImageView"
+        android:layout_marginTop="10dp"
+        />
 
-         <TextView
-        android:textSize="25sp"
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/change_name"
+        android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/divide1"
         app:layout_constraintTop_toTopOf="@id/divide1"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
         android:text="昵称"   />
 
     <TextView
 
         android:id="@+id/name1"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:textColor="@color/DimGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,181 +70,188 @@
         app:layout_constraintTop_toTopOf="@id/divide1"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:text="嘤嘤嘤"  />
+          />
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/divide2"
-            android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/name1"
-            android:layout_marginTop="15dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide2"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/name1"
+        android:layout_marginTop="15dp" />
 
-        <TextView
-            android:textSize="25sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/divide2"
-            app:layout_constraintTop_toTopOf="@id/divide2"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:text="性别"   />
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@id/change_sex"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divide2"
+        app:layout_constraintTop_toTopOf="@id/divide2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="性别"   />
 
-        <TextView
+    <TextView
 
-            android:id="@+id/sex1"
-            android:textSize="20sp"
-            android:textColor="@color/DimGray"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="@id/divide2"
-            app:layout_constraintTop_toTopOf="@id/divide2"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:text="男"  />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/divide3"
-            android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/sex1"
-            android:layout_marginTop="15dp" />
+        android:id="@+id/sex1"
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/divide2"
+        app:layout_constraintTop_toTopOf="@id/divide2"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide3"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/sex1"
+        android:layout_marginTop="15dp" />
 
-        <TextView
-            android:textSize="25sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/divide3"
-            app:layout_constraintTop_toTopOf="@id/divide3"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:text="年龄"   />
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/change_age"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divide3"
+        app:layout_constraintTop_toTopOf="@id/divide3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="年龄"   />
 
-        <TextView
+    <TextView
 
-            android:id="@+id/age1"
-            android:textSize="20sp"
-            android:textColor="@color/DimGray"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="@id/divide3"
-            app:layout_constraintTop_toTopOf="@id/divide3"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:text="20"  />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/divide4"
-            android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/age1"
-            android:layout_marginTop="15dp" />
-
-
-        <TextView
-            android:textSize="25sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/divide4"
-            app:layout_constraintTop_toTopOf="@id/divide4"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:text="地区"   />
-
-        <TextView
-
-            android:id="@+id/address1"
-            android:textSize="20sp"
-            android:textColor="@color/DimGray"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="@id/divide4"
-            app:layout_constraintTop_toTopOf="@id/divide4"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:text="福建 厦门"  />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/divide5"
-            android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/address1"
-            android:layout_marginTop="15dp" />
-
-        <TextView
-            android:textSize="25sp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/divide5"
-            app:layout_constraintTop_toTopOf="@id/divide5"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:text="个性签名"   />
-
-        <TextView
-
-            android:id="@+id/self_signal"
-            android:textSize="20sp"
-            android:textColor="@color/DimGray"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="@id/divide5"
-            app:layout_constraintTop_toTopOf="@id/divide5"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:text="三嘤战吕布"  />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:id="@+id/divide6"
-            android:background="#22000000"
-            app:layout_constraintTop_toBottomOf="@id/self_signal"
-            android:layout_marginTop="15dp" />
-
-        <Button
-            android:id="@+id/set1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/divide6"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="20dp"
-            android:text="设置"
-            android:textSize="30sp"  />
-
-        <Button
-            android:id="@+id/change_information"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/divide6"
-            app:layout_constraintLeft_toRightOf="@id/set1"
-            android:layout_marginLeft="20dp"
-            android:text="修改信息"
-            android:textSize="30sp"  />
-        <Button
-            android:id="@+id/payVIP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/divide6"
-            app:layout_constraintLeft_toRightOf="@id/change_information"
-            android:layout_marginLeft="20dp"
-            android:text="充值"
-            android:textSize="30sp"  />
+        android:id="@+id/age1"
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/divide3"
+        app:layout_constraintTop_toTopOf="@id/divide3"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide4"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/age1"
+        android:layout_marginTop="15dp" />
 
 
-        <include
-            layout="@layout/home_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent" />
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/change_address"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divide4"
+        app:layout_constraintTop_toTopOf="@id/divide4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="地区"   />
+
+    <TextView
+
+        android:id="@+id/address1"
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/divide4"
+        app:layout_constraintTop_toTopOf="@id/divide4"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+       />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide5"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/address1"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/change_self_sign"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divide5"
+        app:layout_constraintTop_toTopOf="@id/divide5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="个性签名"   />
+
+    <TextView
+
+        android:id="@+id/self_signal"
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/divide5"
+        app:layout_constraintTop_toTopOf="@id/divide5"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide6"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/self_signal"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/set1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/divide6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:text="设置"
+        android:textSize="30sp"  />
+
+    <Button
+        android:id="@+id/exit_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/divide6"
+        app:layout_constraintLeft_toRightOf="@id/set1"
+        android:layout_marginLeft="20dp"
+        android:text="退出登录"
+        android:textSize="30sp"  />
+    <Button
+        android:id="@+id/payVIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/divide6"
+        app:layout_constraintLeft_toRightOf="@id/exit_information"
+        android:layout_marginLeft="20dp"
+        android:text="充值"
+        android:textSize="30sp"  />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        layout="@layout/home_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
+
+</androidx.constraintlayout.widget.ConstraintLayout>

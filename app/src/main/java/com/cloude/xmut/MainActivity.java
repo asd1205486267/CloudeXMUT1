@@ -26,6 +26,7 @@ import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.love.MomentListActivity;
 import com.cloude.xmut.zxing.android.CaptureActivity;
+import com.cloude.xmut.main_button.phone_school;
 import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
 import com.nightonke.boommenu.BoomButtons.TextOutsideCircleButton;
 import com.nightonke.boommenu.BoomMenuButton;
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         banner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {
-               Intent intent = new Intent(MainActivity.this, WebViews.class);
+                Intent intent = new Intent(MainActivity.this, WebViews.class);
                 Bundle bundle = new Bundle();
                 String ur;
                 ur = " http://www.xmut.edu.cn/";  //传入的网址
@@ -264,6 +265,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                         @Override
                         public void onBoomButtonClick(int index) {
 //                            Toast.makeText(MainActivity.this, "Clicked " + index, Toast.LENGTH_SHORT).show();
+
                             Intent intent = new Intent(MainActivity.this, WebViews.class);
                             Bundle bundle = new Bundle();
                             String ur;
@@ -292,11 +294,11 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     ur = "https://my.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
-                         /*        case 6:
-                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
-                                    bundle.putString("ur", ur);  //内容，名字
+                                case 6:
+                                    Intent i = new Intent(MainActivity.this,phone_school.class);
+                                    startActivity(i);
                                     break;
-                               case 7:
+                           /*     case 7:
                                     ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
@@ -306,7 +308,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     break;*/
                             }
                             intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
-                            startActivity(intent);
+                            if (index!=6)
+                                startActivity(intent);
                         }
                     })
                     .normalImageRes(getImageResource_school_innet())
@@ -320,7 +323,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         return text_school_innet[index_school_innet++];
     }
     private static String [] text_school_innet = new String[]{"教务系统","课程中心","实验中心"
-            ,"图书馆","志愿者","信息门户"
+            ,"图书馆","志愿者","信息门户","办公电话"
     };
     private static int imageResourceIndex_school_innet = 0;
     static int getImageResource_school_innet() {
@@ -333,7 +336,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             R.drawable.lab_small,
             R.drawable.library_small,
             R.drawable.lovehand_small,
-            R.drawable.id_card_small
+            R.drawable.id_card_small,
+            R.drawable.phone_small
     };
 
     /**********                           上面为第一个按钮  下面为第二个按钮                            *********/
@@ -417,7 +421,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             R.drawable.view_eye_small,
             R.drawable.hands_small,
             R.drawable.map_small,
-          //  R.drawable.news_small
+            //  R.drawable.news_small
     };
 
     /**********                           上面为第二个按钮  下面为第三个按钮                            *********/
@@ -493,14 +497,14 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     }
     private static int[] imageResources_school_outnet_other = new int[]{
             R.drawable.play_music_small,
-         /*   R.drawable.id_card_small,
-            R.drawable.open_book_small,
-            R.drawable.calendar_small,
-            R.drawable.store_small,
-            R.drawable.view_eye_small,
-            R.drawable.hands_small,
-            R.drawable.map_small,
-            R.drawable.news_small*/
+            /*   R.drawable.id_card_small,
+               R.drawable.open_book_small,
+               R.drawable.calendar_small,
+               R.drawable.store_small,
+               R.drawable.view_eye_small,
+               R.drawable.hands_small,
+               R.drawable.map_small,
+               R.drawable.news_small*/
     };
 
     /**********                           上面为第三个按钮  下面为第四个按钮                            *********/
@@ -527,7 +531,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     ur = "mqqwpa://im/chat?chat_type=wpa&uin=1205486267";  //传入的网址
                                     break;
                                 case 4:
-                                     ur = "https://ds.alipay.com/?from=mobilecodec&scheme=" +
+                                    ur = "https://ds.alipay.com/?from=mobilecodec&scheme=" +
                                             "alipays%3A%2F%2Fplatformapi%2Fstartapp%3FsaId%3D10000007%26clientVersion%3D3.7.0.0718%26qrcode%3D" +
                                             "https%253A%252F%252Fqr.alipay.com%252F00c09578wjcsxdblqzuzk66%253F_s%253Dweb-other";  //传入的网址
                                     break;
@@ -575,10 +579,10 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             R.drawable.question_small,
             R.drawable.question_small,
             R.drawable.payment_small,
-           /* R.drawable.view_eye_small,
-            R.drawable.hands_small,
-            R.drawable.map_small,
-            R.drawable.news_small*/
+            /* R.drawable.view_eye_small,
+             R.drawable.hands_small,
+             R.drawable.map_small,
+             R.drawable.news_small*/
     };
 
     /**********                               弹出式按钮                             *********/
@@ -845,7 +849,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         //   }
         // });
 
-        Button home_button = (Button) findViewById(R.id.home);  //主页
+        Button home_button = (Button) findViewById(R.id.my_home);  //主页
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
