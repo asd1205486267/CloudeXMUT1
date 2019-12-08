@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_control"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:stretchColumns="0,1,2,3,4,5">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"/>
+        <com.nightonke.boommenu.BoomMenuButton
+            android:id="@+id/school_innet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            app:bmb_buttonEnum="textOutsideCircle"
+            app:bmb_piecePlaceEnum="piecePlace_dot_7_3"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_7_3"
+            app:bmb_boomInWholeScreen="true">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/main_boom_button"
+                android:text="校内资源"
+                />
+        </com.nightonke.boommenu.BoomMenuButton>
+
+        <com.nightonke.boommenu.BoomMenuButton
+            android:id="@+id/school_outnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            app:bmb_buttonEnum="textOutsideCircle"
+            app:bmb_piecePlaceEnum="piecePlace_dot_8_3"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_8_3"
+            app:bmb_boomInWholeScreen="true">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/main_boom_button"
+                android:text="校外资源"
+                />
+        </com.nightonke.boommenu.BoomMenuButton>
+
+
+        <com.nightonke.boommenu.BoomMenuButton
+            android:id="@+id/school_outnet_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            app:bmb_buttonEnum="textOutsideCircle"
+            app:bmb_piecePlaceEnum="piecePlace_dot_1"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_1"
+            app:bmb_boomInWholeScreen="true">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/main_boom_button"
+                android:text="其他资源"
+                />
+        </com.nightonke.boommenu.BoomMenuButton>
+
+
+
+        <com.nightonke.boommenu.BoomMenuButton
+            android:id="@+id/link_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            app:bmb_buttonEnum="textOutsideCircle"
+            app:bmb_piecePlaceEnum="piecePlace_dot_5_3"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_5_3"
+            app:bmb_boomInWholeScreen="true">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/main_boom_button"
+                android:text="联系作者"
+                />
+        </com.nightonke.boommenu.BoomMenuButton>
+
+        <TextView android:layout_width="wrap_content"/>
+    </TableRow>
+
+</TableLayout>
