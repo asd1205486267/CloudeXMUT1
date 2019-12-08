@@ -635,6 +635,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
+/*
         Button my_button = (Button) findViewById(R.id.my);  //我的
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -645,7 +646,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
-/*
+*/
         Button my_button = (Button) findViewById(R.id.my);  //我的
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -662,6 +663,6 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
-        */
+
     }
 }

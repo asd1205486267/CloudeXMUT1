@@ -45,6 +45,7 @@ import com.cloude.xmut.change_person_information.ensure_age;
 import com.cloude.xmut.change_person_information.ensure_name;
 import com.cloude.xmut.change_person_information.ensure_self_sign;
 import com.cloude.xmut.change_person_information.ensure_sex;
+import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.love.MomentListActivity;
 
 import java.io.BufferedOutputStream;
@@ -322,6 +323,15 @@ public class My_information extends MainActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(My_information.this, ensure_self_sign.class);
+
+                startActivity(intent);
+            }
+        });
+        Button exit_information_button = (Button) findViewById(R.id.exit_information);  //退出登录
+        exit_information_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(My_information.this, LoginActivity.class);
 
                 startActivity(intent);
             }
