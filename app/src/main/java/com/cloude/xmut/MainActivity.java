@@ -48,7 +48,7 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity /*implements View.OnClickListener*/{
     private Banner banner;
-    private ArrayList<Integer> list_path;   //网页 String 本地 Integer 广泛大使馆
+    private ArrayList<Integer> list_path;   //网页 String 本地 Integer
     private ArrayList<String> list_title;
 
     private Toolbar toolbar;
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  //扫描二维码的东西
-        super.onActivityResult(requestCode, resultCode, data);
+
         // 扫描二维码/条码回传
         if (requestCode == REQUEST_CODE_SCAN && resultCode == RESULT_OK) {
             if (data != null) {
@@ -242,8 +242,6 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                     intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
                     startActivity(intent);
                 }
-
-
                 else {
                     Toast.makeText(this, data.getStringExtra(DECODED_CONTENT_KEY), Toast.LENGTH_SHORT).show();
                 }
@@ -255,6 +253,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                 Toast.makeText(this, "内容为空！", Toast.LENGTH_SHORT).show();
             }
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 
@@ -516,22 +515,22 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
 
-        //   Button set_button = (Button) findViewById(R.id.set);  //设置
-        //  set_button.setOnClickListener(new View.OnClickListener() {
-        //      @Override
-        //     public void onClick(View view) {
-        //         String url = "";
-        //        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+           Button chat_button = (Button) findViewById(R.id.chat);  //聊天
+          chat_button.setOnClickListener(new View.OnClickListener() {
+              @Override
+             public void onClick(View view) {
+                 String url = "https://fanyi.baidu.com/?aldtype=16047#en/zh/portrait";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 
-        //   }
-        // });
+           }
+         });
 
-        Button home_button = (Button) findViewById(R.id.home);  //主页
+        Button home_button = (Button) findViewById(R.id.my_home);  //主页
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -550,6 +549,17 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, My_information.class);
+                startActivity(intent);
+
+            }
+        });
+
+/*
+        Button my_button = (Button) findViewById(R.id.my);  //我的
+        my_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
                 String p=sp.getString("uname","000");
                 if (!p.equals("000")){
@@ -561,5 +571,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                 }
             }
         });
+
+        */
     }
 }

@@ -26,6 +26,7 @@
         <activity android:name=".httpClient.RegisterActivity"></activity>
         <activity android:name=".my_information.My_information"></activity>
 
+
         <activity
             android:name=".zxing.android.CaptureActivity"
             android:configChanges="orientation|screenSize"
@@ -44,6 +45,40 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
+        <activity
+            android:name=".change_person_information.ensure_name"
+            android:label="更改昵称"   >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".my_information.My_information"/>
+        </activity>
+
+        <activity
+            android:name=".change_person_information.ensure_sex"
+            android:label="更改性别"   >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".my_information.My_information"/>
+        </activity>
+
+        <activity
+            android:name=".change_person_information.ensure_age"
+            android:label="更改年龄"   >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".my_information.My_information"/>
+        </activity>
+
+        <activity
+            android:name=".change_person_information.ensure_address"
+            android:label="更改地区"   >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".my_information.My_information"/>
+        </activity>
+
+        <activity
+            android:name=".change_person_information.ensure_self_sign"
+            android:label="更改个性签名"   >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".my_information.My_information"/>
+        </activity>
     </application>
 
 
