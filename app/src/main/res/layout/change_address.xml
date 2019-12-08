@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/change_name"
         android:layout_marginTop="5dp"
-        android:text="放心~ 这个不连接数据库的，我们看不到你的信息，格式：xx省 xx市"  />
+        android:text="放心~ 这个不连接数据库，信息不会泄露的"  />
 
 
 </LinearLayout>

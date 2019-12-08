@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     //zing 扫码
     private static final String DECODED_CONTENT_KEY = "codedContent";
     private static final String DECODED_BITMAP_KEY = "codedBitmap";
-    private static final int REQUEST_CODE_SCAN = 0x0000;
+    private static final int REQUEST_CODE_SCAN = 0x0100;
 
     private void goScan(){
         Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
@@ -222,7 +222,9 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                 String content = data.getStringExtra(DECODED_CONTENT_KEY);
                 //返回的BitMap图像
                 Bitmap bitmap = data.getParcelableExtra(DECODED_BITMAP_KEY);
-/*
+
+
+
                 if (isUrl(data.getStringExtra(DECODED_CONTENT_KEY))){
                     Intent intent = new Intent(MainActivity.this, WebViews.class);
                     String ur = data.getStringExtra(DECODED_CONTENT_KEY);  //传入的网址
@@ -234,7 +236,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                 else {
                     Toast.makeText(this, data.getStringExtra(DECODED_CONTENT_KEY), Toast.LENGTH_SHORT).show();
                 }
-*/
+
+
                 //Toast.makeText(this, data.getStringExtra(DECODED_CONTENT_KEY), Toast.LENGTH_SHORT).show();
                 //   tv_scanResult.setText("你扫描到的内容是：" + content);
             }

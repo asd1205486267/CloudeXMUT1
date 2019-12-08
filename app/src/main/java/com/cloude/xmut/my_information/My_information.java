@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ import com.cloude.xmut.R;
 
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -43,9 +45,13 @@ import com.cloude.xmut.change_person_information.ensure_age;
 import com.cloude.xmut.change_person_information.ensure_name;
 import com.cloude.xmut.change_person_information.ensure_self_sign;
 import com.cloude.xmut.change_person_information.ensure_sex;
+import com.cloude.xmut.love.MomentListActivity;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class My_information extends MainActivity {
 
@@ -73,6 +79,7 @@ public class My_information extends MainActivity {
         my_information_button();
         photo_select_button();
        delete_strict_model();
+
         ensure_namex();
         ensure_sexx();
         ensure_agex();
@@ -121,17 +128,11 @@ public class My_information extends MainActivity {
     }
 
     private void head_image(){
-        RoundImageView head_imageTV=(RoundImageView)findViewById(R.id.roundImageView);
-        SharedPreferences sp=getSharedPreferences("user_head_image",MODE_PRIVATE);
-        String head_image=sp.getString("head_image","");
-        Uri uri1 = Uri.parse(head_image);
-        try {
-            bitmap2 = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri1));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        head_imageTV.setImageBitmap(bitmap2);
+        RoundImageView roundImageView = (RoundImageView)findViewById(R.id.roundImageView);
+            String path = Environment.getExternalStorageDirectory() + "/w65/icon_bitmap/" + "myicon.jpg";
+            if (path != null) {
+                roundImageView.setImageBitmap(getDiskBitmap(path));
+            }
 
     }
 
@@ -156,15 +157,17 @@ public class My_information extends MainActivity {
             @Override
             public void onClick(View v) {
 
+                //PopupWindow----START-----这里开始到下面标记的地方是实现点击头像弹出PopupWindow，实现用户从PopupWindow中选择更换头像的方式
+
                 if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.CAMERA}, 5);
                 }
 
-                //PopupWindow----START-----这里开始到下面标记的地方是实现点击头像弹出PopupWindow，实现用户从PopupWindow中选择更换头像的方式
 
-                backgroundAlpha(0.3f);
-                View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.popu_view,null);
-                final PopupWindow popupWindow = new PopupWindow(view, ActionBar.LayoutParams.WRAP_CONTENT,ActionBar.LayoutParams.WRAP_CONTENT, true);
+
+                    backgroundAlpha(0.3f);
+                View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.popu_view, null);
+                final PopupWindow popupWindow = new PopupWindow(view, ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
                 popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 popupWindow.setOutsideTouchable(true);
                 popupWindow.setFocusable(true);
@@ -179,48 +182,51 @@ public class My_information extends MainActivity {
                 //PopupWindow-----END
 
 
-                //PopupWindow中对应的选择按钮
-                Button button = (Button)view.findViewById(R.id.take_photo);//通过拍照的方式
-                Button button1 = (Button)view.findViewById(R.id.all_photo);//通过相册的方式
-                Button button2 = (Button)view.findViewById(R.id.out);//取消按钮
-                button2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        backgroundAlpha(1f);
-                        popupWindow.dismiss();
-                    }
-                });
-                button1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        backgroundAlpha(1f);
-                        popupWindow.dismiss();
-                        //调用手机相册的方法,该方法在下面有具体实现
-                        allPhoto();
-                    }
-                });
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
 
-                        backgroundAlpha(1f);
+                        //PopupWindow中对应的选择按钮
+                        Button button = (Button) view.findViewById(R.id.take_photo);//通过拍照的方式
+                        Button button1 = (Button) view.findViewById(R.id.all_photo);//通过相册的方式
+                        Button button2 = (Button) view.findViewById(R.id.out);//取消按钮
+                        button2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                backgroundAlpha(1f);
+                                popupWindow.dismiss();
+                            }
+                        });
+                        button1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.WRITE_EXTERNAL_STORAGE ) != PackageManager.PERMISSION_GRANTED) {
+                                    ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 5);
+                                }
+                                backgroundAlpha(1f);
+                                popupWindow.dismiss();
+                                //调用手机相册的方法,该方法在下面有具体实现
+                                allPhoto();
+                            }
+                        });
+                        button.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                backgroundAlpha(1f);
 
-                        popupWindow.dismiss();
-                        //调用手机照相机的方法,通过Intent调用系统相机完成拍照，并调用系统裁剪器裁剪照片
-                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                        //创建文件路径,头像保存的路径
-                        File file =FileUitlity.getInstance(getApplicationContext()).makeDir("head_image");
-                        //定义图片路径和名称
-                        path0 = file.getParent() + "/head_image/" + System.currentTimeMillis() + ".jpg";
-                        //图片质量
-                        intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
-                        //保存图片到Intent中，并通过Intent将照片传给系统裁剪器
-                        uri1=Uri.fromFile(new File(path0));
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, uri1);
-                        //启动有返回的Intent，即返回裁剪好的图片到RoundImageView组件中显示
-                        startActivityForResult(intent,photo_1 );
-                    }
-                });
+                                popupWindow.dismiss();
+                                //调用手机照相机的方法,通过Intent调用系统相机完成拍照，并调用系统裁剪器裁剪照片
+                                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                //创建文件路径,头像保存的路径
+                                File file = FileUitlity.getInstance(getApplicationContext()).makeDir("head_image");
+                                //定义图片路径和名称
+                                path0 = file.getParent() + "/head_image/" + System.currentTimeMillis() + ".jpg";
+                                //图片质量
+                                intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+                                //保存图片到Intent中，并通过Intent将照片传给系统裁剪器
+                                uri1 = Uri.fromFile(new File(path0));
+                                intent.putExtra(MediaStore.EXTRA_OUTPUT, uri1);
+                                //启动有返回的Intent，即返回裁剪好的图片到RoundImageView组件中显示
+                                startActivityForResult(intent, photo_1);
+                            }
+                        });
             }
         });
 
@@ -253,9 +259,8 @@ public class My_information extends MainActivity {
         love_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));//支付宝店铺码。
-
+                Intent intent = new Intent(My_information.this, MomentListActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -263,12 +268,8 @@ public class My_information extends MainActivity {
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(Post_to_login.ress!=null) {
-//                    Intent intent = new Intent(My_information.this, My_information.class);
-//                    startActivity(intent);
-//                }else{
-//
-//                }
+              Intent intent = new Intent(My_information.this, My_information.class);
+               startActivity(intent);
             }
         });
 
@@ -326,6 +327,84 @@ public class My_information extends MainActivity {
             }
         });
 
+        Button change_head_image_button = (Button) findViewById(R.id.head_button);  //修改头像
+        change_head_image_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.CAMERA}, 5);
+                }
+
+
+                //PopupWindow----START-----这里开始到下面标记的地方是实现点击头像弹出PopupWindow，实现用户从PopupWindow中选择更换头像的方式
+
+                backgroundAlpha(0.3f);
+                View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.popu_view,null);
+                final PopupWindow popupWindow = new PopupWindow(view, ActionBar.LayoutParams.WRAP_CONTENT,ActionBar.LayoutParams.WRAP_CONTENT, true);
+                popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popupWindow.setOutsideTouchable(true);
+                popupWindow.setFocusable(true);
+                //获取屏幕宽度
+                DisplayMetrics dm = new DisplayMetrics();
+                getWindowManager().getDefaultDisplay().getMetrics(dm);
+                popupWindow.setWidth(dm.widthPixels);
+                popupWindow.setAnimationStyle(R.style.AnimHorizontal);
+                //显示位置
+                popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+                popupWindow.setOnDismissListener(new poponDismissListener());
+                //PopupWindow-----END
+
+
+                //PopupWindow中对应的选择按钮
+                Button button = (Button)view.findViewById(R.id.take_photo);//通过拍照的方式
+                Button button1 = (Button)view.findViewById(R.id.all_photo);//通过相册的方式
+                Button button2 = (Button)view.findViewById(R.id.out);//取消按钮
+                button2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        backgroundAlpha(1f);
+                        popupWindow.dismiss();
+                    }
+                });
+                button1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                            ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 6);
+                        }
+
+                        backgroundAlpha(1f);
+                        popupWindow.dismiss();
+                        //调用手机相册的方法,该方法在下面有具体实现
+                        allPhoto();
+                    }
+                });
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        backgroundAlpha(1f);
+
+                        popupWindow.dismiss();
+                        //调用手机照相机的方法,通过Intent调用系统相机完成拍照，并调用系统裁剪器裁剪照片
+                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        //创建文件路径,头像保存的路径
+                        File file =FileUitlity.getInstance(getApplicationContext()).makeDir("head_image");
+                        //定义图片路径和名称
+                        path0 = file.getParent() + "/head_image/" + System.currentTimeMillis() + ".jpg";
+                        //图片质量
+                        intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+                        //保存图片到Intent中，并通过Intent将照片传给系统裁剪器
+                        uri1=Uri.fromFile(new File(path0));
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, uri1);
+                        //启动有返回的Intent，即返回裁剪好的图片到RoundImageView组件中显示
+                        startActivityForResult(intent,photo_1 );
+                    }
+                });
+            }
+        });
 
 
     }
@@ -397,13 +476,6 @@ public class My_information extends MainActivity {
         //这个参数的意思就是输出文件到本地
 
         imageCropUri = Uri.parse("file://" + "/" + Environment.getExternalStorageDirectory().getPath() + "/" + "small.jpg");
-        pathm=getPath(My_information.this,imageCropUri);
-
-
-        SharedPreferences sp = getSharedPreferences("user_head_image", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putString("head_image", pathm);
-        editor.commit();
 
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);
 
@@ -427,23 +499,6 @@ public class My_information extends MainActivity {
     //    startActivityForResult(intent,photo_2);
     }
 
-//Uri转为String
-private String getPath(Context context, Uri uri) {
-    String path = null;
-    Cursor cursor = context.getContentResolver().query(uri, null, null, null, null);
-    if (cursor == null) {
-        return null;
-    }
-    if (cursor.moveToFirst()) {
-        try {
-            path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    cursor.close();
-    return path;
-}
 
 
 
@@ -505,12 +560,14 @@ private String getPath(Context context, Uri uri) {
 
 
 
+            Bitmap bp = getBitmap();
             try {
-                bitmap1 = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageCropUri));
-            } catch (FileNotFoundException e) {
+                saveFile(bp);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-            roundImageView.setImageBitmap(bitmap1);
+
+            roundImageView.setImageBitmap(bp);
         /*
             //设置裁剪返回的位图
             Bundle bundle = data.getExtras();
@@ -524,116 +581,65 @@ private String getPath(Context context, Uri uri) {
         }
 
 
-
         super.onActivityResult(requestCode, resultCode, data);
+
     }
+
+    // 将uri转换为bitmap
+    public Bitmap getBitmap() {
+        try {
+            bitmap1 = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageCropUri));
+            bitmap1= ThumbnailUtils.extractThumbnail(bitmap1, 300, 300);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return bitmap1;
+    }
+
+
+
 
 
 
     /**
-     * 根据图片的Uri获取图片的绝对路径。@uri 图片的uri
-     * @return 如果Uri对应的图片存在,那么返回该图片的绝对路径,否则返回null
+     * 保存文件
      */
-
-    public static String getRealPathFromUri(Context context, Uri uri) {
-        if(context == null || uri == null) {
-            return null;
+    public File saveFile(Bitmap bm) throws IOException {
+        String path = Environment.getExternalStorageDirectory().toString()+"/w65/icon_bitmap/";
+        File dirFile = new File(path);
+        if(!dirFile.exists()){
+            dirFile.mkdirs();
         }
-        if("file".equalsIgnoreCase(uri.getScheme())) {
-            return getRealPathFromUri_Byfile(context,uri);
-        } else if("content".equalsIgnoreCase(uri.getScheme())) {
-            return getRealPathFromUri_Api11To18(context,uri);
-        }
-//        int sdkVersion = Build.VERSION.SDK_INT;
-//        if (sdkVersion < 11) {
-//            // SDK < Api11
-//            return getRealPathFromUri_BelowApi11(context, uri);
-//        }
-////        if (sdkVersion < 19) {
-////             SDK > 11 && SDK < 19
-////            return getRealPathFromUri_Api11To18(context, uri);
-//            return getRealPathFromUri_ByXiaomi(context, uri);
-////        }
-//        // SDK > 19
-        return getRealPathFromUri_AboveApi19(context, uri);//没用到
-    }
-
-    //针对图片URI格式为Uri:: file:///storage/emulated/0/DCIM/Camera/IMG_20170613_132837.jpg
-    private static String getRealPathFromUri_Byfile(Context context,Uri uri){
-        String uri2Str = uri.toString();
-        String filePath = uri2Str.substring(uri2Str.indexOf(":") + 3);
-        return filePath;
+        File myIconFile= new File(path + "myicon.jpg");
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(myIconFile));
+        bm.compress(Bitmap.CompressFormat.JPEG, 80, bos);
+        bos.flush();
+        bos.close();
+        return myIconFile;
     }
 
     /**
-     * 适配api19以上,根据uri获取图片的绝对路径
+     * 从本地获取图片
+     * @param pathString 文件路径
+     * @return 图片
      */
-    @SuppressLint("NewApi")
-    private static String getRealPathFromUri_AboveApi19(Context context, Uri uri) {
-        String filePath = null;
-        String wholeID = null;
-
-        wholeID = DocumentsContract.getDocumentId(uri);
-
-        // 使用':'分割
-        String id = wholeID.split(":")[1];
-
-        String[] projection = { MediaStore.Images.Media.DATA };
-        String selection = MediaStore.Images.Media._ID + "=?";
-        String[] selectionArgs = { id };
-
-        Cursor cursor = context.getContentResolver().query(
-                MediaStore.Images.Media.EXTERNAL_CONTENT_URI, projection,
-                selection, selectionArgs, null);
-        int columnIndex = cursor.getColumnIndex(projection[0]);
-
-        if (cursor.moveToFirst()) {
-            filePath = cursor.getString(columnIndex);
+    public Bitmap getDiskBitmap(String pathString)
+    {
+        Bitmap bitmap = null;
+        try
+        {
+            File file = new File(pathString);
+            if(file.exists())
+            {
+                bitmap = BitmapFactory.decodeFile(pathString);
+            }
+        } catch (Exception e)
+        {
+            // TODO: handle exception
         }
-        cursor.close();
-        return filePath;
+        return bitmap;
     }
-
-    /**
-     * //适配api11-api18,根据uri获取图片的绝对路径。
-     * 针对图片URI格式为Uri:: content://media/external/images/media/1028
-     */
-    private static String getRealPathFromUri_Api11To18(Context context, Uri uri) {
-        String filePath = null;
-        String[] projection = { MediaStore.Images.Media.DATA };
-
-        CursorLoader loader = new CursorLoader(context, uri, projection, null,
-                null, null);
-        Cursor cursor = loader.loadInBackground();
-
-        if (cursor != null) {
-            cursor.moveToFirst();
-            filePath = cursor.getString(cursor.getColumnIndex(projection[0]));
-            cursor.close();
-        }
-        return filePath;
-    }
-
-    /**
-     * 适配api11以下(不包括api11),根据uri获取图片的绝对路径
-     */
-    private static String getRealPathFromUri_BelowApi11(Context context, Uri uri) {
-        String filePath = null;
-        String[] projection = { MediaStore.Images.Media.DATA };
-        Cursor cursor = context.getContentResolver().query(uri, projection,
-                null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
-            filePath = cursor.getString(cursor.getColumnIndex(projection[0]));
-            cursor.close();
-        }
-        return filePath;
-    }
-
-
-
-
-
 
 
 
