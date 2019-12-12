@@ -295,8 +295,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
                                 case 6:
-                                    Intent i = new Intent(MainActivity.this,phone_school.class);
-                                    startActivity(i);
+                                    ur = "http://ehall.xmut.edu.cn/";  //传入的网址
+                                    bundle.putString("ur", ur);  //内容，名字
                                     break;
                            /*     case 7:
                                     ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
@@ -308,8 +308,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     break;*/
                             }
                             intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
-                            if (index!=6)
-                                startActivity(intent);
+                            startActivity(intent);
                         }
                     })
                     .normalImageRes(getImageResource_school_innet())
@@ -323,7 +322,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         return text_school_innet[index_school_innet++];
     }
     private static String [] text_school_innet = new String[]{"教务系统","课程中心","实验中心"
-            ,"图书馆","志愿者","信息门户","办公电话"
+            ,"图书馆","志愿者","信息门户","学工处"
     };
     private static int imageResourceIndex_school_innet = 0;
     static int getImageResource_school_innet() {
@@ -337,7 +336,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             R.drawable.library_small,
             R.drawable.lovehand_small,
             R.drawable.id_card_small,
-            R.drawable.phone_small
+            R.drawable.high_school_small
     };
 
     /**********                           上面为第一个按钮  下面为第二个按钮                            *********/
@@ -385,12 +384,13 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     ur = "http://3d.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
-                            /*    case 8:
-                                    ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
-                                    bundle.putString("ur", ur);  //内容，名字
-                                    break;*/
+                                case 8:
+                                    Intent i = new Intent(MainActivity.this,phone_school.class);
+                                    startActivity(i);
+                                    break;
                             }
                             intent.putExtra("url", bundle);  //总体名字，BUNDLE名字
+                            if(index!=8)
                             startActivity(intent);
                         }
                     })
@@ -405,7 +405,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         return text_school_outnet[index_school_outnet++];
     }
     private static String [] text_school_outnet = new String[]{"教务系统","信息门户","资源中心"
-            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工",//"理工新闻"
+            ,"理工校历","文化集市","小吐槽","乐帮帮","全景理工","办公电话"
     };
     private static int imageResourceIndex_school_outnet = 0;
     static int getImageResource_school_outnet() {
@@ -421,7 +421,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             R.drawable.view_eye_small,
             R.drawable.hands_small,
             R.drawable.map_small,
-            //  R.drawable.news_small
+            R.drawable.phone_small
     };
 
     /**********                           上面为第二个按钮  下面为第三个按钮                            *********/
