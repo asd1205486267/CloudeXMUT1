@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.cloude.xmut.R;
 import com.cloude.xmut.model.Moment;
+import com.cloude.xmut.my_information.My_information;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -81,7 +82,6 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     private void addNetImageTestData() {
          List<Moment> moments=new ArrayList<>();
         moments.add(new Moment("1张网络图片", new ArrayList<>(Arrays.asList("https://github.com/XMUT123/1245/blob/master/1.jpg"))));
-        ArrayList<String> photos = new ArrayList<>();
 
 
         //mMoment  Adapter.setData(moments);
@@ -90,8 +90,8 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     public void onClick(View v) {
         if (v.getId() == R.id.tv_moment_list_add) {
             startActivityForResult(new Intent(this, MomentAddActivity.class), RC_ADD_MOMENT);
-        } else if (v.getId() == R.id.tv_moment_add_choice_photo) {
-
+        } else if (v.getId() == R.id.iv_item_moment_avatar) {
+            startActivityForResult(new Intent(this, My_information.class), RC_ADD_MOMENT);
         }
     }
 
@@ -170,7 +170,8 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
 
     @Override
     public void onRVItemClick(ViewGroup viewGroup, View view, int position) {
-        Toast.makeText(this, "点击了item " + position, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "点击了item " + position, Toast.LENGTH_SHORT).show();
+        startActivityForResult(new Intent(this, My_information.class), RC_ADD_MOMENT);
     }
 
     @Override

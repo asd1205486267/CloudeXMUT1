@@ -6,8 +6,6 @@
         style="@style/MatchWrap.Vertical"
         android:gravity="center_vertical">
 
-
-
         <TextView
             android:id="@+id/tv_moment_list_add"
             style="@style/MatchWrapTv"

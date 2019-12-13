@@ -19,7 +19,7 @@
         android:layout_toRightOf="@id/iv_item_moment_avatar"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="name"
+        android:text="XMUT"
         android:textColor="#707EA3"
         android:textSize="15sp"/>
 
