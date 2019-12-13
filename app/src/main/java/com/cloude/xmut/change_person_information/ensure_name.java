@@ -3,6 +3,8 @@ package com.cloude.xmut.change_person_information;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,7 +18,10 @@ import androidx.core.app.NavUtils;
 
 import com.cloude.xmut.MainActivity;
 import com.cloude.xmut.R;
+import com.cloude.xmut.httpClient.Post_to_updateinfo;
 import com.cloude.xmut.my_information.My_information;
+
+import java.io.IOException;
 
 
 public class ensure_name extends My_information {
@@ -58,15 +63,46 @@ public class ensure_name extends My_information {
     public void ensure_name_button() {
 
         final EditText nameET=(EditText)findViewById(R.id.change_name_t);
-                String username1=nameET.getText().toString();
+                final String username1=nameET.getText().toString();
                 if(!"".equals(username1)) {
                     SharedPreferences sp = getSharedPreferences("username", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
                     editor.putString("name", username1);
                     editor.commit();
-                    Intent intent = new Intent();
-                    intent.setClass(ensure_name.this, My_information.class);
-                    startActivity(intent);
+                    final Handler myHandler = new Handler(){
+                        public void handleMessage(Message msg){
+                            String responseResult = (String)msg.obj;
+                            //更新失败
+                            if(responseResult.equals("false")){
+                                System.out.print("fail");
+                            }
+                            //更新成功
+                            else if(responseResult.equals("true")){
+                                Intent intent = new Intent();
+                                intent.setClass(ensure_name.this, My_information.class);
+                                startActivity(intent);
+                            }
+                        }
+                    };
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Post_to_updateinfo guestToServer_1 = new Post_to_updateinfo();
+                            try {
+                                SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
+                                String p=sp.getString("uname","000");
+                                String result = guestToServer_1.doPost(username1, "1",p);
+                                Message msg = new Message();
+                                msg.obj = result;
+                                myHandler.sendMessage(msg);
+
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+
+
                 }
 
                 else{
