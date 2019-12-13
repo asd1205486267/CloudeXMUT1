@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="34dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide1"
         android:layout_marginLeft="5dp"
         android:text="头像"   />
 
@@ -32,7 +32,7 @@
         android:background="@color/nocolor"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"  />
 
 
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/divide1"
         app:layout_constraintTop_toTopOf="@id/divide1"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide2"
         android:layout_marginLeft="5dp"
         android:text="昵称"   />
 
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/divide1"
         app:layout_constraintTop_toTopOf="@id/divide1"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide2"
         android:layout_marginRight="20dp"
           />
 
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/divide2"
         app:layout_constraintTop_toTopOf="@id/divide2"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide3"
         android:layout_marginLeft="5dp"
         android:text="性别"   />
 
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/divide2"
         app:layout_constraintTop_toTopOf="@id/divide2"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide3"
         android:layout_marginRight="20dp"
         />
     <View
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/divide3"
         app:layout_constraintTop_toTopOf="@id/divide3"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide4"
         android:layout_marginLeft="5dp"
         android:text="年龄"   />
 
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/divide3"
         app:layout_constraintTop_toTopOf="@id/divide3"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide4"
         android:layout_marginRight="20dp"
          />
     <View
@@ -157,7 +157,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/divide4"
         app:layout_constraintTop_toTopOf="@id/divide4"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide5"
         android:layout_marginLeft="5dp"
         android:text="地区"   />
 
@@ -170,7 +170,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/divide4"
         app:layout_constraintTop_toTopOf="@id/divide4"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide5"
         android:layout_marginRight="20dp"
        />
     <View
@@ -190,7 +190,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/divide5"
         app:layout_constraintTop_toTopOf="@id/divide5"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide6"
         android:layout_marginLeft="16dp"
         android:text="个性签名"   />
 
@@ -203,7 +203,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/divide5"
         app:layout_constraintTop_toTopOf="@id/divide5"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/divide6"
         android:layout_marginRight="20dp"
         />
     <View
@@ -225,7 +225,7 @@
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="@id/divide6"
         app:layout_constraintLeft_toLeftOf="@id/divide6"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="5dp"
         android:text="退出"
         android:textSize="20sp"  />
@@ -234,6 +234,7 @@
 
     <include
         layout="@layout/home_main"
+        android:id="@+id/home_main1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent" />
