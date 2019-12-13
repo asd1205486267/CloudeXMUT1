@@ -5,12 +5,12 @@ import android.view.View;
 
 import java.io.IOException;
 
-import jiguang.chat.R;
-import jiguang.chat.model.Constants;
-import jiguang.chat.utils.ImageLoadUtils;
-import jiguang.chat.utils.keyboard.data.EmoticonEntity;
-import jiguang.chat.utils.keyboard.data.EmoticonPageEntity;
-import jiguang.chat.utils.keyboard.interfaces.EmoticonClickListener;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.model.Constants;
+import com.cloude.xmut.chat.utils.ImageLoadUtils;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonPageEntity;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonClickListener;
 
 
 public class BigEmoticonsAndTitleAdapter extends BigEmoticonsAdapter {

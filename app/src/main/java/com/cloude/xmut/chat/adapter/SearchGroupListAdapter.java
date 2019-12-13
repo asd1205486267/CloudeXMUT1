@@ -11,9 +11,9 @@ import java.util.List;
 
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
-import jiguang.chat.utils.pinyin.CharacterParser;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.chat.utils.pinyin.CharacterParser;
 
 /**
  * Created by ${chenyn} on 2017/5/2.

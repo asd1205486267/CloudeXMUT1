@@ -5,10 +5,11 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
+
+import androidx.fragment.app.Fragment;
 
 import java.io.File;
 
@@ -16,12 +17,13 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.event.LoginStateChangeEvent;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.LoginActivity;
-import jiguang.chat.activity.MainActivity;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.FileHelper;
-import jiguang.chat.utils.SharePreferenceManager;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.LoginActivity;
+import com.cloude.xmut.chat.activity.MainActivity;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.FileHelper;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

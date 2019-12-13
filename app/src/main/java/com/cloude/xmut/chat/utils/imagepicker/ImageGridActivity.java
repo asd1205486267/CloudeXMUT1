@@ -7,10 +7,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -18,18 +15,23 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.adapter.ImageFolderAdapter;
-import jiguang.chat.utils.imagepicker.adapter.ImageRecyclerAdapter;
-import jiguang.chat.utils.imagepicker.bean.ImageFolder;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.imagepicker.util.BitmapUtil;
-import jiguang.chat.utils.imagepicker.view.FolderPopUpWindow;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.adapter.ImageFolderAdapter;
+import com.cloude.xmut.chat.utils.imagepicker.adapter.ImageRecyclerAdapter;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageFolder;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.util.BitmapUtil;
+import com.cloude.xmut.chat.utils.imagepicker.view.FolderPopUpWindow;
 
 
 public class ImageGridActivity extends ImageBaseActivity implements ImageDataSource.OnImagesLoadedListener,

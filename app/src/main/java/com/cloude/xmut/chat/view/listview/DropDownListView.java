@@ -20,8 +20,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.IdHelper;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.IdHelper;
 
 
 public class DropDownListView extends ListView implements OnScrollListener {

@@ -16,8 +16,8 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import cn.jpush.im.android.api.JMessageClient;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
 
 
 public class FileHelper {

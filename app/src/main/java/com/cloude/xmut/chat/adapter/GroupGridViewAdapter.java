@@ -15,9 +15,9 @@ import java.util.List;
 
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.GroupGridViewActivity;
-import jiguang.chat.utils.BitmapLoader;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.GroupGridViewActivity;
+import com.cloude.xmut.chat.utils.BitmapLoader;
 
 /**
  * Created by ${chenyn} on 2017/5/8.

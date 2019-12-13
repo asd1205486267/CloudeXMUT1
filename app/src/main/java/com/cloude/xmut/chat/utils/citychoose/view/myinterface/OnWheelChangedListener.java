@@ -17,7 +17,7 @@
 package com.cloude.xmut.chat.utils.citychoose.view.myinterface;
 
 
-import jiguang.chat.utils.citychoose.view.WheelView;
+import com.cloude.xmut.chat.utils.citychoose.view.WheelView;
 
 /**
  * Wheel changed listener interface.

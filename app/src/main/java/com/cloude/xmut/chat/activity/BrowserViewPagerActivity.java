@@ -12,8 +12,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.provider.MediaStore;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseBooleanArray;
@@ -30,7 +29,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.squareup.picasso.Picasso;
+
+import androidx.viewpager.widget.ViewPager;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
@@ -46,15 +46,15 @@ import cn.jpush.im.android.api.enums.ContentType;
 import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.pickerimage.utils.AttachmentStore;
-import jiguang.chat.pickerimage.utils.StorageUtil;
-import jiguang.chat.utils.BitmapLoader;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.NativeImageLoader;
-import jiguang.chat.view.ImgBrowserViewPager;
-import jiguang.chat.view.PhotoView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.pickerimage.utils.AttachmentStore;
+import com.cloude.xmut.chat.pickerimage.utils.StorageUtil;
+import com.cloude.xmut.chat.utils.BitmapLoader;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.NativeImageLoader;
+import com.cloude.xmut.chat.view.ImgBrowserViewPager;
+import com.cloude.xmut.chat.view.PhotoView;
 
 
 //用于浏览图片
@@ -416,7 +416,7 @@ public class BrowserViewPagerActivity extends BaseActivity {
         }
     }
 
-    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
+    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager().OnPageChangeListener() {
         //在滑动的时候更新CheckBox的状态
         @Override
         public void onPageScrolled(final int i, float v, int i2) {

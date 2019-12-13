@@ -13,7 +13,7 @@ import android.widget.ListAdapter;
 import java.util.LinkedList;
 import java.util.List;
 
-import jiguang.chat.view.CheckableWrapperView;
+import com.cloude.xmut.chat.view.CheckableWrapperView;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 

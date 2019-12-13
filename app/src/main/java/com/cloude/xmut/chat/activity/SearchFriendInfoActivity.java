@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import jiguang.chat.R;
-import jiguang.chat.model.InfoModel;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.model.InfoModel;
 
 /**
  * Created by ${chenyn} on 2017/3/14.

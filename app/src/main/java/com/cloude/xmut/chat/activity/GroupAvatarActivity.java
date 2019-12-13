@@ -14,9 +14,9 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
-import jiguang.chat.R;
-import jiguang.chat.utils.photochoose.ChoosePhoto;
-import jiguang.chat.utils.photochoose.PhotoUtils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.photochoose.ChoosePhoto;
+import com.cloude.xmut.chat.utils.photochoose.PhotoUtils;
 
 /**
  * Created by ${chenyn} on 2017/9/18.

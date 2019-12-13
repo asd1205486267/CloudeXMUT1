@@ -1,20 +1,23 @@
 package com.cloude.xmut.chat.controller;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+
 import android.view.View;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.MainActivity;
-import jiguang.chat.activity.fragment.ChatRoomFragment;
-import jiguang.chat.activity.fragment.ContactsFragment;
-import jiguang.chat.activity.fragment.ConversationListFragment;
-import jiguang.chat.activity.fragment.MeFragment;
-import jiguang.chat.adapter.ViewPagerAdapter;
-import jiguang.chat.view.MainView;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.MainActivity;
+import com.cloude.xmut.chat.activity.fragment.ChatRoomFragment;
+import com.cloude.xmut.chat.activity.fragment.ContactsFragment;
+import com.cloude.xmut.chat.activity.fragment.ConversationListFragment;
+import com.cloude.xmut.chat.activity.fragment.MeFragment;
+import com.cloude.xmut.chat.adapter.ViewPagerAdapter;
+import com.cloude.xmut.chat.view.MainView;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

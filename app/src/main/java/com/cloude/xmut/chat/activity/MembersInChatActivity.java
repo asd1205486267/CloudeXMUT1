@@ -39,15 +39,15 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.AllMembersAdapter;
-import jiguang.chat.adapter.CreateGroupAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.pinyin.HanyuPinyin;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.AllMembersAdapter;
+import com.cloude.xmut.chat.adapter.CreateGroupAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.pinyin.HanyuPinyin;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
 
 public class MembersInChatActivity extends BaseActivity {
 

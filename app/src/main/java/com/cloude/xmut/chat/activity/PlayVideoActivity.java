@@ -9,7 +9,7 @@ import android.widget.VideoView;
 import java.io.File;
 import java.util.ArrayList;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class PlayVideoActivity extends BaseActivity {

@@ -12,7 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 /**

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.List;
 
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.chat.application.JGApplication;
 
 
 public class BitmapLoader {

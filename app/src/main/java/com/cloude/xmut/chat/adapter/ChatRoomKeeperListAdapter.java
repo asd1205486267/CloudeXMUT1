@@ -21,12 +21,12 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.ChatRoomKeeperActivity;
-import jiguang.chat.activity.GroupUserInfoActivity;
-import jiguang.chat.activity.PersonalActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.ChatRoomKeeperActivity;
+import com.cloude.xmut.chat.activity.GroupUserInfoActivity;
+import com.cloude.xmut.chat.activity.PersonalActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
 
 public class ChatRoomKeeperListAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
     private List<ChatRoomKeeperActivity.ItemModel> keepers;

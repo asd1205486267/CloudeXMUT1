@@ -4,8 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ViewDragHelper;
+
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -18,12 +17,15 @@ import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 
+import androidx.core.view.ViewCompat;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.swipeback.ViewDragHelper;
 
 
 public class SwipeLayoutConv extends FrameLayout {

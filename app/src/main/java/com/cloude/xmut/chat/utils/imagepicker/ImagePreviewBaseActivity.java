@@ -8,11 +8,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.adapter.ImagePageAdapter;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.imagepicker.util.Utils;
-import jiguang.chat.utils.imagepicker.view.ViewPagerFixed;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.adapter.ImagePageAdapter;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.util.Utils;
+import com.cloude.xmut.chat.utils.imagepicker.view.ViewPagerFixed;
 
 
 public abstract class ImagePreviewBaseActivity extends ImageBaseActivity {

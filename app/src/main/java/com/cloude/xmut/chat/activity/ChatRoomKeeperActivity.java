@@ -26,12 +26,12 @@ import cn.jpush.im.android.api.ChatRoomManager;
 import cn.jpush.im.android.api.callback.RequestCallback;
 import cn.jpush.im.android.api.event.ChatRoomNotificationEvent;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.adapter.ChatRoomKeeperListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.pinyin.HanyuPinyin;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.ChatRoomKeeperListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.pinyin.HanyuPinyin;
 
 public class ChatRoomKeeperActivity extends BaseActivity {
     private TextView mTvNullKeeper;

@@ -1,15 +1,17 @@
 package com.cloude.xmut.chat.view;
 
 import android.content.Context;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+
 import android.util.AttributeSet;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.SharePreferenceManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

@@ -10,10 +10,10 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.keyboard.data.EmoticonPageEntity;
-import jiguang.chat.utils.keyboard.interfaces.EmoticonClickListener;
-import jiguang.chat.utils.keyboard.interfaces.EmoticonDisplayListener;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonPageEntity;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonClickListener;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonDisplayListener;
 
 public class EmoticonsAdapter<T> extends BaseAdapter {
 

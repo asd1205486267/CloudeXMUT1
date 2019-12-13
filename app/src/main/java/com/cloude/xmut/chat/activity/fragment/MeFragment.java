@@ -13,12 +13,13 @@ import android.view.ViewGroup;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.LoginActivity;
-import jiguang.chat.controller.MeController;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.view.MeView;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.LoginActivity;
+import com.cloude.xmut.chat.controller.MeController;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.view.MeView;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

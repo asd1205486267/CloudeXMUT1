@@ -40,16 +40,16 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.activity.GroupNotFriendActivity;
-import jiguang.chat.activity.PersonalActivity;
-import jiguang.chat.activity.receiptmessage.ReceiptMessageListActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.controller.ChatItemController;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.TimeFormat;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.activity.GroupNotFriendActivity;
+import com.cloude.xmut.chat.activity.PersonalActivity;
+import com.cloude.xmut.chat.activity.receiptmessage.ReceiptMessageListActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.controller.ChatItemController;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.TimeFormat;
 
 public class ChattingListAdapter extends BaseAdapter {
 

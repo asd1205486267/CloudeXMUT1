@@ -17,8 +17,8 @@ import android.widget.Toast;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
-import jiguang.chat.R;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
 
 /**
  * Created by ${chenyn} on 2017/11/6.

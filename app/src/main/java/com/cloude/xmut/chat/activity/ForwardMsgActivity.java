@@ -20,11 +20,11 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.ForwardMsgAdapter;
-import jiguang.chat.controller.ActivityController;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.ForwardMsgAdapter;
+import com.cloude.xmut.chat.controller.ActivityController;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
 
 
 /**

@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +13,22 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import java.util.List;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.ApplyGroupInfoActivity;
-import jiguang.chat.activity.GroupInfoActivity;
-import jiguang.chat.adapter.GroupVerificationAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.GroupApplyEntry;
-import jiguang.chat.database.RefuseGroupEntry;
-import jiguang.chat.database.UserEntry;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.ApplyGroupInfoActivity;
+import com.cloude.xmut.chat.activity.GroupInfoActivity;
+import com.cloude.xmut.chat.adapter.GroupVerificationAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.GroupApplyEntry;
+import com.cloude.xmut.chat.database.RefuseGroupEntry;
+import com.cloude.xmut.chat.database.UserEntry;
 
 /**
  * Created by ${chenyn} on 2017/11/7.

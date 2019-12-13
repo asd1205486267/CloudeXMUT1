@@ -20,8 +20,8 @@ import java.util.List;
 import cn.jpush.im.android.api.ChatRoomManager;
 import cn.jpush.im.android.api.callback.RequestCallback;
 import cn.jpush.im.android.api.model.ChatRoomInfo;
-import jiguang.chat.R;
-import jiguang.chat.utils.CommonUtils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.CommonUtils;
 
 /**
  * Created by ${chenyn} on 2017/11/9.

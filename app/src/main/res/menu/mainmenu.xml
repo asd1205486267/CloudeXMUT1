@@ -16,5 +16,6 @@
         app:showAsAction="always"
         android:icon="@drawable/scan_mainicon" />
 
+  
 
 </menu>

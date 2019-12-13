@@ -3,7 +3,7 @@ package com.cloude.xmut.chat.activity.historyfile.view;
 
 import java.util.Comparator;
 
-import jiguang.chat.entity.FileItem;
+import com.cloude.xmut.chat.entity.FileItem;
 
 public class YMComparator implements Comparator<FileItem> {
 

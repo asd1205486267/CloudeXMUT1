@@ -2,13 +2,15 @@ package com.cloude.xmut.chat.activity.historyfile.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.historyfile.controller.HistoryFileController;
-import jiguang.chat.activity.historyfile.view.HistoryFileView;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.historyfile.controller.HistoryFileController;
+import com.cloude.xmut.chat.activity.historyfile.view.HistoryFileView;
+
+import cn.jmessage.support.annotation.Nullable;
 
 /**
  * Created by ${chenyn} on 2017/8/23.

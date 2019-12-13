@@ -11,8 +11,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import cn.jpush.im.android.api.model.ChatRoomInfo;
-import jiguang.chat.R;
-import jiguang.chat.view.ChatRoomView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.view.ChatRoomView;
 
 /**
  * Created by ${chenyn} on 2017/10/31.

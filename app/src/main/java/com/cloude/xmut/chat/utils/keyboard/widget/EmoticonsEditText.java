@@ -8,8 +8,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.utils.RichEditText;
-import jiguang.chat.utils.keyboard.interfaces.EmoticonFilter;
+import com.cloude.xmut.chat.utils.RichEditText;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonFilter;
 
 public class EmoticonsEditText extends RichEditText {
 

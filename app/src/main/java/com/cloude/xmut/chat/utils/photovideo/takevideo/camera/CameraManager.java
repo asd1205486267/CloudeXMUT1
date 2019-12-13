@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.utils.photovideo.takevideo.utils.LogUtils;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.utils.LogUtils;
 
 
 /**

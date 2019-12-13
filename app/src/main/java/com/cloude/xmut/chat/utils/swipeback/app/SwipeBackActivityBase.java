@@ -1,7 +1,7 @@
 package com.cloude.xmut.chat.utils.swipeback.app;
 
 
-import jiguang.chat.utils.swipeback.SwipeBackLayout;
+import com.cloude.xmut.chat.utils.swipeback.SwipeBackLayout;
 
 
 public interface SwipeBackActivityBase {

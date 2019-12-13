@@ -19,11 +19,11 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.VideoAdapter;
-import jiguang.chat.controller.SendFileController;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.view.SendVideoView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.VideoAdapter;
+import com.cloude.xmut.chat.controller.SendFileController;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.view.SendVideoView;
 
 
 public class VideoFragment extends BaseFragment {

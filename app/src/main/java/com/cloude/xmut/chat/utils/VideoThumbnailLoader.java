@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import java.io.File;
 
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.chat.application.JGApplication;
 
 
 public class VideoThumbnailLoader {

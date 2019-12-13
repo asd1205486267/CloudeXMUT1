@@ -3,18 +3,20 @@ package com.cloude.xmut.chat.utils.imagepicker;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.Loader;
+
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.bean.ImageFolder;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageFolder;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
 
 public class ImageDataSource implements LoaderManager.LoaderCallbacks<Cursor> {
 

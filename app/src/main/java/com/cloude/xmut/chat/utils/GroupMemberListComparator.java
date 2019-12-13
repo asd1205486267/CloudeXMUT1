@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.utils.pinyin.HanziToPinyin;
+import com.cloude.xmut.chat.utils.pinyin.HanziToPinyin;
 
 /**
  * Created by ${chenyn} on 2017/11/3.

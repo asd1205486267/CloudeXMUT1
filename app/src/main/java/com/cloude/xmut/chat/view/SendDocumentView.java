@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.DocumentAdapter;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.DocumentAdapter;
 
 
 public class SendDocumentView extends LinearLayout {

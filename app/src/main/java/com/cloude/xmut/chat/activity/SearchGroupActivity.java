@@ -33,12 +33,12 @@ import java.util.concurrent.TimeUnit;
 
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.model.SearchResult;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
-import jiguang.chat.utils.pinyin.CharacterParser;
-import jiguang.chat.utils.query.TextSearcher;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.model.SearchResult;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.chat.utils.pinyin.CharacterParser;
+import com.cloude.xmut.chat.utils.query.TextSearcher;
 
 /**
  * Created by ${chenyn} on 2017/6/22.

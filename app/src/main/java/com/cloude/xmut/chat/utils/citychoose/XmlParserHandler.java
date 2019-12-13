@@ -8,9 +8,9 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.utils.citychoose.model.CityModel;
-import jiguang.chat.utils.citychoose.model.DistrictModel;
-import jiguang.chat.utils.citychoose.model.ProvinceModel;
+import com.cloude.xmut.chat.utils.citychoose.model.CityModel;
+import com.cloude.xmut.chat.utils.citychoose.model.DistrictModel;
+import com.cloude.xmut.chat.utils.citychoose.model.ProvinceModel;
 
 
 public class XmlParserHandler extends DefaultHandler {

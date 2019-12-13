@@ -18,11 +18,13 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v4.view.ViewCompat;
+
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.widget.ImageView;
+
+import androidx.core.view.ViewCompat;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +33,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class CropImageView extends ImageView {

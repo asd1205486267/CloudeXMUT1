@@ -7,8 +7,7 @@ import android.graphics.PointF;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -16,16 +15,20 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.utils.RequestCode;
-import jiguang.chat.utils.photovideo.takevideo.camera.CameraManager;
-import jiguang.chat.utils.photovideo.takevideo.camera.CameraProgressBar;
-import jiguang.chat.utils.photovideo.takevideo.camera.CameraView;
-import jiguang.chat.utils.photovideo.takevideo.camera.MediaPlayerManager;
-import jiguang.chat.utils.photovideo.takevideo.utils.FileUtils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.utils.RequestCode;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.camera.CameraManager;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.camera.CameraProgressBar;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.camera.CameraView;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.camera.MediaPlayerManager;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.utils.FileUtils;
+
+import cn.jmessage.support.annotation.Nullable;
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;

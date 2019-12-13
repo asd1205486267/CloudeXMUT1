@@ -9,8 +9,9 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.cloude.xmut.R;
+
 import cn.jpush.im.android.api.JMessageClient;
-import jiguang.chat.R;
 
 /**
  * Created by ${chenyn} on 2017/2/22.

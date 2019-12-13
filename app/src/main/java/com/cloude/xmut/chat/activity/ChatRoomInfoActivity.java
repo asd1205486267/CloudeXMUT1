@@ -19,12 +19,12 @@ import cn.jpush.im.android.api.event.ChatRoomNotificationEvent;
 import cn.jpush.im.android.api.model.ChatRoomInfo;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.ChatRoomKeeperGridAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.view.NoScrollGridView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.ChatRoomKeeperGridAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.view.NoScrollGridView;
 
 /**
  * Created by ${chenyn} on 2017/11/8.

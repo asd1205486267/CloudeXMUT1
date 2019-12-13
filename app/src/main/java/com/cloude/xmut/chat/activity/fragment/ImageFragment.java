@@ -20,11 +20,11 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.ImageAdapter;
-import jiguang.chat.controller.SendFileController;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.view.SendImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.ImageAdapter;
+import com.cloude.xmut.chat.controller.SendFileController;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.view.SendImageView;
 
 
 public class ImageFragment extends BaseFragment {

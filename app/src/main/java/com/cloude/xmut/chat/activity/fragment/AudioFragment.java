@@ -14,16 +14,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.AudioAdapter;
+import com.cloude.xmut.chat.controller.SendFileController;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.view.SendAudioView;
+
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-
-import jiguang.chat.R;
-import jiguang.chat.adapter.AudioAdapter;
-import jiguang.chat.controller.SendFileController;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.view.SendAudioView;
 
 
 public class AudioFragment extends BaseFragment {

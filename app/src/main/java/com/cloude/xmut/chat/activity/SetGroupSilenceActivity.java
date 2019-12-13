@@ -8,9 +8,9 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.ToastUtil;
 
 /**
  * Created by ${chenyn} on 2017/11/27.

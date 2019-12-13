@@ -2,12 +2,14 @@ package com.cloude.xmut.chat.activity;
 
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 
-import jiguang.chat.R;
-import jiguang.chat.controller.SendFileController;
-import jiguang.chat.view.SendFileView;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.controller.SendFileController;
+import com.cloude.xmut.chat.view.SendFileView;
 
 
 public class SendFileActivity extends FragmentActivity {

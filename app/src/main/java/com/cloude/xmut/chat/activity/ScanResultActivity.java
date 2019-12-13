@@ -3,7 +3,7 @@ package com.cloude.xmut.chat.activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 /**
  * Created by ${chenyn} on 2017/8/16.

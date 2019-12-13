@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 import java.io.IOException;
 
-import jiguang.chat.R;
-import jiguang.chat.model.Constants;
-import jiguang.chat.utils.keyboard.adpater.EmoticonsAdapter;
-import jiguang.chat.utils.keyboard.data.EmoticonEntity;
-import jiguang.chat.utils.keyboard.data.EmoticonPageEntity;
-import jiguang.chat.utils.keyboard.interfaces.EmoticonClickListener;
-import jiguang.chat.utils.keyboard.utils.imageloader.ImageLoader;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.model.Constants;
+import com.cloude.xmut.chat.utils.keyboard.adpater.EmoticonsAdapter;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonPageEntity;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonClickListener;
+import com.cloude.xmut.chat.utils.keyboard.utils.imageloader.ImageLoader;
 
 
 public class BigEmoticonsAdapter extends EmoticonsAdapter<EmoticonEntity> {

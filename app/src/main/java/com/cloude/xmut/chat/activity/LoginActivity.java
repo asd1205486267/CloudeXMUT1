@@ -3,7 +3,6 @@ package com.cloude.xmut.chat.activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -19,15 +18,17 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.IdRes;
+
 import java.lang.reflect.Method;
 
 import cn.jpush.im.android.api.JMessageClient;
-import jiguang.chat.R;
-import jiguang.chat.controller.LoginController;
-import jiguang.chat.utils.BitmapLoader;
-import jiguang.chat.utils.ClearWriteEditText;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.SoftKeyBoardStateHelper;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.controller.LoginController;
+import com.cloude.xmut.chat.utils.BitmapLoader;
+import com.cloude.xmut.chat.utils.ClearWriteEditText;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.SoftKeyBoardStateHelper;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener, View.OnFocusChangeListener {
     public ClearWriteEditText mLogin_userName;

@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import jiguang.chat.utils.keyboard.widget.EmoticonPageView;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonPageView;
 
 public class EmoticonPageEntity<T> extends PageEntity<EmoticonPageEntity> {
 

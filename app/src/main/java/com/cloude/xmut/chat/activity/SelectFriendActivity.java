@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.CreateGroupAdapter;
-import jiguang.chat.controller.SelectFriendController;
-import jiguang.chat.utils.SoftKeyBoardStateHelper;
-import jiguang.chat.view.SelectFriendView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.CreateGroupAdapter;
+import com.cloude.xmut.chat.controller.SelectFriendController;
+import com.cloude.xmut.chat.utils.SoftKeyBoardStateHelper;
+import com.cloude.xmut.chat.view.SelectFriendView;
 
 
 public class SelectFriendActivity extends BaseActivity{

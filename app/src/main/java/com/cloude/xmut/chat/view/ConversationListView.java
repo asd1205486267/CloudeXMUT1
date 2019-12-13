@@ -13,9 +13,9 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.fragment.ConversationListFragment;
-import jiguang.chat.utils.ThreadUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.fragment.ConversationListFragment;
+import com.cloude.xmut.chat.utils.ThreadUtil;
 
 /**
  * Created by ${chenyn} on 2017/3/13.

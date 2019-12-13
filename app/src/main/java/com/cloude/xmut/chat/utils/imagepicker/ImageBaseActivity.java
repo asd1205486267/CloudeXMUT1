@@ -4,15 +4,16 @@ import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.view.SystemBarTintManager;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.view.SystemBarTintManager;
 
 
 public class ImageBaseActivity extends AppCompatActivity {

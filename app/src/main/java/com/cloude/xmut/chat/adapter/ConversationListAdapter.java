@@ -38,16 +38,16 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.SortConvList;
-import jiguang.chat.utils.SortTopConvList;
-import jiguang.chat.utils.ThreadUtil;
-import jiguang.chat.utils.TimeFormat;
-import jiguang.chat.utils.ViewHolder;
-import jiguang.chat.view.ConversationListView;
-import jiguang.chat.view.SwipeLayoutConv;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.SortConvList;
+import com.cloude.xmut.chat.utils.SortTopConvList;
+import com.cloude.xmut.chat.utils.ThreadUtil;
+import com.cloude.xmut.chat.utils.TimeFormat;
+import com.cloude.xmut.chat.utils.ViewHolder;
+import com.cloude.xmut.chat.view.ConversationListView;
+import com.cloude.xmut.chat.view.SwipeLayoutConv;
 
 /**
  * Created by ${chenyn} on 2017/3/30.

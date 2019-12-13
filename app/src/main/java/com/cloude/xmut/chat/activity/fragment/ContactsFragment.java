@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
+import com.cloude.xmut.R;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.jmessage.support.google.gson.Gson;
 import cn.jpush.im.android.api.ContactManager;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetGroupIDListCallback;
@@ -27,22 +28,21 @@ import cn.jpush.im.android.api.event.GroupApprovalRefuseEvent;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.controller.ContactsController;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.database.FriendRecommendEntry;
-import jiguang.chat.database.GroupApplyEntry;
-import jiguang.chat.database.RefuseGroupEntry;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.entity.Event;
-import jiguang.chat.entity.EventType;
-import jiguang.chat.entity.FriendInvitation;
-import jiguang.chat.entity.GroupApplyInvitation;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ThreadUtil;
-import jiguang.chat.utils.pinyin.HanziToPinyin;
-import jiguang.chat.view.ContactsView;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.controller.ContactsController;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.database.FriendRecommendEntry;
+import com.cloude.xmut.chat.database.GroupApplyEntry;
+import com.cloude.xmut.chat.database.RefuseGroupEntry;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.entity.Event;
+import com.cloude.xmut.chat.entity.EventType;
+import com.cloude.xmut.chat.entity.FriendInvitation;
+import com.cloude.xmut.chat.entity.GroupApplyInvitation;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ThreadUtil;
+import com.cloude.xmut.chat.utils.pinyin.HanziToPinyin;
+import com.cloude.xmut.chat.view.ContactsView;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

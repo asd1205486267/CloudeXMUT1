@@ -16,16 +16,16 @@ import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.ChatActivity;
-import jiguang.chat.activity.SearchContactsActivity;
-import jiguang.chat.activity.fragment.ConversationListFragment;
-import jiguang.chat.adapter.ConversationListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.SortConvList;
-import jiguang.chat.utils.SortTopConvList;
-import jiguang.chat.view.ConversationListView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.ChatActivity;
+import com.cloude.xmut.chat.activity.SearchContactsActivity;
+import com.cloude.xmut.chat.activity.fragment.ConversationListFragment;
+import com.cloude.xmut.chat.adapter.ConversationListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.SortConvList;
+import com.cloude.xmut.chat.utils.SortTopConvList;
+import com.cloude.xmut.chat.view.ConversationListView;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

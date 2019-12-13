@@ -19,11 +19,11 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.event.LoginStateChangeEvent;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.FileHelper;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.swipeback.app.SwipeBackActivity;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.FileHelper;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.swipeback.app.SwipeBackActivity;
 
 public class BaseActivity extends SwipeBackActivity {
 

@@ -8,11 +8,12 @@ import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewParent;
+
+import androidx.core.view.MotionEventCompat;
 
 import java.util.concurrent.TimeUnit;
 

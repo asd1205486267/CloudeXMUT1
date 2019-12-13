@@ -15,7 +15,7 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 /**
  * Created by ${chenyn} on 2017/5/3.

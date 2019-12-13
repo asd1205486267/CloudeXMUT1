@@ -37,11 +37,11 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.ChattingListAdapter;
-import jiguang.chat.utils.FileHelper;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.IdHelper;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.ChattingListAdapter;
+import com.cloude.xmut.chat.utils.FileHelper;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.IdHelper;
 
 public class RecordVoiceButton extends Button {
 

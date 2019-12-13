@@ -9,9 +9,9 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.keyboard.data.PageSetEntity;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.keyboard.data.PageSetEntity;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
 
 public class EmoticonsIndicatorView extends LinearLayout {
 

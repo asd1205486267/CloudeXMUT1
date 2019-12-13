@@ -14,7 +14,7 @@ import java.util.List;
 import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 /**
  * Created by ${chenyn} on 2017/7/16.

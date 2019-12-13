@@ -2,10 +2,11 @@ package com.cloude.xmut.chat.controller;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.activeandroid.ActiveAndroid;
 
@@ -17,19 +18,19 @@ import cn.jpush.im.android.api.ContactManager;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetUserInfoListCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.GroupActivity;
-import jiguang.chat.activity.SearchContactsActivity;
-import jiguang.chat.activity.SearchForAddFriendActivity;
-import jiguang.chat.activity.VerificationMessageActivity;
-import jiguang.chat.adapter.StickyListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.utils.pinyin.HanziToPinyin;
-import jiguang.chat.utils.pinyin.PinyinComparator;
-import jiguang.chat.utils.sidebar.SideBar;
-import jiguang.chat.view.ContactsView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.GroupActivity;
+import com.cloude.xmut.chat.activity.SearchContactsActivity;
+import com.cloude.xmut.chat.activity.SearchForAddFriendActivity;
+import com.cloude.xmut.chat.activity.VerificationMessageActivity;
+import com.cloude.xmut.chat.adapter.StickyListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.utils.pinyin.HanziToPinyin;
+import com.cloude.xmut.chat.utils.pinyin.PinyinComparator;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.chat.view.ContactsView;
 
 /**
  * Created by ${chenyn} on 2017/2/20.

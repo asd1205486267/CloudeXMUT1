@@ -38,11 +38,11 @@ import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 /**

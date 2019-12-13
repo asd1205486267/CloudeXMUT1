@@ -13,9 +13,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import jiguang.chat.utils.keyboard.data.EmoticonEntity;
-import jiguang.chat.utils.keyboard.data.EmoticonPageEntity;
-import jiguang.chat.utils.keyboard.data.EmoticonPageSetEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonPageEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonPageSetEntity;
 
 
 public class XmlUtil {

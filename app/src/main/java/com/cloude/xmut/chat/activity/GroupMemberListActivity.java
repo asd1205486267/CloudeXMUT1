@@ -16,11 +16,11 @@ import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.adapter.GroupMemberListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.GroupMemberListComparator;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.GroupMemberListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.GroupMemberListComparator;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 /**

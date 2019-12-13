@@ -1,16 +1,17 @@
 package com.cloude.xmut.chat.utils.imagepicker.adapter;
 
 import android.app.Activity;
-import android.support.v4.view.PagerAdapter;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.viewpager.widget.PagerAdapter;
+
 import java.util.ArrayList;
 
-import jiguang.chat.utils.imagepicker.ImagePicker;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.imagepicker.util.Utils;
+import com.cloude.xmut.chat.utils.imagepicker.ImagePicker;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.util.Utils;
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 

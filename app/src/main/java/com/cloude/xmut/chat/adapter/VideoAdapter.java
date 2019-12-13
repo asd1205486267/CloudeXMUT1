@@ -18,14 +18,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.PlayVideoActivity;
-import jiguang.chat.activity.fragment.VideoFragment;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.entity.FileType;
-import jiguang.chat.entity.UpdateSelectedStateListener;
-import jiguang.chat.utils.NativeImageLoader;
-import jiguang.chat.utils.VideoThumbnailLoader;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.PlayVideoActivity;
+import com.cloude.xmut.chat.activity.fragment.VideoFragment;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.entity.FileType;
+import com.cloude.xmut.chat.entity.UpdateSelectedStateListener;
+import com.cloude.xmut.chat.utils.NativeImageLoader;
+import com.cloude.xmut.chat.utils.VideoThumbnailLoader;
 
 
 public class VideoAdapter extends BaseAdapter {

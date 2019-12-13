@@ -16,16 +16,16 @@ import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.controller.FriendInfoController;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.entity.Event;
-import jiguang.chat.entity.EventType;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.NativeImageLoader;
-import jiguang.chat.view.FriendInfoView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.controller.FriendInfoController;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.entity.Event;
+import com.cloude.xmut.chat.entity.EventType;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.NativeImageLoader;
+import com.cloude.xmut.chat.view.FriendInfoView;
 
 /**
  * Created by ${chenyn} on 2017/3/22.

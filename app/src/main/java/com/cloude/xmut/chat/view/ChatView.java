@@ -9,10 +9,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import cn.jpush.im.android.api.model.Conversation;
-import jiguang.chat.R;
-import jiguang.chat.activity.ChatActivity;
-import jiguang.chat.adapter.ChattingListAdapter;
-import jiguang.chat.view.listview.DropDownListView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.ChatActivity;
+import com.cloude.xmut.chat.adapter.ChattingListAdapter;
+import com.cloude.xmut.chat.view.listview.DropDownListView;
 
 /**
  * Created by ${chenyn} on 2017/3/28.

@@ -14,7 +14,6 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -25,8 +24,10 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.Toast;
 
-import com.sj.emoji.EmojiBean;
+import androidx.core.content.ContextCompat;
 
+import com.cloude.xmut.R;
+import com.sj.emoji.EmojiBean;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -68,39 +69,38 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.ChattingListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.entity.Event;
-import jiguang.chat.entity.EventType;
-import jiguang.chat.location.activity.MapPickerActivity;
-import jiguang.chat.model.Constants;
-import jiguang.chat.pickerimage.PickImageActivity;
-import jiguang.chat.pickerimage.utils.Extras;
-import jiguang.chat.pickerimage.utils.RequestCode;
-import jiguang.chat.pickerimage.utils.SendImageHelper;
-import jiguang.chat.pickerimage.utils.StorageType;
-import jiguang.chat.pickerimage.utils.StorageUtil;
-import jiguang.chat.pickerimage.utils.StringUtil;
-import jiguang.chat.utils.CommonUtils;
-import jiguang.chat.utils.IdHelper;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.SimpleCommonUtils;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.event.ImageEvent;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.keyboard.XhsEmoticonsKeyBoard;
-import jiguang.chat.utils.keyboard.data.EmoticonEntity;
-import jiguang.chat.utils.keyboard.interfaces.EmoticonClickListener;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
-import jiguang.chat.utils.keyboard.widget.FuncLayout;
-import jiguang.chat.utils.photovideo.takevideo.CameraActivity;
-import jiguang.chat.utils.photovideo.takevideo.utils.LogUtils;
-import jiguang.chat.view.ChatView;
-import jiguang.chat.view.SimpleAppsGridView;
-import jiguang.chat.view.TipItem;
-import jiguang.chat.view.TipView;
-import jiguang.chat.view.listview.DropDownListView;
+import com.cloude.xmut.chat.adapter.ChattingListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.entity.Event;
+import com.cloude.xmut.chat.entity.EventType;
+import com.cloude.xmut.chat.location.activity.MapPickerActivity;
+import com.cloude.xmut.chat.model.Constants;
+import com.cloude.xmut.chat.pickerimage.PickImageActivity;
+import com.cloude.xmut.chat.pickerimage.utils.Extras;
+import com.cloude.xmut.chat.pickerimage.utils.RequestCode;
+import com.cloude.xmut.chat.pickerimage.utils.SendImageHelper;
+import com.cloude.xmut.chat.pickerimage.utils.StorageType;
+import com.cloude.xmut.chat.pickerimage.utils.StorageUtil;
+import com.cloude.xmut.chat.pickerimage.utils.StringUtil;
+import com.cloude.xmut.chat.utils.CommonUtils;
+import com.cloude.xmut.chat.utils.IdHelper;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.SimpleCommonUtils;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.event.ImageEvent;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.keyboard.XhsEmoticonsKeyBoard;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonEntity;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonClickListener;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.chat.utils.keyboard.widget.FuncLayout;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.CameraActivity;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.utils.LogUtils;
+import com.cloude.xmut.chat.view.ChatView;
+import com.cloude.xmut.chat.view.SimpleAppsGridView;
+import com.cloude.xmut.chat.view.TipItem;
+import com.cloude.xmut.chat.view.TipView;
+import com.cloude.xmut.chat.view.listview.DropDownListView;
 
 
 /**
@@ -1411,7 +1411,7 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
             @Override
             public void gotResult(int responseCode, String responseMessage, ImageContent imageContent) {
                 if (responseCode == 0) {
-                    imageContent.setStringExtra("jiguang", "xiong");
+                    imageContent.setStringExtra("com.cloude.xmut", "xiong");
                     Message msg = mConv.createSendMessage(imageContent);
                     handleSendMsg(msg);
                 } else {

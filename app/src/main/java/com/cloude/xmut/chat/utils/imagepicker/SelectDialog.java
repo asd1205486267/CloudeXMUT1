@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class SelectDialog extends Dialog implements OnClickListener, OnItemClickListener {

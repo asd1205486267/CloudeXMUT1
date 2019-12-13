@@ -22,16 +22,16 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.FriendListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.pinyin.PinyinComparator;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.FriendListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.pinyin.PinyinComparator;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 /**

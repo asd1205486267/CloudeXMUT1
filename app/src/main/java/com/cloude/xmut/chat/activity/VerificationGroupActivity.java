@@ -7,8 +7,8 @@ import android.widget.Toast;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.utils.HandleResponseCode;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
 
 /**
  * Created by ${chenyn} on 2017/11/6.

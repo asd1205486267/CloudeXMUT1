@@ -5,10 +5,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
+
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -29,19 +32,19 @@ import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.exceptions.JMFileSizeExceedException;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
-import jiguang.chat.R;
-import jiguang.chat.activity.SendFileActivity;
-import jiguang.chat.activity.fragment.AudioFragment;
-import jiguang.chat.activity.fragment.DocumentFragment;
-import jiguang.chat.activity.fragment.ImageFragment;
-import jiguang.chat.activity.fragment.OtherFragment;
-import jiguang.chat.activity.fragment.VideoFragment;
-import jiguang.chat.adapter.ViewPagerAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.entity.FileType;
-import jiguang.chat.entity.UpdateSelectedStateListener;
-import jiguang.chat.utils.BitmapLoader;
-import jiguang.chat.view.SendFileView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.SendFileActivity;
+import com.cloude.xmut.chat.activity.fragment.AudioFragment;
+import com.cloude.xmut.chat.activity.fragment.DocumentFragment;
+import com.cloude.xmut.chat.activity.fragment.ImageFragment;
+import com.cloude.xmut.chat.activity.fragment.OtherFragment;
+import com.cloude.xmut.chat.activity.fragment.VideoFragment;
+import com.cloude.xmut.chat.adapter.ViewPagerAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.entity.FileType;
+import com.cloude.xmut.chat.entity.UpdateSelectedStateListener;
+import com.cloude.xmut.chat.utils.BitmapLoader;
+import com.cloude.xmut.chat.view.SendFileView;
 
 
 public class SendFileController implements View.OnClickListener, ViewPager.OnPageChangeListener,

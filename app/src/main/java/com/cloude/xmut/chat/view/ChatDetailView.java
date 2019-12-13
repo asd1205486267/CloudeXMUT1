@@ -17,8 +17,8 @@ import android.widget.TextView;
 
 import java.io.File;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.GroupMemberGridAdapter;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.GroupMemberGridAdapter;
 
 
 public class ChatDetailView extends LinearLayout {

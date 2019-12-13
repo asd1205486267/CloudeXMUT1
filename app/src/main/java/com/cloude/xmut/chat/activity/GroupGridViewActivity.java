@@ -21,10 +21,10 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.adapter.GroupGridViewAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.GroupGridViewAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
 
 /**
  * Created by ${chenyn} on 2017/5/8.

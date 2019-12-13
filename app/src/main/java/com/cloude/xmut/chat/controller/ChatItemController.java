@@ -13,7 +13,6 @@ import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +23,8 @@ import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.squareup.picasso.Picasso;
+
+import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -64,21 +63,23 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.BrowserViewPagerActivity;
-import jiguang.chat.activity.DownLoadActivity;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.activity.GroupNotFriendActivity;
-import jiguang.chat.adapter.ChattingListAdapter;
-import jiguang.chat.adapter.ChattingListAdapter.ViewHolder;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.location.activity.MapPickerActivity;
-import jiguang.chat.pickerimage.utils.BitmapDecoder;
-import jiguang.chat.utils.FileHelper;
-import jiguang.chat.utils.FileUtils;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.SimpleCommonUtils;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.BrowserViewPagerActivity;
+import com.cloude.xmut.chat.activity.DownLoadActivity;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.activity.GroupNotFriendActivity;
+import com.cloude.xmut.chat.adapter.ChattingListAdapter;
+import com.cloude.xmut.chat.adapter.ChattingListAdapter.ViewHolder;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.location.activity.MapPickerActivity;
+import com.cloude.xmut.chat.pickerimage.utils.BitmapDecoder;
+import com.cloude.xmut.chat.utils.FileHelper;
+import com.cloude.xmut.chat.utils.FileUtils;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.SimpleCommonUtils;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.squareup.picasso.Picasso;
 
 
 public class ChatItemController {
@@ -341,7 +342,6 @@ public class ChatItemController {
         }
     }
 
-    // 处理图片
     public void handleImgMsg(final Message msg, final ViewHolder holder, final int position) {
         final ImageContent imgContent = (ImageContent) msg.getContent();
         final String jiguang = imgContent.getStringExtra("jiguang");

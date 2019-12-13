@@ -27,12 +27,13 @@
         android:id="@+id/tv_item_moment_content"
         style="@style/MatchWrap"
         android:layout_below="@id/tv_item_moment_username"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
+        android:gravity="start"
         android:layout_toRightOf="@id/iv_item_moment_avatar"
         android:ellipsize="end"
-        android:maxLines="4"
+        android:maxLines="20"
         android:textColor="#474747"
-        android:textSize="14sp"
+        android:textSize="15sp"
         tools:text="我是测试内容"/>
 
     <cn.bingoogolapple1.photopicker.widget.BGANinePhotoLayout

@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
+
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -29,12 +29,14 @@ import java.util.UUID;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import jiguang.chat.R;
-import jiguang.chat.model.User;
-import jiguang.chat.model.UserModel;
-import jiguang.chat.pickerimage.utils.AttachmentStore;
-import jiguang.chat.pickerimage.utils.StorageUtil;
-import jiguang.chat.utils.zxing.encode.EncodingHandler;
+import cn.jmessage.support.google.gson.Gson;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.model.User;
+import com.cloude.xmut.chat.model.UserModel;
+import com.cloude.xmut.chat.pickerimage.utils.AttachmentStore;
+import com.cloude.xmut.chat.pickerimage.utils.StorageUtil;
+import com.cloude.xmut.chat.utils.zxing.encode.EncodingHandler;
 
 /**
  * Created by ${chenyn} on 2017/8/16.

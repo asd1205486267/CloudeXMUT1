@@ -19,11 +19,11 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.OtherAdapter;
-import jiguang.chat.controller.SendFileController;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.view.SendOtherView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.OtherAdapter;
+import com.cloude.xmut.chat.controller.SendFileController;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.view.SendOtherView;
 
 
 public class OtherFragment extends BaseFragment {

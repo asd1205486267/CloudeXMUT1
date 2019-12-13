@@ -1,14 +1,15 @@
 package com.cloude.xmut.chat.utils.keyboard.adpater;
 
-import android.support.v4.view.PagerAdapter;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.viewpager.widget.PagerAdapter;
+
 import java.util.ArrayList;
 
-import jiguang.chat.utils.keyboard.data.PageEntity;
-import jiguang.chat.utils.keyboard.data.PageSetEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.PageEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.PageSetEntity;
 
 public class PageSetAdapter extends PagerAdapter {
 

@@ -18,15 +18,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.historyfile.activity.BrowserFileImageActivity;
-import jiguang.chat.activity.historyfile.fragment.ImageFileFragment;
-import jiguang.chat.activity.historyfile.grideviewheader.StickyGridHeadersSimpleAdapter;
-import jiguang.chat.activity.historyfile.view.MImageView;
-import jiguang.chat.activity.historyfile.view.NativeImageLoaderView;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.entity.SelectedHistoryFileListener;
-import jiguang.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.historyfile.activity.BrowserFileImageActivity;
+import com.cloude.xmut.chat.activity.historyfile.fragment.ImageFileFragment;
+import com.cloude.xmut.chat.activity.historyfile.grideviewheader.StickyGridHeadersSimpleAdapter;
+import com.cloude.xmut.chat.activity.historyfile.view.MImageView;
+import com.cloude.xmut.chat.activity.historyfile.view.NativeImageLoaderView;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.entity.SelectedHistoryFileListener;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
 
 /**
  * Created by ${chenyn} on 2017/8/24.

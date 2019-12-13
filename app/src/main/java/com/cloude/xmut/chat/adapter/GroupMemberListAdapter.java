@@ -19,9 +19,9 @@ import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.GroupMemberListActivity;
-import jiguang.chat.utils.pinyin.HanziToPinyin;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.GroupMemberListActivity;
+import com.cloude.xmut.chat.utils.pinyin.HanziToPinyin;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 /**

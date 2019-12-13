@@ -36,11 +36,11 @@ import android.widget.LinearLayout;
 import java.util.LinkedList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.citychoose.view.myinterface.OnWheelChangedListener;
-import jiguang.chat.utils.citychoose.view.myinterface.OnWheelClickedListener;
-import jiguang.chat.utils.citychoose.view.myinterface.OnWheelScrollListener;
-import jiguang.chat.utils.citychoose.view.myinterface.WheelViewAdapter;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.OnWheelChangedListener;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.OnWheelClickedListener;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.OnWheelScrollListener;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.WheelViewAdapter;
 
 /**
  * Numeric wheel view.

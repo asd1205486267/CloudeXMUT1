@@ -3,7 +3,7 @@ package com.cloude.xmut.chat.view;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class MenuItemView {

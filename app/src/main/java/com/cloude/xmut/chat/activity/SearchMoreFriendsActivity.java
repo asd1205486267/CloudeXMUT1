@@ -6,7 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -32,6 +31,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import cn.jmessage.support.annotation.Nullable;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.content.TextContent;
@@ -41,17 +41,17 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.android.api.options.MessageSendingOptions;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.controller.ActivityController;
-import jiguang.chat.entity.Event;
-import jiguang.chat.entity.EventType;
-import jiguang.chat.model.SearchResult;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
-import jiguang.chat.utils.pinyin.CharacterParser;
-import jiguang.chat.utils.query.TextSearcher;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.controller.ActivityController;
+import com.cloude.xmut.chat.entity.Event;
+import com.cloude.xmut.chat.entity.EventType;
+import com.cloude.xmut.chat.model.SearchResult;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.chat.utils.pinyin.CharacterParser;
+import com.cloude.xmut.chat.utils.query.TextSearcher;
 
 
 public class SearchMoreFriendsActivity extends BaseActivity implements AdapterView.OnItemClickListener {

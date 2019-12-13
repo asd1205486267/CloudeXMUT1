@@ -12,10 +12,10 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.model.AppBean;
-import jiguang.chat.utils.event.ImageEvent;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.model.AppBean;
+import com.cloude.xmut.chat.utils.event.ImageEvent;
 
 public class AppsAdapter extends BaseAdapter {
 

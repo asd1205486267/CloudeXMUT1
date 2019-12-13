@@ -21,15 +21,15 @@ import java.util.List;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.adapter.CreateGroupAdapter;
-import jiguang.chat.adapter.StickyListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
-import jiguang.chat.utils.pinyin.PinyinComparator;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.CreateGroupAdapter;
+import com.cloude.xmut.chat.adapter.StickyListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.chat.utils.pinyin.PinyinComparator;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 

@@ -7,12 +7,14 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 import com.bigkoo.pickerview.TimePickerView;
 
@@ -23,15 +25,15 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ThreadUtil;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.citychoose.view.SelectAddressDialog;
-import jiguang.chat.utils.citychoose.view.myinterface.SelectAddressInterface;
-import jiguang.chat.utils.photochoose.ChoosePhoto;
-import jiguang.chat.utils.photochoose.PhotoUtils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ThreadUtil;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.citychoose.view.SelectAddressDialog;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.SelectAddressInterface;
+import com.cloude.xmut.chat.utils.photochoose.ChoosePhoto;
+import com.cloude.xmut.chat.utils.photochoose.PhotoUtils;
 
 /**
  * Created by ${chenyn} on 2017/2/23.

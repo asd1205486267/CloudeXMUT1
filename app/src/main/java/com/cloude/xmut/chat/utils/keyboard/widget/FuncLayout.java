@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
 
 public class FuncLayout extends LinearLayout {
 

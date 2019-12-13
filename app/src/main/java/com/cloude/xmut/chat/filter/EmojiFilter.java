@@ -8,8 +8,8 @@ import com.sj.emoji.EmojiSpan;
 
 import java.util.regex.Matcher;
 
-import jiguang.chat.utils.keyboard.interfaces.EmoticonFilter;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonFilter;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
 
 
 public class EmojiFilter extends EmoticonFilter {

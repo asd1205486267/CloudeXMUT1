@@ -12,9 +12,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import jiguang.chat.utils.keyboard.data.EmoticonEntity;
-import jiguang.chat.utils.keyboard.data.EmoticonPageSetEntity;
-import jiguang.chat.utils.keyboard.utils.imageloader.ImageBase;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonEntity;
+import com.cloude.xmut.chat.utils.keyboard.data.EmoticonPageSetEntity;
+import com.cloude.xmut.chat.utils.keyboard.utils.imageloader.ImageBase;
 
 
 public class ParseDataUtils {

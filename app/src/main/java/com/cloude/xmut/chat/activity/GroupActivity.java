@@ -12,12 +12,12 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetGroupIDListCallback;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
-import jiguang.chat.R;
-import jiguang.chat.adapter.GroupListAdapter;
-import jiguang.chat.controller.ActivityController;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.GroupListAdapter;
+import com.cloude.xmut.chat.controller.ActivityController;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.ToastUtil;
 
 /**
  * Created by ${chenyn} on 2017/4/26.

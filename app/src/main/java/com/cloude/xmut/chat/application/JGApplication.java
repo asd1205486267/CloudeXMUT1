@@ -1,10 +1,10 @@
 package com.cloude.xmut.chat.application;
 
 import android.content.Context;
-import android.support.multidex.MultiDex;
+
+import androidx.multidex.MultiDex;
 
 import com.activeandroid.ActiveAndroid;
-import com.baidu.mapapi.SDKInitializer;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.ArrayList;
@@ -17,14 +17,14 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.entity.NotificationClickEventReceiver;
-import jiguang.chat.location.service.LocationService;
-import jiguang.chat.pickerimage.utils.StorageUtil;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.imagepicker.GlideImageLoader;
-import jiguang.chat.utils.imagepicker.ImagePicker;
-import jiguang.chat.utils.imagepicker.view.CropImageView;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.entity.NotificationClickEventReceiver;
+import com.cloude.xmut.chat.location.service.LocationService;
+import com.cloude.xmut.chat.pickerimage.utils.StorageUtil;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.imagepicker.GlideImageLoader;
+import com.cloude.xmut.chat.utils.imagepicker.ImagePicker;
+import com.cloude.xmut.chat.utils.imagepicker.view.CropImageView;
 
 /**
  * Created by ${chenyn} on 2017/2/16.
@@ -132,7 +132,7 @@ public class JGApplication extends com.activeandroid.app.Application {
         THUMP_PICTURE_DIR = context.getFilesDir().getAbsolutePath() + "/JChatDemo";
         StorageUtil.init(context, null);
         Fresco.initialize(getApplicationContext());
-        SDKInitializer.initialize(getApplicationContext());
+      //  SDKInitializer.initialize(getApplicationContext());  这里是百度定位的
         locationService = new LocationService(getApplicationContext());
 
         JMessageClient.init(getApplicationContext(), true);

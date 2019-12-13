@@ -23,12 +23,12 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.entity.Event;
-import jiguang.chat.entity.EventType;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.entity.Event;
+import com.cloude.xmut.chat.entity.EventType;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.ToastUtil;
 
 /**
  * Created by ${chenyn} on 2017/5/10.

@@ -23,7 +23,7 @@ import android.view.ViewGroup;
 import java.util.LinkedList;
 import java.util.List;
 
-import jiguang.chat.utils.citychoose.view.myinterface.WheelViewAdapter;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.WheelViewAdapter;
 
 
 /**

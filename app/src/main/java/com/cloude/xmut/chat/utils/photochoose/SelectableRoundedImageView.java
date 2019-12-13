@@ -26,7 +26,7 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class SelectableRoundedImageView extends ImageView {

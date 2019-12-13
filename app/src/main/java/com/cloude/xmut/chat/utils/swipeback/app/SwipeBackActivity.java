@@ -5,8 +5,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-import jiguang.chat.utils.swipeback.SwipeBackLayout;
-import jiguang.chat.utils.swipeback.Utils;
+import com.cloude.xmut.chat.utils.swipeback.SwipeBackLayout;
+import com.cloude.xmut.chat.utils.swipeback.Utils;
 
 
 public class SwipeBackActivity extends Activity implements SwipeBackActivityBase {

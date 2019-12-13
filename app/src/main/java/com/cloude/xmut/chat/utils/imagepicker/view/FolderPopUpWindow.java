@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class FolderPopUpWindow extends PopupWindow implements View.OnClickListener {

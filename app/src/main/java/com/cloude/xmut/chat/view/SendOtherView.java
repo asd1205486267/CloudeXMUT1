@@ -6,8 +6,8 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.OtherAdapter;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.OtherAdapter;
 
 
 public class SendOtherView extends LinearLayout {

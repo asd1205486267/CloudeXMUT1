@@ -15,11 +15,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.fragment.OtherFragment;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.entity.FileType;
-import jiguang.chat.entity.UpdateSelectedStateListener;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.fragment.OtherFragment;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.entity.FileType;
+import com.cloude.xmut.chat.entity.UpdateSelectedStateListener;
 
 
 public class OtherAdapter extends BaseAdapter {

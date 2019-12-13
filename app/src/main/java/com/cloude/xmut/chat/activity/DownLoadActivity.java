@@ -20,8 +20,8 @@ import cn.jpush.im.android.api.callback.DownloadCompletionCallback;
 import cn.jpush.im.android.api.callback.ProgressUpdateCallback;
 import cn.jpush.im.android.api.content.FileContent;
 import cn.jpush.im.android.api.model.Message;
-import jiguang.chat.R;
-import jiguang.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
 
 /**
  * Created by ${chenyn} on 2017/5/19.

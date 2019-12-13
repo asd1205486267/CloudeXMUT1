@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.view.View;
 
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.activity.FriendSettingActivity;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.activity.FriendSettingActivity;
 
 /**
  * Created by ${chenyn} on 2017/3/24.

@@ -9,9 +9,9 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.AppsAdapter;
-import jiguang.chat.model.AppBean;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.AppsAdapter;
+import com.cloude.xmut.chat.model.AppBean;
 
 public class SimpleAppsGridView extends RelativeLayout {
 

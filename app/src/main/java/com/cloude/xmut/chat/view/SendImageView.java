@@ -5,10 +5,10 @@ import android.util.AttributeSet;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.historyfile.adapter.ImageFileAdapter;
-import jiguang.chat.activity.historyfile.grideviewheader.StickyGridHeadersGridView;
-import jiguang.chat.adapter.ImageAdapter;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.historyfile.adapter.ImageFileAdapter;
+import com.cloude.xmut.chat.activity.historyfile.grideviewheader.StickyGridHeadersGridView;
+import com.cloude.xmut.chat.adapter.ImageAdapter;
 
 
 public class SendImageView extends LinearLayout {

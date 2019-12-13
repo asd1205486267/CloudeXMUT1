@@ -20,12 +20,12 @@ import java.io.File;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.model.InfoModel;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.dialog.LoadDialog;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.model.InfoModel;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.dialog.LoadDialog;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
 
 /**
  * Created by ${chenyn} on 2017/3/13.

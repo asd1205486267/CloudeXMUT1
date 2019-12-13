@@ -2,7 +2,6 @@ package com.cloude.xmut.chat.view;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +11,14 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.StickyListAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.controller.ContactsController;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.StickyListAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.controller.ContactsController;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
+
+import cn.jmessage.support.annotation.Nullable;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 

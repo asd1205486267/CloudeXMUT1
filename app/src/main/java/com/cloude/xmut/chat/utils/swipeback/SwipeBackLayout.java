@@ -6,17 +6,18 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.core.view.ViewCompat;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 public class SwipeBackLayout extends FrameLayout {
     /**
@@ -306,7 +307,7 @@ public class SwipeBackLayout extends FrameLayout {
      * Set a drawable used for edge shadow.
      *
      * @param shadow    Drawable to use
-     * @param edgeFlags Combination of edge flags describing the edge to set
+     * @param edgeFlag Combination of edge flags describing the edge to set
      * @see #EDGE_LEFT
      * @see #EDGE_RIGHT
      * @see #EDGE_BOTTOM
@@ -326,7 +327,7 @@ public class SwipeBackLayout extends FrameLayout {
      * Set a drawable used for edge shadow.
      *
      * @param resId     Resource of drawable to use
-     * @param edgeFlags Combination of edge flags describing the edge to set
+     * @param edgeFlag Combination of edge flags describing the edge to set
      * @see #EDGE_LEFT
      * @see #EDGE_RIGHT
      * @see #EDGE_BOTTOM

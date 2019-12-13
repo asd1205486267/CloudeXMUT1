@@ -3,7 +3,7 @@ package com.cloude.xmut.chat.view;
 import android.content.Context;
 import android.widget.Checkable;
 
-import jiguang.chat.view.listview.WrapperView;
+import com.cloude.xmut.chat.view.listview.WrapperView;
 
 /**
  * A WrapperView that implements the checkable interface

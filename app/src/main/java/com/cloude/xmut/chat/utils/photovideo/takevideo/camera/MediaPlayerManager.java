@@ -4,7 +4,7 @@ import android.app.Application;
 import android.media.MediaPlayer;
 import android.view.Surface;
 
-import jiguang.chat.utils.photovideo.takevideo.utils.LogUtils;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.utils.LogUtils;
 
 
 /**

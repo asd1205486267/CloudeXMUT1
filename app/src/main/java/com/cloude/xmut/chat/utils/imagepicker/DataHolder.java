@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
 
 
 /**

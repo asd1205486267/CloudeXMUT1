@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
 
 public abstract class AutoHeightLayout extends SoftKeyboardSizeWatchLayout implements SoftKeyboardSizeWatchLayout.OnResizeListener {
 

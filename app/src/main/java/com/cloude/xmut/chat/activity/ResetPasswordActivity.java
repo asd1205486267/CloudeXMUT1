@@ -8,9 +8,9 @@ import android.widget.EditText;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.utils.CommonUtils;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.CommonUtils;
+import com.cloude.xmut.chat.utils.ToastUtil;
 
 public class ResetPasswordActivity extends BaseActivity {
 

@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -18,19 +17,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+
 import java.io.File;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ThreadUtil;
-import jiguang.chat.utils.photochoose.ChoosePhoto;
-import jiguang.chat.utils.photochoose.PhotoUtils;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ThreadUtil;
+import com.cloude.xmut.chat.utils.photochoose.ChoosePhoto;
+import com.cloude.xmut.chat.utils.photochoose.PhotoUtils;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
 
 public class FinishRegisterActivity extends BaseActivity {
     private EditText mNickNameEt;

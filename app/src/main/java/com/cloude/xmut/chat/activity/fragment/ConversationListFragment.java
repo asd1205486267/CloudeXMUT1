@@ -20,6 +20,12 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.controller.ContactsController;
+import com.cloude.xmut.chat.controller.MenuItemController;
+import com.cloude.xmut.chat.view.ConversationListView;
+import com.cloude.xmut.chat.view.MenuItemView;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -36,13 +42,11 @@ import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.controller.ConversationListController;
-import jiguang.chat.controller.MenuItemController;
-import jiguang.chat.entity.Event;
-import jiguang.chat.view.ConversationListView;
-import jiguang.chat.view.MenuItemView;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.controller.ConversationListController;
+
+import com.cloude.xmut.chat.entity.Event;
+
 
 /**
  * Created by ${chenyn} on 2017/2/20.
@@ -53,7 +57,7 @@ public class ConversationListFragment extends BaseFragment {
     private Activity mContext;
     private View mRootView;
     private ConversationListView mConvListView;
-    private ConversationListController mConvListController;
+    private ContactsController mConvListController;
     private HandlerThread mThread;
     private static final int REFRESH_CONVERSATION_LIST = 0x3000;
     private static final int DISMISS_REFRESH_HEADER = 0x3001;

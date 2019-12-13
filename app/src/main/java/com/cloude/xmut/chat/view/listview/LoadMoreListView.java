@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 public class LoadMoreListView extends ListView implements AbsListView.OnScrollListener {
 

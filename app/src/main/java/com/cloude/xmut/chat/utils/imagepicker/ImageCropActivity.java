@@ -12,10 +12,10 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.imagepicker.util.BitmapUtil;
-import jiguang.chat.utils.imagepicker.view.CropImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.util.BitmapUtil;
+import com.cloude.xmut.chat.utils.imagepicker.view.CropImageView;
 
 
 public class ImageCropActivity extends ImageBaseActivity implements View.OnClickListener, CropImageView.OnBitmapSaveCompleteListener {

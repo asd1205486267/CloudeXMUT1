@@ -1,26 +1,29 @@
 package com.cloude.xmut.chat.activity.historyfile.controller;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+
 import android.view.View;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.Conversation;
-import jiguang.chat.R;
-import jiguang.chat.activity.historyfile.activity.HistoryFileActivity;
-import jiguang.chat.activity.historyfile.fragment.AudioFileFragment;
-import jiguang.chat.activity.historyfile.fragment.DocumentFileFragment;
-import jiguang.chat.activity.historyfile.fragment.ImageFileFragment;
-import jiguang.chat.activity.historyfile.fragment.OtherFileFragment;
-import jiguang.chat.activity.historyfile.fragment.VideoFileFragment;
-import jiguang.chat.activity.historyfile.view.HistoryFileView;
-import jiguang.chat.adapter.ViewPagerAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.entity.SelectedHistoryFileListener;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.historyfile.activity.HistoryFileActivity;
+import com.cloude.xmut.chat.activity.historyfile.fragment.AudioFileFragment;
+import com.cloude.xmut.chat.activity.historyfile.fragment.DocumentFileFragment;
+import com.cloude.xmut.chat.activity.historyfile.fragment.ImageFileFragment;
+import com.cloude.xmut.chat.activity.historyfile.fragment.OtherFileFragment;
+import com.cloude.xmut.chat.activity.historyfile.fragment.VideoFileFragment;
+import com.cloude.xmut.chat.activity.historyfile.view.HistoryFileView;
+import com.cloude.xmut.chat.adapter.ViewPagerAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.entity.SelectedHistoryFileListener;
 
 /**
  * Created by ${chenyn} on 2017/8/24.

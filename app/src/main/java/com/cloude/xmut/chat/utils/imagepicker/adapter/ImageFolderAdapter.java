@@ -12,10 +12,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.ImagePicker;
-import jiguang.chat.utils.imagepicker.bean.ImageFolder;
-import jiguang.chat.utils.imagepicker.util.Utils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.ImagePicker;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageFolder;
+import com.cloude.xmut.chat.utils.imagepicker.util.Utils;
 
 
 public class ImageFolderAdapter extends BaseAdapter {

@@ -21,11 +21,11 @@ import cn.jpush.im.android.api.content.MessageContent;
 import cn.jpush.im.android.api.enums.ContentType;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
-import jiguang.chat.R;
-import jiguang.chat.activity.fragment.BaseFragment;
-import jiguang.chat.activity.historyfile.adapter.AudioFileAdapter;
-import jiguang.chat.activity.historyfile.controller.HistoryFileController;
-import jiguang.chat.entity.FileItem;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.fragment.BaseFragment;
+import com.cloude.xmut.chat.activity.historyfile.adapter.AudioFileAdapter;
+import com.cloude.xmut.chat.activity.historyfile.controller.HistoryFileController;
+import com.cloude.xmut.chat.entity.FileItem;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 /**

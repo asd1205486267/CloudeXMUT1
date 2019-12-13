@@ -14,7 +14,7 @@ import android.util.Log;
 import java.io.File;
 import java.util.List;
 
-import jiguang.chat.utils.CommonUtils;
+import com.cloude.xmut.chat.utils.CommonUtils;
 
 
 /**

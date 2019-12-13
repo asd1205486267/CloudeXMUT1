@@ -10,11 +10,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.activity.GroupNotFriendActivity;
-import jiguang.chat.activity.fragment.BaseFragment;
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.activity.GroupNotFriendActivity;
+import com.cloude.xmut.chat.activity.fragment.BaseFragment;
+import com.cloude.xmut.chat.application.JGApplication;
 
 /**
  * Created by ${chenyn} on 2017/9/5.

@@ -1,7 +1,6 @@
 package com.cloude.xmut.chat.view;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +12,11 @@ import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.ChatRoomAdapter;
-import jiguang.chat.controller.ChatRoomController;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.ChatRoomAdapter;
+import com.cloude.xmut.chat.controller.ChatRoomController;
+
+import cn.jmessage.support.annotation.Nullable;
 
 /**
  * Created by ${chenyn} on 2017/10/31.

@@ -9,7 +9,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.io.File;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 public class GlideImageLoader implements ImageLoader {
 

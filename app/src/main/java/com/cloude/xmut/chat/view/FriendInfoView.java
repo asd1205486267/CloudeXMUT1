@@ -2,7 +2,6 @@ package com.cloude.xmut.chat.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -16,11 +15,12 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import cn.jmessage.support.annotation.Nullable;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.controller.FriendInfoController;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.controller.FriendInfoController;
 
 /**
  * Created by ${chenyn} on 2017/3/24.

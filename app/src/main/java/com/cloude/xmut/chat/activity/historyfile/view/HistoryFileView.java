@@ -1,8 +1,7 @@
 package com.cloude.xmut.chat.activity.historyfile.view;
 
 import android.content.Context;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +10,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.view.ScrollControlViewPager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.view.ScrollControlViewPager;
 
 /**
  * Created by ${chenyn} on 2017/8/24.

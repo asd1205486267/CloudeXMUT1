@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.view.View;
 
-import jiguang.chat.utils.swipeback.SwipeBackLayout;
+import com.cloude.xmut.chat.utils.swipeback.SwipeBackLayout;
 
 
 public class SwipeBackPreferenceActivity extends PreferenceActivity implements SwipeBackActivityBase {

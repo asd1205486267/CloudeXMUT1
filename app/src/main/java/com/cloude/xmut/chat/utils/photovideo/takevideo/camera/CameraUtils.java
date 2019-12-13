@@ -5,7 +5,7 @@ import android.content.pm.FeatureInfo;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 
-import jiguang.chat.utils.photovideo.takevideo.utils.SPUtils;
+import com.cloude.xmut.chat.utils.photovideo.takevideo.utils.SPUtils;
 
 
 final class CameraUtils {

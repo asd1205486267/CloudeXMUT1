@@ -6,13 +6,13 @@ import android.graphics.Bitmap;
 import android.view.View;
 import android.view.WindowManager;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.AboutJChatActivity;
-import jiguang.chat.activity.FeedbackActivity;
-import jiguang.chat.activity.PersonalActivity;
-import jiguang.chat.activity.ResetPasswordActivity;
-import jiguang.chat.activity.fragment.MeFragment;
-import jiguang.chat.utils.DialogCreator;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.AboutJChatActivity;
+import com.cloude.xmut.chat.activity.FeedbackActivity;
+import com.cloude.xmut.chat.activity.PersonalActivity;
+import com.cloude.xmut.chat.activity.ResetPasswordActivity;
+import com.cloude.xmut.chat.activity.fragment.MeFragment;
+import com.cloude.xmut.chat.utils.DialogCreator;
 
 /**
  * Created by ${chenyn} on 2017/2/21.

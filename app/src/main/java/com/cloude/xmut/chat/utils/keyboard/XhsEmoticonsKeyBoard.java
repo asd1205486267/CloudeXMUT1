@@ -18,17 +18,17 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.keyboard.adpater.PageSetAdapter;
-import jiguang.chat.utils.keyboard.data.PageSetEntity;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
-import jiguang.chat.utils.keyboard.widget.AutoHeightLayout;
-import jiguang.chat.utils.keyboard.widget.EmoticonsEditText;
-import jiguang.chat.utils.keyboard.widget.EmoticonsFuncView;
-import jiguang.chat.utils.keyboard.widget.EmoticonsIndicatorView;
-import jiguang.chat.utils.keyboard.widget.EmoticonsToolBarView;
-import jiguang.chat.utils.keyboard.widget.FuncLayout;
-import jiguang.chat.view.RecordVoiceButton;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.keyboard.adpater.PageSetAdapter;
+import com.cloude.xmut.chat.utils.keyboard.data.PageSetEntity;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.chat.utils.keyboard.widget.AutoHeightLayout;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonsEditText;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonsFuncView;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonsIndicatorView;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonsToolBarView;
+import com.cloude.xmut.chat.utils.keyboard.widget.FuncLayout;
+import com.cloude.xmut.chat.view.RecordVoiceButton;
 
 public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnClickListener, EmoticonsFuncView.OnEmoticonsPageViewListener,
         EmoticonsToolBarView.OnToolBarItemClickListener, EmoticonsEditText.OnBackKeyClickListener, FuncLayout.OnFuncChangeListener {

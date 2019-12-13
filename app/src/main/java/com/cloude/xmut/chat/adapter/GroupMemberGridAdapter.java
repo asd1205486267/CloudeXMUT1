@@ -19,8 +19,8 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.utils.BitmapLoader;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.BitmapLoader;
 
 public class GroupMemberGridAdapter extends BaseAdapter {
 

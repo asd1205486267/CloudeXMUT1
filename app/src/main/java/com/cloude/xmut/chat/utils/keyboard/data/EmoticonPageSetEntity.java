@@ -2,7 +2,7 @@ package com.cloude.xmut.chat.utils.keyboard.data;
 
 import java.util.ArrayList;
 
-import jiguang.chat.utils.keyboard.interfaces.PageViewInstantiateListener;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.PageViewInstantiateListener;
 
 public class EmoticonPageSetEntity<T> extends PageSetEntity<EmoticonPageEntity> {
 

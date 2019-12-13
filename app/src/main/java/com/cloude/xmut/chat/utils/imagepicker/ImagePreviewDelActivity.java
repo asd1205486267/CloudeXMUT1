@@ -1,16 +1,18 @@
 package com.cloude.xmut.chat.utils.imagepicker;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
+
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import jiguang.chat.R;
+import androidx.viewpager.widget.ViewPager;
+
+import com.cloude.xmut.R;
 
 
 public class ImagePreviewDelActivity extends ImagePreviewBaseActivity implements View.OnClickListener {

@@ -8,9 +8,9 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.StickyListAdapter;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.StickyListAdapter;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 

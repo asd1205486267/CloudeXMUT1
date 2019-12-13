@@ -3,7 +3,6 @@ package com.cloude.xmut.chat.utils.imagepicker;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.text.format.Formatter;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -11,9 +10,11 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.imagepicker.view.SuperCheckBox;
+import androidx.viewpager.widget.ViewPager;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.view.SuperCheckBox;
 
 
 public class ImagePreviewActivity extends ImagePreviewBaseActivity implements ImagePicker.OnImageSelectedListener, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -53,7 +54,7 @@ public class ImagePreviewActivity extends ImagePreviewBaseActivity implements Im
         mTitleCount.setText(getString(R.string.preview_image_count, mCurrentPosition + 1, mImageItems.size()));
         mCbCheck.setChecked(isSelected);
         //滑动ViewPager的时候，根据外界的数据改变当前的选中状态和当前的图片的位置描述文本
-        mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+        mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
             @Override
             public void onPageSelected(int position) {
                 mCurrentPosition = position;

@@ -1,8 +1,7 @@
 package com.cloude.xmut.chat.view;
 
 import android.content.Context;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+
 import android.util.AttributeSet;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -10,7 +9,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.cloude.xmut.R;
 
 
 public class SendFileView extends RelativeLayout {

@@ -3,9 +3,11 @@ package com.cloude.xmut.chat.controller;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+
 import android.view.View;
 import android.widget.AdapterView;
+
+import androidx.annotation.NonNull;
 
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
@@ -18,14 +20,14 @@ import cn.jpush.im.android.api.ChatRoomManager;
 import cn.jpush.im.android.api.callback.RequestCallback;
 import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.model.ChatRoomInfo;
-import jiguang.chat.R;
-import jiguang.chat.activity.ChatActivity;
-import jiguang.chat.activity.SearchChatRoomActivity;
-import jiguang.chat.adapter.ChatRoomAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.view.ChatRoomView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.ChatActivity;
+import com.cloude.xmut.chat.activity.SearchChatRoomActivity;
+import com.cloude.xmut.chat.adapter.ChatRoomAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.view.ChatRoomView;
 
 /**
  * Created by ${chenyn} on 2017/10/31.

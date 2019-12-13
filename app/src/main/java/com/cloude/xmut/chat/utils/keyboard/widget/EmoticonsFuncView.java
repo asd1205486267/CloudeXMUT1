@@ -1,11 +1,12 @@
 package com.cloude.xmut.chat.utils.keyboard.widget;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 
-import jiguang.chat.utils.keyboard.adpater.PageSetAdapter;
-import jiguang.chat.utils.keyboard.data.PageSetEntity;
+import androidx.viewpager.widget.ViewPager;
+
+import com.cloude.xmut.chat.utils.keyboard.adpater.PageSetAdapter;
+import com.cloude.xmut.chat.utils.keyboard.data.PageSetEntity;
 
 public class EmoticonsFuncView extends ViewPager {
 

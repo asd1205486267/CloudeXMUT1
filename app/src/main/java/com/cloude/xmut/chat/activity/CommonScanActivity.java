@@ -29,29 +29,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.google.zxing.Result;
 
 import java.lang.reflect.Type;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import cn.jmessage.support.google.gson.Gson;
+import cn.jmessage.support.google.gson.reflect.TypeToken;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.model.Constant;
-import jiguang.chat.model.InfoModel;
-import jiguang.chat.model.User;
-import jiguang.chat.model.UserModel;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.dialog.LoadDialog;
-import jiguang.chat.utils.zxing.ScanListener;
-import jiguang.chat.utils.zxing.ScanManager;
-import jiguang.chat.utils.zxing.decode.DecodeThread;
-import jiguang.chat.utils.zxing.decode.Utils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.model.Constant;
+import com.cloude.xmut.chat.model.InfoModel;
+import com.cloude.xmut.chat.model.User;
+import com.cloude.xmut.chat.model.UserModel;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.dialog.LoadDialog;
+import com.cloude.xmut.chat.utils.zxing.ScanListener;
+import com.cloude.xmut.chat.utils.zxing.ScanManager;
+import com.cloude.xmut.chat.utils.zxing.decode.DecodeThread;
+import com.cloude.xmut.chat.utils.zxing.decode.Utils;
 
 
 /**

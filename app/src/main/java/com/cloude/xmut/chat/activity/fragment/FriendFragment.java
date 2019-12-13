@@ -3,21 +3,22 @@ package com.cloude.xmut.chat.activity.fragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import androidx.annotation.Nullable;
+
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.adapter.FriendRecommendAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.FriendRecommendEntry;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.entity.FriendInvitation;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.FriendRecommendAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.FriendRecommendEntry;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.entity.FriendInvitation;
 
 /**
  * Created by ${chenyn} on 2017/11/7.

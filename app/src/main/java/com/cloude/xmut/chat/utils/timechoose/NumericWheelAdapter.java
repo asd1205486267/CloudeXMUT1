@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import jiguang.chat.utils.citychoose.view.adapter.AbstractWheelTextAdapter;
+import com.cloude.xmut.chat.utils.citychoose.view.adapter.AbstractWheelTextAdapter;
 
 /**
  * Created by ${chenyn} on 2017/2/23.

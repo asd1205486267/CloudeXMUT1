@@ -13,9 +13,9 @@ import cn.jpush.im.android.api.ChatRoomManager;
 import cn.jpush.im.android.api.callback.RequestCallback;
 import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.model.ChatRoomInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.dialog.LoadDialog;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.dialog.LoadDialog;
 
 /**
  * Created by ${chenyn} on 2017/10/31.

@@ -4,7 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.support.v4.app.Fragment;
+
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -24,23 +26,23 @@ import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.FriendInfoActivity;
-import jiguang.chat.activity.GroupNotFriendActivity;
-import jiguang.chat.activity.SearchFriendDetailActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.database.FriendRecommendEntry;
-import jiguang.chat.entity.Event;
-import jiguang.chat.entity.EventType;
-import jiguang.chat.entity.FriendInvitation;
-import jiguang.chat.utils.BitmapLoader;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.NativeImageLoader;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ViewHolder;
-import jiguang.chat.utils.photochoose.SelectableRoundedImageView;
-import jiguang.chat.view.SwipeLayout;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FriendInfoActivity;
+import com.cloude.xmut.chat.activity.GroupNotFriendActivity;
+import com.cloude.xmut.chat.activity.SearchFriendDetailActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.database.FriendRecommendEntry;
+import com.cloude.xmut.chat.entity.Event;
+import com.cloude.xmut.chat.entity.EventType;
+import com.cloude.xmut.chat.entity.FriendInvitation;
+import com.cloude.xmut.chat.utils.BitmapLoader;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.NativeImageLoader;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ViewHolder;
+import com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView;
+import com.cloude.xmut.chat.view.SwipeLayout;
 
 /**
  * Created by ${chenyn} on 2017/3/20.

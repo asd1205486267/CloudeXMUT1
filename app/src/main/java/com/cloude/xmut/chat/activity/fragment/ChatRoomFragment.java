@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import jiguang.chat.R;
-import jiguang.chat.controller.ChatRoomController;
-import jiguang.chat.view.ChatRoomView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.controller.ChatRoomController;
+import com.cloude.xmut.chat.view.ChatRoomView;
 
 /**
  * Created by ${chenyn} on 2017/10/31.

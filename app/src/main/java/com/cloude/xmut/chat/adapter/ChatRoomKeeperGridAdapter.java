@@ -12,7 +12,7 @@ import java.util.List;
 
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 public class ChatRoomKeeperGridAdapter extends BaseAdapter {
     private Context context;

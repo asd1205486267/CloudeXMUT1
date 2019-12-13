@@ -15,8 +15,8 @@ import java.util.List;
 
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
 
 /**
  * Created by ${chenyn} on 2017/9/5.

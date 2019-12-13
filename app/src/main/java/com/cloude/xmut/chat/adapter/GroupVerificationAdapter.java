@@ -12,11 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-
 import java.io.File;
 import java.util.List;
 
+import cn.jmessage.support.google.gson.Gson;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetAvatarBitmapCallback;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
@@ -25,8 +24,8 @@ import cn.jpush.im.android.api.event.GroupApprovalEvent;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.database.GroupApplyEntry;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.database.GroupApplyEntry;
 
 /**
  * Created by ${chenyn} on 2017/11/7.

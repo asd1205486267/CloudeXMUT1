@@ -19,14 +19,14 @@ import java.io.File;
 import java.util.List;
 
 import cn.jpush.im.android.api.content.FileContent;
-import jiguang.chat.R;
-import jiguang.chat.activity.DownLoadActivity;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.entity.SelectedHistoryFileListener;
-import jiguang.chat.utils.FileHelper;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ViewHolder;
-import jiguang.chat.view.MyImageView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.DownLoadActivity;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.entity.SelectedHistoryFileListener;
+import com.cloude.xmut.chat.utils.FileHelper;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ViewHolder;
+import com.cloude.xmut.chat.view.MyImageView;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 /**

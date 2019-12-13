@@ -12,16 +12,16 @@ import java.util.regex.Pattern;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.FinishRegisterActivity;
-import jiguang.chat.activity.LoginActivity;
-import jiguang.chat.activity.MainActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.database.UserEntry;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FinishRegisterActivity;
+import com.cloude.xmut.chat.activity.LoginActivity;
+import com.cloude.xmut.chat.activity.MainActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.database.UserEntry;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ToastUtil;
 
 /**
  * Created by ${chenyn} on 2017/2/16.

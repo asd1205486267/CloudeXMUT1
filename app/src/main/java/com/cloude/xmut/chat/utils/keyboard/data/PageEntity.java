@@ -3,7 +3,7 @@ package com.cloude.xmut.chat.utils.keyboard.data;
 import android.view.View;
 import android.view.ViewGroup;
 
-import jiguang.chat.utils.keyboard.interfaces.PageViewInstantiateListener;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.PageViewInstantiateListener;
 
 public class PageEntity<T extends PageEntity> implements PageViewInstantiateListener<T> {
 

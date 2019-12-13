@@ -34,7 +34,7 @@ import android.widget.RelativeLayout;
 
 import java.lang.ref.WeakReference;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener, VersionedGestureDetector.OnGestureListener,

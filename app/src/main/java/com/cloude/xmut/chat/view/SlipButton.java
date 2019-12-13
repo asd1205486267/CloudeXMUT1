@@ -13,7 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class SlipButton extends View implements OnTouchListener {

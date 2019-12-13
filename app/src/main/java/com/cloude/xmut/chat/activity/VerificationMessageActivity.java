@@ -1,19 +1,21 @@
 package com.cloude.xmut.chat.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.fragment.FriendFragment;
-import jiguang.chat.activity.fragment.GroupFragment;
-import jiguang.chat.adapter.ViewPagerAdapter;
-import jiguang.chat.view.NoScrollViewPager;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.fragment.FriendFragment;
+import com.cloude.xmut.chat.activity.fragment.GroupFragment;
+import com.cloude.xmut.chat.adapter.ViewPagerAdapter;
+import com.cloude.xmut.chat.view.NoScrollViewPager;
 
 /**
  * Created by ${chenyn} on 2017/11/7.

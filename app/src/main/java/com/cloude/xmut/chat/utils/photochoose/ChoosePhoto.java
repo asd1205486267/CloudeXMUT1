@@ -15,11 +15,11 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetGroupInfoCallback;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.activity.PersonalActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.HandleResponseCode;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.activity.PersonalActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.HandleResponseCode;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.utils.ToastUtil;
 
 /**
  * Created by ${chenyn} on 2017/3/3.
@@ -77,11 +77,11 @@ public class ChoosePhoto {
                     SharePreferenceManager.setCachedAvatarPath(uri.getPath());
                 }
                 if (isFromPersonal) {
-                    jiguang.chat.utils.dialog.LoadDialog.show(context);
+                    com.cloude.xmut.chat.utils.dialog.LoadDialog.show(context);
                     JMessageClient.updateUserAvatar(new File(uri.getPath()), new BasicCallback() {
                         @Override
                         public void gotResult(int responseCode, String responseMessage) {
-                            jiguang.chat.utils.dialog.LoadDialog.dismiss(context);
+                            com.cloude.xmut.chat.utils.dialog.LoadDialog.dismiss(context);
                             if (responseCode == 0) {
                                 ToastUtil.shortToast(mContext, "更新成功");
                             } else {
@@ -103,7 +103,7 @@ public class ChoosePhoto {
         photoUtils = new PhotoUtils(new PhotoUtils.OnPhotoResultListener() {
             @Override
             public void onPhotoResult(final Uri uri) {
-                jiguang.chat.utils.dialog.LoadDialog.show(context);
+                com.cloude.xmut.chat.utils.dialog.LoadDialog.show(context);
                 JMessageClient.getGroupInfo(groupId, new GetGroupInfoCallback() {
                     @Override
                     public void gotResult(int i, String s, GroupInfo groupInfo) {
@@ -111,7 +111,7 @@ public class ChoosePhoto {
                             groupInfo.updateAvatar(new File(uri.getPath()), "", new BasicCallback() {
                                 @Override
                                 public void gotResult(int i, String s) {
-                                    jiguang.chat.utils.dialog.LoadDialog.dismiss(context);
+                                    com.cloude.xmut.chat.utils.dialog.LoadDialog.dismiss(context);
                                     if (i == 0) {
                                         Intent intent = new Intent();
                                         intent.putExtra("groupAvatarPath", uri.getPath());

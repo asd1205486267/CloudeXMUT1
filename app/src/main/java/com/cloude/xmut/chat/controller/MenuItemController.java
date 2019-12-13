@@ -3,13 +3,13 @@ package com.cloude.xmut.chat.controller;
 import android.content.Intent;
 import android.view.View;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.CommonScanActivity;
-import jiguang.chat.activity.CreateGroupActivity;
-import jiguang.chat.activity.SearchAddOpenGroupActivity;
-import jiguang.chat.activity.SearchForAddFriendActivity;
-import jiguang.chat.activity.fragment.ConversationListFragment;
-import jiguang.chat.model.Constant;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.CommonScanActivity;
+import com.cloude.xmut.chat.activity.CreateGroupActivity;
+import com.cloude.xmut.chat.activity.SearchAddOpenGroupActivity;
+import com.cloude.xmut.chat.activity.SearchForAddFriendActivity;
+import com.cloude.xmut.chat.activity.fragment.ConversationListFragment;
+import com.cloude.xmut.chat.model.Constant;
 
 /**
  * Created by ${chenyn} on 2017/4/9.

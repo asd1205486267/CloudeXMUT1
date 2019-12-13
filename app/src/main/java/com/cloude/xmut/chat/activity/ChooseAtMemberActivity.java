@@ -16,13 +16,13 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.UserInfo;
-import jiguang.chat.R;
-import jiguang.chat.adapter.AtMemberAdapter;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.model.ParentLinkedHolder;
-import jiguang.chat.utils.keyboard.widget.EmoticonsEditText;
-import jiguang.chat.utils.pinyin.UserComparator;
-import jiguang.chat.utils.sidebar.SideBar;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.adapter.AtMemberAdapter;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.model.ParentLinkedHolder;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonsEditText;
+import com.cloude.xmut.chat.utils.pinyin.UserComparator;
+import com.cloude.xmut.chat.utils.sidebar.SideBar;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 

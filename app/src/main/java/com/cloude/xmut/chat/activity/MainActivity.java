@@ -2,10 +2,11 @@ package com.cloude.xmut.chat.activity;
 
 import android.Manifest;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.view.KeyEvent;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.PermissionListener;
@@ -14,9 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.jiguang.api.JCoreInterface;
-import jiguang.chat.R;
-import jiguang.chat.controller.MainController;
-import jiguang.chat.view.MainView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.controller.MainController;
+import com.cloude.xmut.chat.view.MainView;
 
 public class MainActivity extends FragmentActivity {
     private MainController mMainController;

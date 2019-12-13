@@ -12,10 +12,10 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.GetUserInfoCallback;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.database.FriendEntry;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.pinyin.HanyuPinyin;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.database.FriendEntry;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.pinyin.HanyuPinyin;
 
 /**
  * Created by ${chenyn} on 2017/5/7.

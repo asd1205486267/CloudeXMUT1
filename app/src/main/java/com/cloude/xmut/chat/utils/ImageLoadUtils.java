@@ -8,8 +8,8 @@ import com.bumptech.glide.Glide;
 
 import java.io.IOException;
 
-import jiguang.chat.utils.keyboard.utils.imageloader.ImageBase;
-import jiguang.chat.utils.keyboard.utils.imageloader.ImageLoader;
+import com.cloude.xmut.chat.utils.keyboard.utils.imageloader.ImageBase;
+import com.cloude.xmut.chat.utils.keyboard.utils.imageloader.ImageLoader;
 
 
 public class ImageLoadUtils extends ImageLoader {

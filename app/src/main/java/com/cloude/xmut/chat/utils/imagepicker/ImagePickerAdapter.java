@@ -2,18 +2,20 @@ package com.cloude.xmut.chat.utils.imagepicker;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.activity.FeedbackActivity;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.FeedbackActivity;
 
 
 public class ImagePickerAdapter extends RecyclerView.Adapter<ImagePickerAdapter.SelectedPicViewHolder> {

@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 /**

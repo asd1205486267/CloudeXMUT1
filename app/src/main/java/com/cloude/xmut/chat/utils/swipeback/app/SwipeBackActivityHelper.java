@@ -6,9 +6,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.swipeback.SwipeBackLayout;
-import jiguang.chat.utils.swipeback.Utils;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.swipeback.SwipeBackLayout;
+import com.cloude.xmut.chat.utils.swipeback.Utils;
 
 
 /**

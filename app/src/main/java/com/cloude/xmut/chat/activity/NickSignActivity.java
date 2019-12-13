@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 /**
  * Created by ${chenyn} on 2017/2/27.

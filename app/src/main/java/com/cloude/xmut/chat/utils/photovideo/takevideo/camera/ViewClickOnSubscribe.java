@@ -1,7 +1,8 @@
 package com.cloude.xmut.chat.utils.photovideo.takevideo.camera;
 
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -27,15 +27,16 @@ import cn.jpush.im.android.api.content.ImageContent;
 import cn.jpush.im.android.api.content.MessageContent;
 import cn.jpush.im.android.api.enums.ContentType;
 import cn.jpush.im.android.api.model.Conversation;
-import jiguang.chat.R;
-import jiguang.chat.activity.fragment.BaseFragment;
-import jiguang.chat.activity.historyfile.adapter.ImageFileAdapter;
-import jiguang.chat.activity.historyfile.controller.HistoryFileController;
-import jiguang.chat.activity.historyfile.view.YMComparator;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.utils.FileUtils;
-import jiguang.chat.utils.SharePreferenceManager;
-import jiguang.chat.view.SendImageView;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.fragment.BaseFragment;
+import com.cloude.xmut.chat.activity.historyfile.adapter.ImageFileAdapter;
+import com.cloude.xmut.chat.activity.historyfile.controller.HistoryFileController;
+import com.cloude.xmut.chat.activity.historyfile.view.YMComparator;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.utils.FileUtils;
+import com.cloude.xmut.chat.utils.SharePreferenceManager;
+import com.cloude.xmut.chat.view.SendImageView;
 
 /**
  * Created by ${chenyn} on 2017/8/23.

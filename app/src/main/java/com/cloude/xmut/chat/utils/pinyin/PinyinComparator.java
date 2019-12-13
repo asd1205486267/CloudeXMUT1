@@ -3,7 +3,7 @@ package com.cloude.xmut.chat.utils.pinyin;
 
 import java.util.Comparator;
 
-import jiguang.chat.database.FriendEntry;
+import com.cloude.xmut.chat.database.FriendEntry;
 
 /**
  *

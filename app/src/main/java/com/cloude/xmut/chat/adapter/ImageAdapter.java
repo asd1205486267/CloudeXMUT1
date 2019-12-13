@@ -15,22 +15,22 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+
+import java.util.List;
+
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.BrowserViewPagerActivity;
+import com.cloude.xmut.chat.activity.fragment.ImageFragment;
+import com.cloude.xmut.chat.entity.FileItem;
+import com.cloude.xmut.chat.entity.FileType;
+import com.cloude.xmut.chat.entity.UpdateSelectedStateListener;
+import com.cloude.xmut.chat.pickerimage.utils.PickerConfig;
+import com.cloude.xmut.chat.view.MyImageView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.imageaware.ImageAware;
 import com.nostra13.universalimageloader.core.imageaware.ImageViewAware;
-
-import java.util.List;
-
-import jiguang.chat.R;
-import jiguang.chat.activity.BrowserViewPagerActivity;
-import jiguang.chat.activity.fragment.ImageFragment;
-import jiguang.chat.entity.FileItem;
-import jiguang.chat.entity.FileType;
-import jiguang.chat.entity.UpdateSelectedStateListener;
-import jiguang.chat.pickerimage.utils.PickerConfig;
-import jiguang.chat.view.MyImageView;
 
 
 public class ImageAdapter extends BaseAdapter {

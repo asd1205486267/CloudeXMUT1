@@ -3,8 +3,7 @@ package com.cloude.xmut.chat.activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -15,6 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -23,17 +25,17 @@ import java.util.List;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.CommonUtils;
-import jiguang.chat.utils.DialogCreator;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.imagepicker.ImageGridActivity;
-import jiguang.chat.utils.imagepicker.ImagePicker;
-import jiguang.chat.utils.imagepicker.ImagePickerAdapter;
-import jiguang.chat.utils.imagepicker.ImagePreviewDelActivity;
-import jiguang.chat.utils.imagepicker.SelectDialog;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.CommonUtils;
+import com.cloude.xmut.chat.utils.DialogCreator;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.imagepicker.ImageGridActivity;
+import com.cloude.xmut.chat.utils.imagepicker.ImagePicker;
+import com.cloude.xmut.chat.utils.imagepicker.ImagePickerAdapter;
+import com.cloude.xmut.chat.utils.imagepicker.ImagePreviewDelActivity;
+import com.cloude.xmut.chat.utils.imagepicker.SelectDialog;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
 
 /**
  * Created by ${chenyn} on 2017/2/21.

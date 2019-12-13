@@ -9,8 +9,9 @@ import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
 import android.util.Log;
+
+import androidx.core.content.FileProvider;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -19,11 +20,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import jiguang.chat.utils.imagepicker.bean.ImageFolder;
-import jiguang.chat.utils.imagepicker.bean.ImageItem;
-import jiguang.chat.utils.imagepicker.util.ProviderUtil;
-import jiguang.chat.utils.imagepicker.util.Utils;
-import jiguang.chat.utils.imagepicker.view.CropImageView;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageFolder;
+import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
+import com.cloude.xmut.chat.utils.imagepicker.util.ProviderUtil;
+import com.cloude.xmut.chat.utils.imagepicker.util.Utils;
+import com.cloude.xmut.chat.utils.imagepicker.view.CropImageView;
 
 
 public class ImagePicker {
