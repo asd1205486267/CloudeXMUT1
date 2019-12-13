@@ -37,7 +37,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     /**
      * 是否是单选「测试接口用的」
      */
-    private CheckBox mSingleChoiceCb;
+    //private CheckBox mSingleChoiceCb;
     /**
      * 是否具有拍照功能「测试接口用的」
      */
@@ -48,15 +48,15 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     /**
      * 是否可编辑
      */
-    private CheckBox mEditableCb;
+   // private CheckBox mEditableCb;
     /**
      * 是否显示九图控件的加号按钮「测试接口用的」
      */
-    private CheckBox mPlusCb;
+ //   private CheckBox mPlusCb;
     /**
      * 是否开启拖拽排序功能「测试接口用的」
      */
-    private CheckBox mSortableCb;
+   // private CheckBox mSortableCb;
     /**
      * 拖拽排序九宫格控件
      */
@@ -72,12 +72,12 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_moment_add);
-        mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
+      //  mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
         mTakePhotoCb = findViewById(R.id.cb_moment_add_take_photo);
 
-        mEditableCb = findViewById(R.id.cb_moment_add_editable);
-        mPlusCb = findViewById(R.id.cb_moment_add_plus);
-        mSortableCb = findViewById(R.id.cb_moment_add_sortable);
+      //  mEditableCb = findViewById(R.id.cb_moment_add_editable);
+       // mPlusCb = findViewById(R.id.cb_moment_add_plus);
+       // mSortableCb = findViewById(R.id.cb_moment_add_sortable);
 
         mContentEt = findViewById(R.id.et_moment_add_content);
         mPhotosSnpl = findViewById(R.id.snpl_moment_add_photos);
@@ -85,7 +85,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
 
     @Override
     protected void setListener() {
-        mSingleChoiceCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
                 if (checked) {
@@ -96,19 +96,19 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
                 }
             }
         });
-        mEditableCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
                 mPhotosSnpl.setEditable(checked);
             }
         });
-        mPlusCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
                 mPhotosSnpl.setPlusEnable(checked);
             }
         });
-        mSortableCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
                 mPhotosSnpl.setSortable(checked);
@@ -123,9 +123,9 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     protected void processLogic(Bundle savedInstanceState) {
         setTitle("表白TA");
 
-        mEditableCb.setChecked(mPhotosSnpl.isEditable());
-        mPlusCb.setChecked(mPhotosSnpl.isPlusEnable());
-        mSortableCb.setChecked(mPhotosSnpl.isSortable());
+        mTakePhotoCb.setChecked(mPhotosSnpl.isEditable());
+        mTakePhotoCb.setChecked(mPhotosSnpl.isPlusEnable());
+        mTakePhotoCb.setChecked(mPhotosSnpl.isSortable());
     }
 
     public void onClick(View v) {
@@ -212,7 +212,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == RC_CHOOSE_PHOTO) {
-            if (mSingleChoiceCb.isChecked()) {
+            if ( mTakePhotoCb .isChecked()) {
                 mPhotosSnpl.setData(BGAPhotoPickerActivity.getSelectedPhotos(data));
             } else {
                 mPhotosSnpl.addMoreData(BGAPhotoPickerActivity.getSelectedPhotos(data));

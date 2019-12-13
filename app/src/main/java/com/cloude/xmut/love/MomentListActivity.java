@@ -43,7 +43,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     /**
      * 设置图片预览时是否具有保存图片功能「测试接口用的」
      */
-    private CheckBox mDownLoadableCb;
+   // private CheckBox mDownLoadableCb;
 
     private BGANinePhotoLayout mCurrentClickNpl;
 
@@ -51,7 +51,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_moment_list);
        // setContentView(R.layout.activity_moment_list);
-        mDownLoadableCb = findViewById(R.id.cb_moment_list_downloadable);
+      //  mDownLoadableCb = findViewById(R.id.cb_moment_list_downloadable);
         mMomentRv = findViewById(R.id.rv_moment_list_moments);
     }
 
@@ -115,19 +115,21 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
 
         String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            File downloadDir = new File(Environment.getExternalStorageDirectory(), "BGAPhotoPickerDownload");
+            File downloadDir = new File(Environment.getExternalStorageDirectory(), "XMUT");
             BGAPhotoPreviewActivity.IntentBuilder photoPreviewIntentBuilder = new BGAPhotoPreviewActivity.IntentBuilder(this);
 
-            if (mDownLoadableCb.isChecked()) {
+            /*if (mDownLoadableCb.isChecked()) {
                 // 保存图片的目录，如果传 null，则没有保存图片功能
                 photoPreviewIntentBuilder.saveImgDir(downloadDir);
-            }
+            }*/
 
             if (mCurrentClickNpl.getItemCount() == 1) {
                 // 预览单张图片
+                photoPreviewIntentBuilder.saveImgDir(downloadDir);
                 photoPreviewIntentBuilder.previewPhoto(mCurrentClickNpl.getCurrentClickItem());
             } else if (mCurrentClickNpl.getItemCount() > 1) {
                 // 预览多张图片
+                photoPreviewIntentBuilder.saveImgDir(downloadDir);
                 photoPreviewIntentBuilder.previewPhotos(mCurrentClickNpl.getData())
                         .currentPosition(mCurrentClickNpl.getCurrentClickItemPosition()); // 当前预览图片的索引
             }
