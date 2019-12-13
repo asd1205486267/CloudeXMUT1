@@ -30,6 +30,12 @@ public class LoginActivity extends Activity {
     private EditText pwd;			//登录密码输入框
     private Button button1;			//登录按钮
     private Button button2;			//注册按钮
+    public static String name_sql="null";
+    public static String sex_sql="null";
+    public static String age_sql="null";
+    public static String city_sql="null";
+    public static String sign_sql="null";
+    private TextView textView;
     private DefaultHttpClient httpClient;
     private  String ress;
     public static  String test="null";
@@ -49,7 +55,7 @@ public class LoginActivity extends Activity {
                 final Handler myHandler = new Handler(){
                     public void handleMessage(Message msg){
                         String responseResult = (String)msg.obj;
-                        //textView_response.setText(responseResult);
+                        textView.setText(responseResult);
                         //登录失败
                         if(responseResult.equals("false")){
                             Toast.makeText(LoginActivity.this, "登录失败！", Toast.LENGTH_LONG).show();
@@ -61,6 +67,32 @@ public class LoginActivity extends Activity {
                             editor.putString("uname",Post_to_login.r1);
                             editor.putString("pwd",Post_to_login.r2);
                             editor.commit();
+
+                            SharedPreferences sp1=getSharedPreferences("username",MODE_PRIVATE);
+                            SharedPreferences.Editor editor1=sp1.edit();
+                            editor1.putString("name",name_sql);
+                            editor1.commit();
+
+                            SharedPreferences sp2=getSharedPreferences("user_sex",MODE_PRIVATE);
+                            SharedPreferences.Editor editor2=sp2.edit();
+                            editor2.putString("sex",sex_sql);
+                            editor2.commit();
+
+                            SharedPreferences sp3=getSharedPreferences("user_age",MODE_PRIVATE);
+                            SharedPreferences.Editor editor3=sp3.edit();
+                            editor3.putString("age",age_sql);
+                            editor3.commit();
+
+                            SharedPreferences sp4=getSharedPreferences("user_address",MODE_PRIVATE);
+                            SharedPreferences.Editor editor4=sp4.edit();
+                            editor4.putString("address",city_sql);
+                            editor4.commit();
+
+                            SharedPreferences sp5=getSharedPreferences("user_self_sign",MODE_PRIVATE);
+                            SharedPreferences.Editor editor5=sp5.edit();
+                            editor5.putString("self_sign",sign_sql);
+                            editor5.commit();
+
                             Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
                             Intent intent=new Intent (LoginActivity.this, My_information.class);
                             startActivity(intent);
@@ -101,7 +133,7 @@ public class LoginActivity extends Activity {
         pwd = (EditText)findViewById(R.id.password);
         button1 = (Button)findViewById(R.id.login);
         button2 = (Button)findViewById(R.id.Register);
-
+       textView=(TextView)findViewById(R.id.textview);
 
         Toolbar toolbar =(Toolbar)findViewById(R.id.login_toolbar);
         setActionBar(toolbar);

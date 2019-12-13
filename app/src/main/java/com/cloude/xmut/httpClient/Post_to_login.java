@@ -1,5 +1,7 @@
 package com.cloude.xmut.httpClient;
 
+import com.cloude.xmut.my_information.My_information;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -14,10 +16,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.client.CookieStore;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Post_to_login {
     private String url = "http://47.97.160.39:8080/Server_of_Client/Check_Login_Servlet";
@@ -27,7 +32,6 @@ public class Post_to_login {
     public static String ress;
     public static String r1;
     public static String r2;
-
     /**
      * 使用Post方式向服务器发送请求并返回响应
      * @param username 传递给服务器的username
@@ -60,11 +64,12 @@ public class Post_to_login {
 
             HttpEntity entity = httpResponse.getEntity(); //获取响应对象，对象包含响应内容
             InputStream inputStream = entity.getContent();
-            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));//缓冲
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream,"utf-8"));//缓冲
             String readLine = null;
             while((readLine = br.readLine()) != null){
                 result += readLine;
             }
+
             CookieStore mCookieStore = httpClient.getCookieStore();
             List<Cookie> cookies = mCookieStore.getCookies();
             for (int i = 0; i < cookies.size(); i++) {
@@ -75,6 +80,17 @@ public class Post_to_login {
                 if("pwd".equals(cookies.get(i).getName())){
                     r2=cookies.get(i).getValue();
                 }
+            }
+            try {
+                JSONObject json = new JSONObject(result);
+                LoginActivity.name_sql=json.getString("name");
+                LoginActivity.sex_sql=json.getString("sex");
+                LoginActivity.age_sql=json.getString("age");
+                LoginActivity.city_sql=json.getString("city");
+                LoginActivity.sign_sql=json.getString("sign");
+
+            }catch (JSONException e) {
+                e.printStackTrace();
             }
             inputStream.close();
             return result;
