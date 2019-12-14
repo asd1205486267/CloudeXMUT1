@@ -6,21 +6,23 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.pickerimage.fragment.BaseFragment;
-import jiguang.chat.pickerimage.utils.ReflectionUtil;
+import com.cloude.xmut.chat.pickerimage.fragment.BaseFragment;
+import com.cloude.xmut.chat.pickerimage.utils.ReflectionUtil;
 
 public abstract class UIView extends AppCompatActivity {
 
@@ -28,7 +30,7 @@ public abstract class UIView extends AppCompatActivity {
 
     private static Handler handler;
 
-    private Toolbar toolbar;
+    private androidx.appcompat.widget.Toolbar toolbar;
 
     @Override
     protected void onStart() {
@@ -74,7 +76,7 @@ public abstract class UIView extends AppCompatActivity {
     }
 
     public void setToolBar(int toolBarId, ToolBarOptions options) {
-        toolbar = (Toolbar) findViewById(toolBarId);
+        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(toolBarId);
         toolbar.setTitleTextColor(Color.WHITE);
         if (options.titleId != 0) {
             toolbar.setTitle(options.titleId);
@@ -97,7 +99,7 @@ public abstract class UIView extends AppCompatActivity {
     }
 
     public void setToolBar(int toolbarId, int titleId, int logoId) {
-        toolbar = (Toolbar) findViewById(toolbarId);
+        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(toolbarId);
         toolbar.setTitle(titleId);
         toolbar.setLogo(logoId);
         setSupportActionBar(toolbar);

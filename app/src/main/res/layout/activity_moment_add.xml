@@ -57,7 +57,7 @@
             android:textColor="#AEA7B6"
             android:textColorHint="#C6C6C6" />
 
-        <cn.bingoogolapple1.photopicker.widget.BGASortableNinePhotoLayout
+        <cn.bingoogolapple.baseadapter.BGAEmptyView
             android:id="@+id/snpl_moment_add_photos"
             style="@style/WrapWrap"
             android:layout_margin="10dp"

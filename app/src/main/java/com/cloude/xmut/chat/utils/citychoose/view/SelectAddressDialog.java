@@ -30,19 +30,19 @@ import javax.xml.parsers.SAXParserFactory;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
-import jiguang.chat.R;
-import jiguang.chat.activity.PersonalActivity;
-import jiguang.chat.application.JGApplication;
-import jiguang.chat.utils.ThreadUtil;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.citychoose.XmlParserHandler;
-import jiguang.chat.utils.citychoose.model.CityModel;
-import jiguang.chat.utils.citychoose.model.DistrictModel;
-import jiguang.chat.utils.citychoose.model.ProvinceModel;
-import jiguang.chat.utils.citychoose.view.adapter.ArrayWheelAdapter;
-import jiguang.chat.utils.citychoose.view.myinterface.OnWheelChangedListener;
-import jiguang.chat.utils.citychoose.view.myinterface.SelectAddressInterface;
-import jiguang.chat.utils.timechoose.NumericWheelAdapter;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.activity.PersonalActivity;
+import com.cloude.xmut.chat.application.JGApplication;
+import com.cloude.xmut.chat.utils.ThreadUtil;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.citychoose.XmlParserHandler;
+import com.cloude.xmut.chat.utils.citychoose.model.CityModel;
+import com.cloude.xmut.chat.utils.citychoose.model.DistrictModel;
+import com.cloude.xmut.chat.utils.citychoose.model.ProvinceModel;
+import com.cloude.xmut.chat.utils.citychoose.view.adapter.ArrayWheelAdapter;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.OnWheelChangedListener;
+import com.cloude.xmut.chat.utils.citychoose.view.myinterface.SelectAddressInterface;
+import com.cloude.xmut.chat.utils.timechoose.NumericWheelAdapter;
 
 
 public class SelectAddressDialog implements OnClickListener,

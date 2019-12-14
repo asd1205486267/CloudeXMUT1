@@ -5,8 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
+
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -14,26 +13,29 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.adapter.PickerPreviewPagerAdapter;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.model.PickerContract;
-import jiguang.chat.pickerimage.utils.BitmapDecoder;
-import jiguang.chat.pickerimage.utils.Extras;
-import jiguang.chat.pickerimage.utils.ImageUtil;
-import jiguang.chat.pickerimage.utils.PickerUtil;
-import jiguang.chat.pickerimage.utils.RequestCode;
-import jiguang.chat.pickerimage.view.BaseZoomableImageView;
-import jiguang.chat.pickerimage.view.ToolBarOptions;
-import jiguang.chat.pickerimage.view.UIView;
-import jiguang.chat.utils.ToastUtil;
-import jiguang.chat.utils.imagepicker.view.ViewPagerFixed;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.adapter.PickerPreviewPagerAdapter;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.model.PickerContract;
+import com.cloude.xmut.chat.pickerimage.utils.BitmapDecoder;
+import com.cloude.xmut.chat.pickerimage.utils.Extras;
+import com.cloude.xmut.chat.pickerimage.utils.ImageUtil;
+import com.cloude.xmut.chat.pickerimage.utils.PickerUtil;
+import com.cloude.xmut.chat.pickerimage.utils.RequestCode;
+import com.cloude.xmut.chat.pickerimage.view.BaseZoomableImageView;
+import com.cloude.xmut.chat.pickerimage.view.ToolBarOptions;
+import com.cloude.xmut.chat.pickerimage.view.UIView;
+import com.cloude.xmut.chat.utils.ToastUtil;
+import com.cloude.xmut.chat.utils.imagepicker.view.ViewPagerFixed;
 
-public class PickerAlbumPreviewActivity extends UIView implements OnClickListener, OnPageChangeListener {
+public class PickerAlbumPreviewActivity extends UIView implements OnClickListener, ViewPager.OnPageChangeListener {
 
     public static final int RESULT_FROM_USER = RESULT_FIRST_USER + 1;
 

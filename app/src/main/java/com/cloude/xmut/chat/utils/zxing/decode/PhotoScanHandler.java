@@ -6,7 +6,7 @@ import android.os.Message;
 
 import com.google.zxing.Result;
 
-import jiguang.chat.utils.zxing.ScanManager;
+import com.cloude.xmut.chat.utils.zxing.ScanManager;
 
 public class PhotoScanHandler extends Handler {
 	public final static int PHOTODECODEERROR=0;

@@ -29,7 +29,7 @@ import java.util.EnumSet;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
-import jiguang.chat.utils.zxing.ScanManager;
+import com.cloude.xmut.chat.utils.zxing.ScanManager;
 
 
 public class DecodeThread extends Thread {

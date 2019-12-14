@@ -19,7 +19,7 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import com.cloude.xmut.chat.database.UserEntry;
 import com.cloude.xmut.chat.entity.NotificationClickEventReceiver;
-import com.cloude.xmut.chat.location.service.LocationService;
+//import com.cloude.xmut.chat.location.service.LocationService;
 import com.cloude.xmut.chat.pickerimage.utils.StorageUtil;
 import com.cloude.xmut.chat.utils.SharePreferenceManager;
 import com.cloude.xmut.chat.utils.imagepicker.GlideImageLoader;
@@ -111,7 +111,7 @@ public class JGApplication extends com.activeandroid.app.Application {
     public static String groupAvatarPath;
 
     public static Context context;
-    public static LocationService locationService;
+//    public static LocationService locationService;
 
     public static List<GroupInfo> mGroupInfoList = new ArrayList<>();
     public static List<UserInfo> mFriendInfoList = new ArrayList<>();
@@ -133,7 +133,7 @@ public class JGApplication extends com.activeandroid.app.Application {
         StorageUtil.init(context, null);
         Fresco.initialize(getApplicationContext());
       //  SDKInitializer.initialize(getApplicationContext());  这里是百度定位的
-        locationService = new LocationService(getApplicationContext());
+//        locationService = new LocationService(getApplicationContext());
 
         JMessageClient.init(getApplicationContext(), true);
         JMessageClient.setDebugMode(true);

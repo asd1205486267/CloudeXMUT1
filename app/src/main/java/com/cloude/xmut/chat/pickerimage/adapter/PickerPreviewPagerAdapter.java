@@ -2,19 +2,20 @@ package com.cloude.xmut.chat.pickerimage.adapter;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.viewpager.widget.PagerAdapter;
+
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.PickerAlbumPreviewActivity;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.utils.ScreenUtil;
-import jiguang.chat.pickerimage.view.BaseZoomableImageView;
-import jiguang.chat.pickerimage.view.UIView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.PickerAlbumPreviewActivity;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.utils.ScreenUtil;
+import com.cloude.xmut.chat.pickerimage.view.BaseZoomableImageView;
+import com.cloude.xmut.chat.pickerimage.view.UIView;
 
 public class PickerPreviewPagerAdapter extends PagerAdapter {
 	

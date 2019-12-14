@@ -27,7 +27,7 @@ import android.view.SurfaceHolder;
 
 import java.io.IOException;
 
-import jiguang.chat.utils.zxing.camera.open.OpenCameraInterface;
+import com.cloude.xmut.chat.utils.zxing.camera.open.OpenCameraInterface;
 
 /**
  * This object wraps the Camera service object and expects to be the only one

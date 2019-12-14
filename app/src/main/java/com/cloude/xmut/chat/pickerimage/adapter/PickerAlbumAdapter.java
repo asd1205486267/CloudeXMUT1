@@ -11,11 +11,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.model.AlbumInfo;
-import jiguang.chat.pickerimage.utils.PickerImageLoadTool;
-import jiguang.chat.pickerimage.utils.RotateImageViewAware;
-import jiguang.chat.pickerimage.utils.ThumbnailsUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.model.AlbumInfo;
+import com.cloude.xmut.chat.pickerimage.utils.PickerImageLoadTool;
+import com.cloude.xmut.chat.pickerimage.utils.RotateImageViewAware;
+import com.cloude.xmut.chat.pickerimage.utils.ThumbnailsUtil;
 
 
 public class PickerAlbumAdapter extends BaseAdapter {

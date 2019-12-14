@@ -9,8 +9,8 @@ import cn.jpush.im.android.api.enums.ConversationType;
 import cn.jpush.im.android.api.event.NotificationClickEvent;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
-import jiguang.chat.activity.ChatActivity;
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.chat.activity.ChatActivity;
+import com.cloude.xmut.chat.application.JGApplication;
 
 public class NotificationClickEventReceiver {
     private Context mContext;

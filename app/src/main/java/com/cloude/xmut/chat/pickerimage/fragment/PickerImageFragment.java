@@ -13,10 +13,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.adapter.PickerPhotoAdapter;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.utils.Extras;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.adapter.PickerPhotoAdapter;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.utils.Extras;
 
 public class PickerImageFragment extends BaseFragment implements OnItemClickListener {
 

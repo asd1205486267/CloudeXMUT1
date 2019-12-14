@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.pickerimage.utils.Extras;
+import com.cloude.xmut.chat.pickerimage.utils.Extras;
 
 public class PickerContract {
 

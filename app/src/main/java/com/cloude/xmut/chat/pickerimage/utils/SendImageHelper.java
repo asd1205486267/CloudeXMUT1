@@ -11,9 +11,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.model.PickerContract;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.model.PickerContract;
 
 public class SendImageHelper {
     public interface Callback {

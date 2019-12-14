@@ -7,7 +7,7 @@ import android.util.Log;
 
 import java.lang.reflect.Field;
 
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.chat.application.JGApplication;
 
 public class ScreenUtil {
     private static final String TAG = "Demo.ScreenUtil";

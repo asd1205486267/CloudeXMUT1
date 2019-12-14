@@ -22,10 +22,10 @@ import android.os.Message;
 
 import com.google.zxing.Result;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.zxing.ScanManager;
-import jiguang.chat.utils.zxing.camera.CameraManager;
-import jiguang.chat.utils.zxing.decode.DecodeThread;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.zxing.ScanManager;
+import com.cloude.xmut.chat.utils.zxing.camera.CameraManager;
+import com.cloude.xmut.chat.utils.zxing.decode.DecodeThread;
 
 
 /**

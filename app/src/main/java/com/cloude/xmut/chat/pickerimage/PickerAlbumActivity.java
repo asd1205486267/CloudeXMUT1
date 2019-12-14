@@ -13,18 +13,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.fragment.PickerAlbumFragment;
-import jiguang.chat.pickerimage.fragment.PickerImageFragment;
-import jiguang.chat.pickerimage.model.AlbumInfo;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.model.PickerContract;
-import jiguang.chat.pickerimage.utils.Extras;
-import jiguang.chat.pickerimage.utils.PickerConfig;
-import jiguang.chat.pickerimage.utils.PickerImageLoadTool;
-import jiguang.chat.pickerimage.utils.RequestCode;
-import jiguang.chat.pickerimage.view.ToolBarOptions;
-import jiguang.chat.pickerimage.view.UIView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.fragment.PickerAlbumFragment;
+import com.cloude.xmut.chat.pickerimage.fragment.PickerImageFragment;
+import com.cloude.xmut.chat.pickerimage.model.AlbumInfo;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.model.PickerContract;
+import com.cloude.xmut.chat.pickerimage.utils.Extras;
+import com.cloude.xmut.chat.pickerimage.utils.PickerConfig;
+import com.cloude.xmut.chat.pickerimage.utils.PickerImageLoadTool;
+import com.cloude.xmut.chat.pickerimage.utils.RequestCode;
+import com.cloude.xmut.chat.pickerimage.view.ToolBarOptions;
+import com.cloude.xmut.chat.pickerimage.view.UIView;
 
 /**
  * Inner image picker, no longer use third-part application 

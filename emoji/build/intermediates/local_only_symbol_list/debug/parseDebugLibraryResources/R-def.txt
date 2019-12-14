@@ -80,3 +80,4 @@ mipmap emoji_0x26bd
 mipmap emoji_0x270a
 mipmap emoji_0x270c
 mipmap emoji_0x2764
+string app_name

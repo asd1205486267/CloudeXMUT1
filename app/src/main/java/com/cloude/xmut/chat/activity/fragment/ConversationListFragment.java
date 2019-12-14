@@ -21,7 +21,7 @@ import android.view.WindowManager;
 import android.widget.PopupWindow;
 
 import com.cloude.xmut.R;
-import com.cloude.xmut.chat.controller.ContactsController;
+import com.cloude.xmut.chat.controller.ConversationListController;
 import com.cloude.xmut.chat.controller.MenuItemController;
 import com.cloude.xmut.chat.view.ConversationListView;
 import com.cloude.xmut.chat.view.MenuItemView;
@@ -43,8 +43,6 @@ import cn.jpush.im.android.api.model.GroupInfo;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import com.cloude.xmut.chat.application.JGApplication;
-import com.cloude.xmut.chat.controller.ConversationListController;
-
 import com.cloude.xmut.chat.entity.Event;
 
 
@@ -57,7 +55,7 @@ public class ConversationListFragment extends BaseFragment {
     private Activity mContext;
     private View mRootView;
     private ConversationListView mConvListView;
-    private ContactsController mConvListController;
+    private ConversationListController mConvListController;
     private HandlerThread mThread;
     private static final int REFRESH_CONVERSATION_LIST = 0x3000;
     private static final int DISMISS_REFRESH_HEADER = 0x3001;

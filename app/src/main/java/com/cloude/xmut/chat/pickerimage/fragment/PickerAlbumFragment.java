@@ -22,12 +22,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.adapter.PickerAlbumAdapter;
-import jiguang.chat.pickerimage.model.AlbumInfo;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.utils.MediaDAO;
-import jiguang.chat.pickerimage.utils.ThumbnailsUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.adapter.PickerAlbumAdapter;
+import com.cloude.xmut.chat.pickerimage.model.AlbumInfo;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.utils.MediaDAO;
+import com.cloude.xmut.chat.pickerimage.utils.ThumbnailsUtil;
 
 
 public class PickerAlbumFragment extends BaseFragment implements OnItemClickListener {

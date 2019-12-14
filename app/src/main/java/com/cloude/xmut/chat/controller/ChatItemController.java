@@ -71,7 +71,7 @@ import com.cloude.xmut.chat.activity.GroupNotFriendActivity;
 import com.cloude.xmut.chat.adapter.ChattingListAdapter;
 import com.cloude.xmut.chat.adapter.ChattingListAdapter.ViewHolder;
 import com.cloude.xmut.chat.application.JGApplication;
-import com.cloude.xmut.chat.location.activity.MapPickerActivity;
+//import com.cloude.xmut.chat.location.activity.MapPickerActivity;
 import com.cloude.xmut.chat.pickerimage.utils.BitmapDecoder;
 import com.cloude.xmut.chat.utils.FileHelper;
 import com.cloude.xmut.chat.utils.FileUtils;
@@ -1255,17 +1255,17 @@ public class ChatItemController {
                         mContext.startActivity(intent);
                     }
                     break;
-                case location:
-                    if (holder.picture != null && v.getId() == holder.picture.getId()) {
-                        Intent intent = new Intent(mContext, MapPickerActivity.class);
-                        LocationContent locationContent = (LocationContent) msg.getContent();
-                        intent.putExtra("latitude", locationContent.getLatitude().doubleValue());
-                        intent.putExtra("longitude", locationContent.getLongitude().doubleValue());
-                        intent.putExtra("locDesc", locationContent.getAddress());
-                        intent.putExtra("sendLocation", false);
-                        mContext.startActivity(intent);
-                    }
-                    break;
+//                case location:
+//                    if (holder.picture != null && v.getId() == holder.picture.getId()) {
+//                        Intent intent = new Intent(mContext, MapPickerActivity.class);
+//                        LocationContent locationContent = (LocationContent) msg.getContent();
+//                        intent.putExtra("latitude", locationContent.getLatitude().doubleValue());
+//                        intent.putExtra("longitude", locationContent.getLongitude().doubleValue());
+//                        intent.putExtra("locDesc", locationContent.getAddress());
+//                        intent.putExtra("sendLocation", false);
+//                        mContext.startActivity(intent);
+//                    }
+//                    break;
                 case file:
                     FileContent content = (FileContent) msg.getContent();
                     String fileName = content.getFileName();

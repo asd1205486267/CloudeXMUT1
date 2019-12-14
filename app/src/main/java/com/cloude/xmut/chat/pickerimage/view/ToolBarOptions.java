@@ -1,7 +1,7 @@
 package com.cloude.xmut.chat.pickerimage.view;
 
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 
 public class ToolBarOptions {

@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import java.io.File;
@@ -55,6 +56,7 @@ import com.cloude.xmut.chat.utils.DialogCreator;
 import com.cloude.xmut.chat.utils.NativeImageLoader;
 import com.cloude.xmut.chat.view.ImgBrowserViewPager;
 import com.cloude.xmut.chat.view.PhotoView;
+import com.squareup.picasso.Picasso;
 
 
 //用于浏览图片
@@ -416,7 +418,7 @@ public class BrowserViewPagerActivity extends BaseActivity {
         }
     }
 
-    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager().OnPageChangeListener() {
+    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
         //在滑动的时候更新CheckBox的状态
         @Override
         public void onPageScrolled(final int i, float v, int i2) {

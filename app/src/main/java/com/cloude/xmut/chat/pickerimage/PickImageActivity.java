@@ -15,12 +15,12 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.model.PickerContract;
-import jiguang.chat.pickerimage.utils.Extras;
-import jiguang.chat.pickerimage.view.ToolBarOptions;
-import jiguang.chat.pickerimage.view.UIView;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.model.PickerContract;
+import com.cloude.xmut.chat.pickerimage.utils.Extras;
+import com.cloude.xmut.chat.pickerimage.view.ToolBarOptions;
+import com.cloude.xmut.chat.pickerimage.view.UIView;
 
 public class PickImageActivity extends UIView {
 

@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import com.cloude.xmut.R;
-import com.cloude.xmut.chat.utils.ViewHolder;
 import com.cloude.xmut.chat.utils.imagepicker.ImageBaseActivity;
 import com.cloude.xmut.chat.utils.imagepicker.ImageGridActivity;
 import com.cloude.xmut.chat.utils.imagepicker.ImagePicker;
@@ -76,7 +75,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof CameraViewHolder){
             ((CameraViewHolder)holder).bindCamera();
         }else if (holder instanceof ImageViewHolder){
@@ -109,7 +108,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
         }
     }
 
-    private class ImageViewHolder extends ViewHolder {
+    private class ImageViewHolder extends RecyclerView.ViewHolder {
 
         View rootView;
         ImageView ivThumb;
@@ -166,7 +165,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     }
 
-    private class CameraViewHolder extends ViewHolder {
+    private class CameraViewHolder extends RecyclerView.ViewHolder {
 
         View mItemView;
 

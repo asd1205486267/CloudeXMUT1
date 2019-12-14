@@ -6,7 +6,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import cn.jiguang.api.JCoreInterface;
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 public class TimeFormat {
 

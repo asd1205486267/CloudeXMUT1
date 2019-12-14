@@ -26,15 +26,15 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Map;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.zxing.camera.CameraManager;
-import jiguang.chat.utils.zxing.decode.DecodeThread;
-import jiguang.chat.utils.zxing.decode.PhotoScanHandler;
-import jiguang.chat.utils.zxing.decode.RGBLuminanceSource;
-import jiguang.chat.utils.zxing.utils.BeepManager;
-import jiguang.chat.utils.zxing.utils.BitmapUtil;
-import jiguang.chat.utils.zxing.utils.CaptureActivityHandler;
-import jiguang.chat.utils.zxing.utils.InactivityTimer;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.zxing.camera.CameraManager;
+import com.cloude.xmut.chat.utils.zxing.decode.DecodeThread;
+import com.cloude.xmut.chat.utils.zxing.decode.PhotoScanHandler;
+import com.cloude.xmut.chat.utils.zxing.decode.RGBLuminanceSource;
+import com.cloude.xmut.chat.utils.zxing.utils.BeepManager;
+import com.cloude.xmut.chat.utils.zxing.utils.BitmapUtil;
+import com.cloude.xmut.chat.utils.zxing.utils.CaptureActivityHandler;
+import com.cloude.xmut.chat.utils.zxing.utils.InactivityTimer;
 
 public class ScanManager implements SurfaceHolder.Callback{
 	boolean isHasSurface = false;

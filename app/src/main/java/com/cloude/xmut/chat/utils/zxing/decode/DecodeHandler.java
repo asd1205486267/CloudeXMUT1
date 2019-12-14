@@ -35,8 +35,8 @@ import com.google.zxing.common.HybridBinarizer;
 import java.io.ByteArrayOutputStream;
 import java.util.Map;
 
-import jiguang.chat.R;
-import jiguang.chat.utils.zxing.ScanManager;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.utils.zxing.ScanManager;
 
 public class DecodeHandler extends Handler {
 

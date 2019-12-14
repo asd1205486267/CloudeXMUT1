@@ -14,13 +14,13 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import jiguang.chat.R;
-import jiguang.chat.pickerimage.fragment.PickerImageFragment;
-import jiguang.chat.pickerimage.model.PhotoInfo;
-import jiguang.chat.pickerimage.utils.PickerImageLoadTool;
-import jiguang.chat.pickerimage.utils.RotateImageViewAware;
-import jiguang.chat.pickerimage.utils.ScreenUtil;
-import jiguang.chat.pickerimage.utils.ThumbnailsUtil;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.pickerimage.fragment.PickerImageFragment;
+import com.cloude.xmut.chat.pickerimage.model.PhotoInfo;
+import com.cloude.xmut.chat.pickerimage.utils.PickerImageLoadTool;
+import com.cloude.xmut.chat.pickerimage.utils.RotateImageViewAware;
+import com.cloude.xmut.chat.pickerimage.utils.ScreenUtil;
+import com.cloude.xmut.chat.pickerimage.utils.ThumbnailsUtil;
 
 public class PickerPhotoAdapter extends BaseAdapter {
 

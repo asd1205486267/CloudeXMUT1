@@ -5,6 +5,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.ArrayList;
@@ -12,6 +13,8 @@ import java.util.ArrayList;
 import com.cloude.xmut.chat.utils.imagepicker.ImagePicker;
 import com.cloude.xmut.chat.utils.imagepicker.bean.ImageItem;
 import com.cloude.xmut.chat.utils.imagepicker.util.Utils;
+
+
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -48,7 +51,7 @@ public class ImagePageAdapter extends PagerAdapter {
         PhotoView photoView = new PhotoView(mActivity);
         ImageItem imageItem = images.get(position);
         imagePicker.getImageLoader().displayImages(mActivity, imageItem.path, photoView, screenWidth, screenHeight);
-        photoView.setOnPhotoTapListener(new PhotoViewAttacher.OnPhotoTapListener() {
+        photoView.setOnPhotoTapListener(new PhotoViewAttacher.OnPhotoTapListener(){
             @Override
             public void onPhotoTap(View view, float x, float y) {
                 if (listener != null) listener.OnPhotoTapListener(view, x, y);

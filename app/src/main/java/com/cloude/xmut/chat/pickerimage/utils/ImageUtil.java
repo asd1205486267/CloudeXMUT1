@@ -17,8 +17,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import jiguang.chat.R;
-import jiguang.chat.application.JGApplication;
+import com.cloude.xmut.R;
+import com.cloude.xmut.chat.application.JGApplication;
 
 public class ImageUtil {
     public static class ImageSize {

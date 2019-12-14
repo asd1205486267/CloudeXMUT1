@@ -1,7 +1,7 @@
 package com.cloude.xmut.chat.model;
 
-import android.support.annotation.NonNull;
 
+import androidx.annotation.NonNull;
 
 public class ParentLinkedHolder<T> {
     public T item;

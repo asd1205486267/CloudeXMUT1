@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import jiguang.chat.R;
+import com.cloude.xmut.R;
 
 /**
  * 普通提示包含两个按钮以及Title和Message(居中显示).

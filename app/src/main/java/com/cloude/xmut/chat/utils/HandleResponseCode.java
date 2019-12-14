@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import jiguang.chat.activity.LoginActivity;
+import com.cloude.xmut.chat.activity.LoginActivity;
 
 
 public class HandleResponseCode {

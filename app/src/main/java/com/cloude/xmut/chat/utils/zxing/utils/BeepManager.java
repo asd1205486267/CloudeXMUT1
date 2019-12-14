@@ -26,10 +26,11 @@ import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.cloude.xmut.R;
+
 import java.io.Closeable;
 import java.io.IOException;
 
-import jiguang.chat.R;
 
 
 public class BeepManager implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener, Closeable {
