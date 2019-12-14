@@ -2,7 +2,7 @@ package com.cloude.xmut.chat.utils.keyboard.interfaces;
 
 import android.view.ViewGroup;
 
-import jiguang.chat.utils.keyboard.adpater.EmoticonsAdapter;
+import com.cloude.xmut.chat.utils.keyboard.adpater.EmoticonsAdapter;
 
 public interface EmoticonDisplayListener<T> {
 

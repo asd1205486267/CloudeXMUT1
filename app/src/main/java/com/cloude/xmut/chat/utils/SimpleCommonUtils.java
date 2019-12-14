@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.cloude.xmut.chat.testemticon.DefXhsEmoticons;
 import com.sj.emoji.DefEmoticons;
 import com.sj.emoji.EmojiBean;
 import com.sj.emoji.EmojiDisplay;
-import com.testemticon.DefXhsEmoticons;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;

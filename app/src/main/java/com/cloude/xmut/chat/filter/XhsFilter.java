@@ -6,16 +6,16 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.widget.EditText;
 
+import com.cloude.xmut.chat.testemticon.DefXhsEmoticons;
 import com.sj.emoji.EmojiDisplayListener;
 import com.sj.emoji.EmojiSpan;
-import com.testemticon.DefXhsEmoticons;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import jiguang.chat.utils.keyboard.interfaces.EmoticonFilter;
-import jiguang.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
-import jiguang.chat.utils.keyboard.widget.EmoticonSpan;
+import com.cloude.xmut.chat.utils.keyboard.interfaces.EmoticonFilter;
+import com.cloude.xmut.chat.utils.keyboard.utils.EmoticonsKeyboardUtils;
+import com.cloude.xmut.chat.utils.keyboard.widget.EmoticonSpan;
 
 
 public class XhsFilter extends EmoticonFilter {
