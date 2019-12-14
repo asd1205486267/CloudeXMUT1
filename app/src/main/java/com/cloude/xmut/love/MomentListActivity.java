@@ -8,11 +8,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cloude.xmut.R;
 import com.cloude.xmut.model.Moment;
 import com.cloude.xmut.my_information.My_information;
+import com.cloude.xmut.my_information.RoundImageView;
 
 import java.io.File;
 import java.util.ArrayList;
