@@ -22,8 +22,8 @@ public class ImageLoadUtils extends ImageLoader {
     protected void displayImageFromFile(String imageUri, ImageView imageView) throws IOException {
         String filePath = Scheme.FILE.crop(imageUri);
         Glide.with(imageView.getContext())
-                .load(filePath)
                 .asBitmap()
+                .load(filePath)
                 .into(imageView);
     }
 

@@ -37,7 +37,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     /**
      * 是否是单选「测试接口用的」
      */
-    //private CheckBox mSingleChoiceCb;
+    // private CheckBox mSingleChoiceCb;
     /**
      * 是否具有拍照功能「测试接口用的」
      */
@@ -52,7 +52,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     /**
      * 是否显示九图控件的加号按钮「测试接口用的」
      */
-    //   private CheckBox mPlusCb;
+    // private CheckBox mPlusCb;
     /**
      * 是否开启拖拽排序功能「测试接口用的」
      */
@@ -72,10 +72,10 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_moment_add);
-        //  mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
+        // mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
         mTakePhotoCb = findViewById(R.id.cb_moment_add_take_photo);
 
-        //  mEditableCb = findViewById(R.id.cb_moment_add_editable);
+        // mEditableCb = findViewById(R.id.cb_moment_add_editable);
         // mPlusCb = findViewById(R.id.cb_moment_add_plus);
         // mSortableCb = findViewById(R.id.cb_moment_add_sortable);
 
@@ -177,7 +177,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
         String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
         if (EasyPermissions.hasPermissions(this, perms)) {
             // 拍照后照片的存放目录，改成你自己拍照后要存放照片的目录。如果不传递该参数的话就没有拍照功能
-            File takePhotoDir = new File(Environment.getExternalStorageDirectory(), "xmut");
+            File takePhotoDir = new File(Environment.getExternalStorageDirectory(), "BGAPhotoPickerTakePhoto");
 
             Intent photoPickerIntent = new BGAPhotoPickerActivity.IntentBuilder(this)
                     .cameraFileDir(mTakePhotoCb.isChecked() ? takePhotoDir : null) // 拍照后照片的存放目录，改成你自己拍照后要存放照片的目录。如果不传递该参数的话则不开启图库里的拍照功能
@@ -212,7 +212,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == RC_CHOOSE_PHOTO) {
-            if ( mTakePhotoCb .isChecked()) {
+            if ( mTakePhotoCb.isChecked()) {
                 mPhotosSnpl.setData(BGAPhotoPickerActivity.getSelectedPhotos(data));
             } else {
                 mPhotosSnpl.addMoreData(BGAPhotoPickerActivity.getSelectedPhotos(data));
