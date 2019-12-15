@@ -48,15 +48,15 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     /**
      * 是否可编辑
      */
-   // private CheckBox mEditableCb;
+    // private CheckBox mEditableCb;
     /**
      * 是否显示九图控件的加号按钮「测试接口用的」
      */
- //   private CheckBox mPlusCb;
+    //   private CheckBox mPlusCb;
     /**
      * 是否开启拖拽排序功能「测试接口用的」
      */
-   // private CheckBox mSortableCb;
+    // private CheckBox mSortableCb;
     /**
      * 拖拽排序九宫格控件
      */
@@ -72,12 +72,12 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_moment_add);
-      //  mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
+        //  mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
         mTakePhotoCb = findViewById(R.id.cb_moment_add_take_photo);
 
-      //  mEditableCb = findViewById(R.id.cb_moment_add_editable);
-       // mPlusCb = findViewById(R.id.cb_moment_add_plus);
-       // mSortableCb = findViewById(R.id.cb_moment_add_sortable);
+        //  mEditableCb = findViewById(R.id.cb_moment_add_editable);
+        // mPlusCb = findViewById(R.id.cb_moment_add_plus);
+        // mSortableCb = findViewById(R.id.cb_moment_add_sortable);
 
         mContentEt = findViewById(R.id.et_moment_add_content);
         mPhotosSnpl = findViewById(R.id.snpl_moment_add_photos);
@@ -177,7 +177,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
         String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
         if (EasyPermissions.hasPermissions(this, perms)) {
             // 拍照后照片的存放目录，改成你自己拍照后要存放照片的目录。如果不传递该参数的话就没有拍照功能
-            File takePhotoDir = new File(Environment.getExternalStorageDirectory(), "BGAPhotoPickerTakePhoto");
+            File takePhotoDir = new File(Environment.getExternalStorageDirectory(), "xmut");
 
             Intent photoPickerIntent = new BGAPhotoPickerActivity.IntentBuilder(this)
                     .cameraFileDir(mTakePhotoCb.isChecked() ? takePhotoDir : null) // 拍照后照片的存放目录，改成你自己拍照后要存放照片的目录。如果不传递该参数的话则不开启图库里的拍照功能
