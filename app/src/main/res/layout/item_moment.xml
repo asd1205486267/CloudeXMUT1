@@ -19,22 +19,25 @@
         android:layout_toRightOf="@id/iv_item_moment_avatar"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="name"
+        android:text="XMUT"
         android:textColor="#707EA3"
-        android:textSize="15sp"/>
+        android:textIsSelectable="true"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tv_item_moment_content"
         style="@style/MatchWrap"
         android:layout_below="@id/tv_item_moment_username"
         android:layout_marginTop="6dp"
-        android:gravity="start"
         android:layout_toRightOf="@id/iv_item_moment_avatar"
+        android:scrollbars="vertical"
         android:ellipsize="end"
-        android:maxLines="20"
+        android:gravity="start"
+        android:maxLines="10"
         android:textColor="#474747"
+        android:textIsSelectable="true"
         android:textSize="15sp"
-        tools:text="我是测试内容"/>
+        tools:text="我是文本内容" />
 
     <cn.bingoogolapple1.photopicker.widget.BGANinePhotoLayout
         android:id="@+id/npl_item_moment_photos"
