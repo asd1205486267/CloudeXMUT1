@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
+import com.cloude.xmut.chat.activity.WelcomeActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.love.MomentListActivity;
@@ -846,8 +847,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
           chat_button.setOnClickListener(new View.OnClickListener() {
               @Override
              public void onClick(View view) {
-                 String url = "https://fanyi.baidu.com/?aldtype=16047#en/zh/portrait";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                  Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+                  startActivity(intent);
 
            }
          });
