@@ -19,7 +19,7 @@ import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 
-public class ImagePageAdapter extends PagerAdapter {
+public class ImagePageAdapter extends PagerAdapter  {
 
     private int screenWidth;
     private int screenHeight;
@@ -48,7 +48,7 @@ public class ImagePageAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        PhotoView photoView = new PhotoView(mActivity);
+       /* PhotoView photoView = new PhotoView(mActivity);
         ImageItem imageItem = images.get(position);
         imagePicker.getImageLoader().displayImages(mActivity, imageItem.path, photoView, screenWidth, screenHeight);
         photoView.setOnPhotoTapListener(new PhotoViewAttacher.OnPhotoTapListener(){
@@ -57,7 +57,11 @@ public class ImagePageAdapter extends PagerAdapter {
                 if (listener != null) listener.OnPhotoTapListener(view, x, y);
             }
         });
-        container.addView(photoView);
+        container.addView(photoView);*/
+        PhotoView photoView = new PhotoView(container.getContext());
+        photoView.setImageResource(position);
+        // Now just add PhotoView to ViewPager and return it
+        container.addView(photoView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         return photoView;
     }
 

@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
             app:bmb_buttonEnum="textOutsideCircle"
-            app:bmb_piecePlaceEnum="piecePlace_dot_9_3"
-            app:bmb_buttonPlaceEnum="buttonPlace_sc_9_3"
+            app:bmb_piecePlaceEnum="piecePlace_dot_9_1"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_9_1"
             app:bmb_boomInWholeScreen="true">
             <TextView
                 android:layout_height="match_parent"
