@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
 
-    <jiguang.chat.view.SwipeLayoutConv
+    <com.cloude.xmut.chat.view.SwipeLayoutConv
         android:id="@+id/swp_layout"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -177,5 +177,5 @@
         </RelativeLayout>
 
 
-    </jiguang.chat.view.SwipeLayoutConv>
+    </com.cloude.xmut.chat.view.SwipeLayoutConv>
 </LinearLayout>

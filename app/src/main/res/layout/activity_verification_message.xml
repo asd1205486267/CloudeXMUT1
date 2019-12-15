@@ -68,12 +68,12 @@
         android:layout_height="0.33dp"
         android:background="#D2D2D2"/>
 
-    <jiguang.chat.view.NoScrollViewPager
+    <com.cloude.xmut.chat.view.NoScrollViewPager
         android:id="@+id/verification_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </jiguang.chat.view.NoScrollViewPager>
+    </com.cloude.xmut.chat.view.NoScrollViewPager>
 
 
 </LinearLayout>

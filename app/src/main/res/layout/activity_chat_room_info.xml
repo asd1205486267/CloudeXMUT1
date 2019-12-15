@@ -81,7 +81,7 @@
 
         <LinearLayout
             style="@style/ChatDetailItemContent">
-            <jiguang.chat.view.NoScrollGridView
+            <com.cloude.xmut.chat.view.NoScrollGridView
                 android:id="@+id/grid_chatRommKeeper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

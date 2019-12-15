@@ -8,7 +8,7 @@
     android:descendantFocusability="blocksDescendants"
     android:orientation="vertical">
 
-    <jiguang.chat.view.SwipeLayout
+    <com.cloude.xmut.chat.view.SwipeLayout
         android:id="@+id/swp_layout"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -45,7 +45,7 @@
                 android:layout_height="47.33dp"
                 android:layout_gravity="center_vertical">
 
-                <jiguang.chat.utils.photochoose.SelectableRoundedImageView
+                <com.cloude.xmut.chat.utils.photochoose.SelectableRoundedImageView
                     android:id="@+id/item_head_icon"
                     android:layout_width="47.33dp"
                     android:layout_height="47.33dp"/>
@@ -113,7 +113,7 @@
         </LinearLayout>
 
 
-    </jiguang.chat.view.SwipeLayout>
+    </com.cloude.xmut.chat.view.SwipeLayout>
 
     <View
         android:layout_width="match_parent"
