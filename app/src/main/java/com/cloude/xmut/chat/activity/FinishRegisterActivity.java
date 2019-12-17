@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import androidx.core.content.ContextCompat;
 
@@ -43,7 +45,7 @@ public class FinishRegisterActivity extends BaseActivity {
     private Uri mUri;
     private static int OUTPUT_X = 720;
     private static int OUTPUT_Y = 720;
-    private static final int MAX_COUNT = 30;
+    private static final int MAX_COUNT = 20;
     private ProgressDialog mDialog;
     private TextView mTv_nickCount;
     private ChoosePhoto mChoosePhoto;
@@ -194,11 +196,11 @@ public class FinishRegisterActivity extends BaseActivity {
         @Override
         public void onTextChanged(CharSequence cs, int start, int before,
                                   int count) {
-//            if (!TextUtils.isEmpty(mNickNameEt.getText().toString())) {
-//                mFinishBtn.setEnabled(true);
-//            } else {
-//                mFinishBtn.setEnabled(false);
-//            }
+            if (!TextUtils.isEmpty(mNickNameEt.getText().toString())) {
+                mFinishBtn.setEnabled(true);
+            } else {
+                mFinishBtn.setEnabled(false);
+            }
         }
     }
 }

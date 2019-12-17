@@ -10,8 +10,7 @@ public class app extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-        JMessageClient.setDebugMode(true);
-        JMessageClient.init(this);
+
         if (LeakCanary.isInAnalyzerProcess(this)) {
             Log.d("App", "In LeakCanary Analyzer Process");
             return;

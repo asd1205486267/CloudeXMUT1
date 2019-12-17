@@ -79,14 +79,14 @@ public class LoginController implements View.OnClickListener {
                     mContext.mLogin_passWord.setShakeAnimation();
                     return;
                 }
-                if (userId.length() < 4 || userId.length() > 128) {
+                if (userId.length() !=10 ) {  //|| userId.length() > 9
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "用户名为4-128位字符");
+                    ToastUtil.shortToast(mContext, "请输入正确的学号"); //用户名为4-15位字符
                     return;
                 }
-                if (password.length() < 4 || password.length() > 128) {
+                if (password.length() < 6 || password.length() > 20) {
                     mContext.mLogin_userName.setShakeAnimation();
-                    ToastUtil.shortToast(mContext, "密码为4-128位字符");
+                    ToastUtil.shortToast(mContext, "密码为6-20位字符");
                     return;
                 }
                 if (isContainChinese(userId)) {

@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.multidex.MultiDex;
 
 import com.activeandroid.ActiveAndroid;
+import com.activeandroid.app.Application;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ import com.cloude.xmut.chat.utils.imagepicker.view.CropImageView;
  */
 
 //使用的数据库需要继承这个application
-public class JGApplication extends com.activeandroid.app.Application {
+public class JGApplication extends Application {
     public static final String CONV_TITLE = "conv_title";
     public static final int IMAGE_MESSAGE = 1;
     public static final int TAKE_PHOTO_MESSAGE = 2;
@@ -134,9 +135,8 @@ public class JGApplication extends com.activeandroid.app.Application {
         Fresco.initialize(getApplicationContext());
       //  SDKInitializer.initialize(getApplicationContext());  这里是百度定位的
 //        locationService = new LocationService(getApplicationContext());
-
-        JMessageClient.init(getApplicationContext(), true);
         JMessageClient.setDebugMode(true);
+        JMessageClient.init(getApplicationContext(), true);
         SharePreferenceManager.init(getApplicationContext(), JCHAT_CONFIGS);
         //设置Notification的模式
         JMessageClient.setNotificationFlag(JMessageClient.FLAG_NOTIFY_WITH_SOUND | JMessageClient.FLAG_NOTIFY_WITH_LED | JMessageClient.FLAG_NOTIFY_WITH_VIBRATE);
