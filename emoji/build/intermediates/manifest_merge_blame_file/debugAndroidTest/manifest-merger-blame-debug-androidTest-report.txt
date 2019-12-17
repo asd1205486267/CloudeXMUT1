@@ -3,38 +3,38 @@
 3    package="com.sj.emoji.test" >
 4
 5    <uses-sdk
-5-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:5:5-74
-6        android:minSdkVersion="23"
-6-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:5:15-41
+5-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:5:42-71
+7-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:5:42-71
 8
 9    <instrumentation
-9-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:11:5-15:67
+9-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:11:5-15:67
 10        android:name="android.test.InstrumentationTestRunner"
-10-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:11:22-75
+10-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:11:22-75
 11        android:functionalTest="false"
-11-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:14:22-52
+11-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:14:22-52
 12        android:handleProfiling="false"
-12-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:13:22-53
+12-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:13:22-53
 13        android:label="Tests for com.sj.emoji.test"
-13-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:15:22-65
+13-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:15:22-65
 14        android:targetPackage="com.sj.emoji.test" />
-14-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:12:22-63
+14-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:12:22-63
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.2.0] C:\Users\张泽林\.gradle\caches\transforms-2\files-2.1\b84e39374531a9cc1088cbb1e2cc9cc2\core-1.2.0\AndroidManifest.xml:24:5-72
 16-->[androidx.test:core:1.2.0] C:\Users\张泽林\.gradle\caches\transforms-2\files-2.1\b84e39374531a9cc1088cbb1e2cc9cc2\core-1.2.0\AndroidManifest.xml:24:22-69
 17
 18    <application
-18-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:7:5-9:19
+18-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:7:5-9:19
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.1.0] C:\Users\张泽林\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true" >
-20-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:7:18-43
+20-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:7:18-43
 21        <uses-library android:name="android.test.runner" />
-21-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:8:9-60
-21-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6236612130588171629.xml:8:23-57
+21-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:8:9-60
+21-->H:\Android\CloudeXmut1\emoji\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5891924716615526792.xml:8:23-57
 22
 23        <activity
 23-->[androidx.test:core:1.2.0] C:\Users\张泽林\.gradle\caches\transforms-2\files-2.1\b84e39374531a9cc1088cbb1e2cc9cc2\core-1.2.0\AndroidManifest.xml:27:9-33:20

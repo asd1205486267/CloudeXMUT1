@@ -3,7 +3,7 @@
 3    package="com.sj.emoji" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="23"
+6        android:minSdkVersion="21"
 6-->H:\Android\CloudeXmut1\emoji\src\main\AndroidManifest.xml
 7        android:targetSdkVersion="29" />
 7-->H:\Android\CloudeXmut1\emoji\src\main\AndroidManifest.xml
