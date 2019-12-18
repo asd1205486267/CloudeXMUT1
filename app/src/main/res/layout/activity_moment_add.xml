@@ -13,9 +13,6 @@
         <LinearLayout
             style="@style/MatchWrap.Horizontal"
             android:layout_margin="10dp">
-
-
-
             <CheckBox
                 android:id="@+id/cb_moment_add_take_photo"
                 style="@style/AutoWrap"
@@ -52,7 +49,7 @@
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
             android:gravity="start"
-            android:hint="说出你的话....."
+            android:hint="说出你的心声....."
             android:lines="5"
             android:textColor="#AEA7B6"
             android:textColorHint="#C6C6C6" />
