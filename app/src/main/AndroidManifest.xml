@@ -214,16 +214,17 @@
         <!-- 发到 Google Play 的APK可以设置为 google-play; -->
         <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
         <!-- 目前这个渠道统计功能的报表还未开放。-->
-        <meta-data
-            android:name="JPUSH_CHANNEL"
-            android:value="developer-default" />
+<!--        <meta-data-->
+<!--            android:name="JPUSH_CHANNEL"-->
+<!--            android:value="developer-default" />-->
 
-        <!-- Required. AppKey copied from Portal -->
-        <meta-data
-            android:name="JPUSH_APPKEY"
-            android:value="7152781c534d4717be09f8db" />
+<!--        &lt;!&ndash; Required. AppKey copied from Portal &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="JPUSH_APPKEY"-->
+<!--            android:value="7152781c534d4717be09f8db" />-->
 
-
+        <activity android:name=".chat.activity.UserInfoActivity">
+        </activity>
         <activity android:name=".chat.activity.SearchForChatRoomActivity">
         </activity>
         <activity android:name=".chat.activity.ChatRoomKeeperActivity">
@@ -231,10 +232,10 @@
 
         <meta-data
             android:name="AA_DB_NAME"
-            android:value="jchat.db"/>
+            android:value="com.cloude.xmut.db"/>
         <meta-data
             android:name="AA_MODELS"
-            android:value="jiguang.chat.database.UserEntry, jiguang.chat.database.FriendEntry,              jiguang.chat.database.FriendRecommendEntry, jiguang.chat.database.GroupApplyEntry             , jiguang.chat.database.RefuseGroupEntry"/>
+            android:value="com.cloude.xmut.chat.database.UserEntry, jiguang.chat.database.FriendEntry,              com.cloude.xmut.chat.database.FriendRecommendEntry, com.cloude.xmut.chat.database.GroupApplyEntry             , com.cloude.xmut.chat.database.RefuseGroupEntry"/>
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="4"/> <!-- Since JCore2.0.0 Required SDK核心功能 -->
@@ -309,10 +310,10 @@
             android:name=".chat.activity.VerificationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BaseThemes"/>
-<!--                <activity-->
-<!--                    android:name=".chat.activity.FriendRecommendActivity"-->
-<!--                    android:screenOrientation="portrait"-->
-<!--                    android:theme="@style/BaseThemes"/>-->
+                <activity
+                    android:name=".chat.activity.FriendRecommendActivity"
+                    android:screenOrientation="portrait"
+                    android:theme="@style/BaseThemes"/>
         <activity
             android:name=".chat.activity.SearchFriendDetailActivity"
             android:screenOrientation="portrait"

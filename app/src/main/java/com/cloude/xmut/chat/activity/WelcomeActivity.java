@@ -10,15 +10,15 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.UserInfo;
 import com.cloude.xmut.R;
 
-public class WelcomeActivity extends AppCompatActivity  {
+public class WelcomeActivity extends AppCompatActivity {
     private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
         JMessageClient.setDebugMode(true);
         JMessageClient.init(this);
-        setContentView(R.layout.activity_welcome);
         mContext = this;
         initData();
     }
@@ -42,5 +42,4 @@ public class WelcomeActivity extends AppCompatActivity  {
         startActivity(new Intent(mContext, LoginActivity.class));
         finish();
     }
-
 }

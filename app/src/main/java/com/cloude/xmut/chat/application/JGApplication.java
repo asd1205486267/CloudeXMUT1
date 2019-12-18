@@ -136,8 +136,9 @@ public class JGApplication extends Application {
         Fresco.initialize(getApplicationContext());
         SDKInitializer.initialize(getApplicationContext());  //这里是百度定位的
         locationService = new LocationService(getApplicationContext());
-        JMessageClient.setDebugMode(true);
+
         JMessageClient.init(getApplicationContext(), true);
+        JMessageClient.setDebugMode(true);
         SharePreferenceManager.init(getApplicationContext(), JCHAT_CONFIGS);
         //设置Notification的模式
         JMessageClient.setNotificationFlag(JMessageClient.FLAG_NOTIFY_WITH_SOUND | JMessageClient.FLAG_NOTIFY_WITH_LED | JMessageClient.FLAG_NOTIFY_WITH_VIBRATE);
