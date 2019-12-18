@@ -248,14 +248,14 @@
                 <action android:name="cn.jiguang.user.service.action"/>
             </intent-filter>
         </service>
-        <!--        <service-->
-        <!--            android:name="com.baidu.location.f"-->
-        <!--            android:enabled="true"-->
-        <!--            android:process=":remote">-->
-        <!--        </service> &lt;!&ndash; 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey &ndash;&gt;-->
-        <!--        <meta-data-->
-        <!--            android:name="com.baidu.lbsapi.API_KEY"-->
-        <!--            android:value="UAkQeBK84ioVGzYgA1rSWYfuD4xYtpmV"/>-->
+                <service
+                    android:name="com.baidu.location.f"
+                    android:enabled="true"
+                    android:process=":remote">
+                </service> <!-- 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey -->
+                <meta-data
+                    android:name="com.baidu.lbsapi.API_KEY"
+                    android:value="UAkQeBK84ioVGzYgA1rSWYfuD4xYtpmV"/>
 
         <activity
             android:name=".chat.activity.WelcomeActivity"
@@ -309,10 +309,10 @@
             android:name=".chat.activity.VerificationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/BaseThemes"/>
-        <!--        <activity-->
-        <!--            android:name=".chat.activity.FriendRecommendActivity"-->
-        <!--            android:screenOrientation="portrait"-->
-        <!--            android:theme="@style/BaseThemes"/>-->
+<!--                <activity-->
+<!--                    android:name=".chat.activity.FriendRecommendActivity"-->
+<!--                    android:screenOrientation="portrait"-->
+<!--                    android:theme="@style/BaseThemes"/>-->
         <activity
             android:name=".chat.activity.SearchFriendDetailActivity"
             android:screenOrientation="portrait"
@@ -381,10 +381,10 @@
         <activity
             android:name=".chat.activity.PlayVideoActivity"
             android:screenOrientation="portrait"/>
-        <!--        <activity-->
-        <!--            android:name=".chat.location.activity.MapPickerActivity"-->
-        <!--            android:screenOrientation="portrait"-->
-        <!--            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>-->
+                <activity
+                    android:name=".chat.location.activity.MapPickerActivity"
+                    android:screenOrientation="portrait"
+                    android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".chat.activity.FriendInfoActivity"
             android:screenOrientation="portrait"
@@ -577,10 +577,10 @@
 <!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- android:usesCleartextTraffic="true"  可以支持 http链接 -->
-<!--    <uses-permission android:name="android.permission.VIBRATE" /> &lt;!&ndash; 震动权限 &ndash;&gt;-->
-<!--    <uses-permission android:name="android.permission.CAMERA" /> &lt;!&ndash; 摄像头权�?&ndash;&gt;-->
-<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
-<!--    <uses-feature android:name="android.hardware.camera.autofocus" /> &lt;!&ndash; 自动聚焦权限 &ndash;&gt;-->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 摄像头权�?-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-feature android:name="android.hardware.camera" />

@@ -42,7 +42,8 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
-            res.srcDirs += "src/main/res-jiguang"
+            res.srcDirs += "src/main/assets"
+            res.srcDirs += "src/main/jinLibs"
         }
     }
     aaptOptions.cruncherEnabled = false
@@ -136,7 +137,9 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
     implementation 'com.github.mtotschnig:StickyListHeaders:2.7.1'
     implementation 'cn.jiguang.sdk:jmessage:2.9.0'  // 此处以JMessage 2.9.0 版本为例。
-    implementation 'cn.jiguang.sdk:jcore:2.0.0'  // 此处以JCore 2.0.0 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.0.0'
+    implementation fileTree(dir: 'src\\main\\jinLibs', include: ['*.aar', '*.jar'], exclude: [])
+    // 此处以JCore 2.0.0 版本为例。
 
 
 

@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                             String ur;
                             switch (index){
                                 case 0:
-                                    ur = "https://jw.xmut.edu.cn/";  //传入的网址
+                                    ur = "http://jw.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
                                 case 1:
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
                                 case 5:
-                                    ur = "https://my.xmut.edu.cn/";  //传入的网址
+                                    ur = "http://my.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
                                 case 6:

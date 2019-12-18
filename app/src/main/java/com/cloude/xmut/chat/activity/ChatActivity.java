@@ -27,6 +27,7 @@ import android.widget.Toast;
 import androidx.core.content.ContextCompat;
 
 import com.cloude.xmut.R;
+import com.cloude.xmut.chat.location.activity.MapPickerActivity;
 import com.sj.emoji.EmojiBean;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -1177,19 +1178,19 @@ public class ChatActivity extends BaseActivity implements FuncLayout.OnFuncKeyBo
                     startActivityForResult(intent, RequestCode.TAKE_PHOTO);
                 }
                 break;
-//            case JGApplication.TAKE_LOCATION:
-//                if (ContextCompat.checkSelfPermission(ChatActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
-//                        != PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(this, "请在应用管理中打开“位置”访问权限！", Toast.LENGTH_LONG).show();
-//                } else {
-//                    intent = new Intent(mContext, MapPickerActivity.class);
-//                    intent.putExtra(JGApplication.CONV_TYPE, mConv.getType());
-//                    intent.putExtra(JGApplication.TARGET_ID, mTargetId);
-//                    intent.putExtra(JGApplication.TARGET_APP_KEY, mTargetAppKey);
-//                    intent.putExtra("sendLocation", true);
-//                    startActivityForResult(intent, JGApplication.REQUEST_CODE_SEND_LOCATION);
-//                }
-//                break;
+            case JGApplication.TAKE_LOCATION:
+                if (ContextCompat.checkSelfPermission(ChatActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "请在应用管理中打开“位置”访问权限！", Toast.LENGTH_LONG).show();
+                } else {
+                    intent = new Intent(mContext, MapPickerActivity.class);
+                    intent.putExtra(JGApplication.CONV_TYPE, mConv.getType());
+                    intent.putExtra(JGApplication.TARGET_ID, mTargetId);
+                    intent.putExtra(JGApplication.TARGET_APP_KEY, mTargetAppKey);
+                    intent.putExtra("sendLocation", true);
+                    startActivityForResult(intent, JGApplication.REQUEST_CODE_SEND_LOCATION);
+                }
+                break;
             case JGApplication.FILE_MESSAGE:
                 if (ContextCompat.checkSelfPermission(this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)

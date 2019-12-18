@@ -6,6 +6,7 @@ import androidx.multidex.MultiDex;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.app.Application;
+import com.baidu.mapapi.SDKInitializer;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.android.api.model.UserInfo;
 import com.cloude.xmut.chat.database.UserEntry;
 import com.cloude.xmut.chat.entity.NotificationClickEventReceiver;
-//import com.cloude.xmut.chat.location.service.LocationService;
+import com.cloude.xmut.chat.location.service.LocationService;
 import com.cloude.xmut.chat.pickerimage.utils.StorageUtil;
 import com.cloude.xmut.chat.utils.SharePreferenceManager;
 import com.cloude.xmut.chat.utils.imagepicker.GlideImageLoader;
@@ -112,7 +113,7 @@ public class JGApplication extends Application {
     public static String groupAvatarPath;
 
     public static Context context;
-//    public static LocationService locationService;
+    public static LocationService locationService;
 
     public static List<GroupInfo> mGroupInfoList = new ArrayList<>();
     public static List<UserInfo> mFriendInfoList = new ArrayList<>();
@@ -133,8 +134,8 @@ public class JGApplication extends Application {
         THUMP_PICTURE_DIR = context.getFilesDir().getAbsolutePath() + "/JChatDemo";
         StorageUtil.init(context, null);
         Fresco.initialize(getApplicationContext());
-      //  SDKInitializer.initialize(getApplicationContext());  这里是百度定位的
-//        locationService = new LocationService(getApplicationContext());
+        SDKInitializer.initialize(getApplicationContext());  //这里是百度定位的
+        locationService = new LocationService(getApplicationContext());
         JMessageClient.setDebugMode(true);
         JMessageClient.init(getApplicationContext(), true);
         SharePreferenceManager.init(getApplicationContext(), JCHAT_CONFIGS);
