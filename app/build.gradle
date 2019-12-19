@@ -13,8 +13,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
-        applicationId "com.cloude.xmut" //JPush上注册的包名.
-
 
         manifestPlaceholders = [
                 JPUSH_PKGNAME : applicationId,
@@ -137,7 +135,8 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
     implementation 'com.github.mtotschnig:StickyListHeaders:2.7.1'
     implementation 'cn.jiguang.sdk:jmessage:2.9.0'  // 此处以JMessage 2.9.0 版本为例。
-    implementation 'cn.jiguang.sdk:jcore:2.0.0'
+    implementation 'cn.jiguang.sdk:jpush:3.5.0'  // 此处以JPush 3.4.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.2.4'
     implementation fileTree(dir: 'src\\main\\jinLibs', include: ['*.aar', '*.jar'], exclude: [])
     // 此处以JCore 2.0.0 版本为例。
 

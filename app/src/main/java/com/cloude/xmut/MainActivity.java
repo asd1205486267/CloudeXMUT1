@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import cn.jpush.android.api.JPushInterface;
+import cn.jpush.im.android.api.JMessageClient;
+
 
 public class MainActivity extends AppCompatActivity /*implements View.OnClickListener*/{
     private Banner banner;
@@ -55,6 +58,11 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);  //极光推送
+        JMessageClient.setDebugMode(true);  //极光聊天
+        JMessageClient.init(this);
 
         main_bannner();
         button();
