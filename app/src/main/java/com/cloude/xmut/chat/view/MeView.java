@@ -49,7 +49,7 @@ public class MeView extends LinearLayout implements SlipButton.OnChangedListener
         mSignatureTv = (TextView) findViewById(R.id.signature);
         mSet_pwd = (RelativeLayout) findViewById(R.id.setPassword);
         mSet_noDisturb = (SlipButton) findViewById(R.id.btn_noDisturb);
-        mOpinion = (RelativeLayout) findViewById(R.id.opinion);
+//        mOpinion = (RelativeLayout) findViewById(R.id.opinion);
         mAbout = (RelativeLayout) findViewById(R.id.about);
         mExit = (RelativeLayout) findViewById(R.id.exit);
         mRl_personal = (RelativeLayout) findViewById(R.id.rl_personal);
@@ -79,7 +79,7 @@ public class MeView extends LinearLayout implements SlipButton.OnChangedListener
 
     public void setListener(OnClickListener onClickListener) {
         mSet_pwd.setOnClickListener(onClickListener);
-        mOpinion.setOnClickListener(onClickListener);
+//        mOpinion.setOnClickListener(onClickListener);
         mAbout.setOnClickListener(onClickListener);
         mExit.setOnClickListener(onClickListener);
         mRl_personal.setOnClickListener(onClickListener);

@@ -33,7 +33,7 @@ public class AboutJChatActivity extends BaseActivity {
     }
 
     private void initView() {
-        initTitle(true, true, "关于JChat", "", false, "");
+        initTitle(true, true, "关于云上理工", "", false, "");
         mJChat_version = (TextView) findViewById(R.id.jchat_version);
         mSDK_version = (TextView) findViewById(R.id.sdk_version);
         mJiguang = (RelativeLayout) findViewById(R.id.jiguang);
@@ -44,7 +44,7 @@ public class AboutJChatActivity extends BaseActivity {
         mJiguang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.jiguang.cn");
+                Uri uri = Uri.parse("mqqwpa://im/chat?chat_type=wpa&uin=1427703250");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

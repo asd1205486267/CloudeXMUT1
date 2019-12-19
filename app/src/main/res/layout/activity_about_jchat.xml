@@ -18,7 +18,7 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_gravity="center"
-            android:src="@drawable/app_icon"/>
+            android:src="@mipmap/icon"/>
     </LinearLayout>
 
 
@@ -33,7 +33,7 @@
 
         <TextView
             style="@style/info_left_style"
-            android:text="JChat版本"/>
+            android:text="聊天版本"/>
 
         <TextView
             android:id="@+id/jchat_version"
@@ -84,7 +84,7 @@
 
         <TextView
             style="@style/info_left_style"
-            android:text="官方网站"/>
+            android:text="联系作者"/>
 
         <ImageView
             android:layout_width="wrap_content"

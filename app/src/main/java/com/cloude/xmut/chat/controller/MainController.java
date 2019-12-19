@@ -71,6 +71,9 @@ public class MainController implements View.OnClickListener, ViewPager.OnPageCha
             case R.id.actionbar_me_btn:
                 mMainView.setCurrentItem(3, false);
                 break;
+//            case R.id.main_icon:
+//                mMainView.setCurrentItem(4,false);
+//                break;
         }
     }
 

@@ -40,9 +40,9 @@ public class MeController implements View.OnClickListener {
             case R.id.setPassword:
                 mContext.startActivity(new Intent(mContext.getContext(), ResetPasswordActivity.class));
                 break;
-            case R.id.opinion://意见反馈
-                mContext.startActivity(new Intent(mContext.getContext(), FeedbackActivity.class));
-                break;
+//            case R.id.opinion://意见反馈
+//                mContext.startActivity(new Intent(mContext.getContext(), FeedbackActivity.class));
+//                break;
             case R.id.about:
                 mContext.startActivity(new Intent(mContext.getContext(), AboutJChatActivity.class));
                 break;

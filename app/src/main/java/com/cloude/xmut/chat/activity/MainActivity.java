@@ -87,10 +87,10 @@ public class MainActivity extends FragmentActivity {
         super.onDestroy();
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        return keyCode == KeyEvent.KEYCODE_BACK;
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        return keyCode == KeyEvent.KEYCODE_BACK;
+//    }
 
 
     private PermissionListener listener = new PermissionListener() {

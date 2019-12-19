@@ -60,7 +60,7 @@ public class MainActivity extends Activity  {
 
 	//for receive customer msg from jpush server
 	private MessageReceiver mMessageReceiver;
-	public static final String MESSAGE_RECEIVED_ACTION = "com.example.jpushdemo.MESSAGE_RECEIVED_ACTION";
+	public static final String MESSAGE_RECEIVED_ACTION = "com.cloude.xmut.Jpush.MESSAGE_RECEIVED_ACTION";
 	public static final String KEY_TITLE = "title";
 	public static final String KEY_MESSAGE = "message";
 	public static final String KEY_EXTRAS = "extras";

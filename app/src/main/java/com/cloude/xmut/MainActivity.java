@@ -449,11 +449,11 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
                             Bundle bundle = new Bundle();
                             String ur="";
                             switch (index){
-                             /*   case 0:
-                                    ur = "http://www.xmut.edu.cn/";  //传入的网址
+                                case 0:
+                                    ur = "https://i.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
-                                case 1:
+                              /*  case 1:
                                     ur = "https://jw.webvpn.xmut.edu.cn/";  //传入的网址
                                     bundle.putString("ur", ur);  //内容，名字
                                     break;
