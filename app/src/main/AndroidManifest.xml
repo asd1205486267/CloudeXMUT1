@@ -84,7 +84,6 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".my_information.My_information"/>
         </activity>
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 
 

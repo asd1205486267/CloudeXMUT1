@@ -8,13 +8,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cloude.xmut.R;
 import com.cloude.xmut.model.Moment;
-import com.cloude.xmut.my_information.My_information;
-import com.cloude.xmut.my_information.RoundImageView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -46,7 +43,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     /**
      * 设置图片预览时是否具有保存图片功能「测试接口用的」
      */
-   // private CheckBox mDownLoadableCb;
+    private CheckBox mDownLoadableCb;
 
     private BGANinePhotoLayout mCurrentClickNpl;
 
@@ -54,7 +51,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_moment_list);
        // setContentView(R.layout.activity_moment_list);
-      //  mDownLoadableCb = findViewById(R.id.cb_moment_list_downloadable);
+        mDownLoadableCb = findViewById(R.id.cb_moment_list_downloadable);
         mMomentRv = findViewById(R.id.rv_moment_list_moments);
     }
 
@@ -84,6 +81,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     private void addNetImageTestData() {
          List<Moment> moments=new ArrayList<>();
         moments.add(new Moment("1张网络图片", new ArrayList<>(Arrays.asList("https://github.com/XMUT123/1245/blob/master/1.jpg"))));
+        ArrayList<String> photos = new ArrayList<>();
 
 
         //mMoment  Adapter.setData(moments);
@@ -92,8 +90,8 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
     public void onClick(View v) {
         if (v.getId() == R.id.tv_moment_list_add) {
             startActivityForResult(new Intent(this, MomentAddActivity.class), RC_ADD_MOMENT);
-        } else if (v.getId() == R.id.iv_item_moment_avatar) {
-            startActivityForResult(new Intent(this, My_information.class), RC_ADD_MOMENT);
+        } else if (v.getId() == R.id.tv_moment_add_choice_photo) {
+
         }
     }
 
@@ -117,21 +115,19 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
 
         String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            File downloadDir = new File(Environment.getExternalStorageDirectory(), "XMUT");
+            File downloadDir = new File(Environment.getExternalStorageDirectory(), "BGAPhotoPickerDownload");
             BGAPhotoPreviewActivity.IntentBuilder photoPreviewIntentBuilder = new BGAPhotoPreviewActivity.IntentBuilder(this);
 
-            /*if (mDownLoadableCb.isChecked()) {
+            if (mDownLoadableCb.isChecked()) {
                 // 保存图片的目录，如果传 null，则没有保存图片功能
                 photoPreviewIntentBuilder.saveImgDir(downloadDir);
-            }*/
+            }
 
             if (mCurrentClickNpl.getItemCount() == 1) {
                 // 预览单张图片
-                photoPreviewIntentBuilder.saveImgDir(downloadDir);
                 photoPreviewIntentBuilder.previewPhoto(mCurrentClickNpl.getCurrentClickItem());
             } else if (mCurrentClickNpl.getItemCount() > 1) {
                 // 预览多张图片
-                photoPreviewIntentBuilder.saveImgDir(downloadDir);
                 photoPreviewIntentBuilder.previewPhotos(mCurrentClickNpl.getData())
                         .currentPosition(mCurrentClickNpl.getCurrentClickItemPosition()); // 当前预览图片的索引
             }
@@ -172,8 +168,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
 
     @Override
     public void onRVItemClick(ViewGroup viewGroup, View view, int position) {
-       // Toast.makeText(this, "点击了item " + position, Toast.LENGTH_SHORT).show();
-        startActivityForResult(new Intent(this, My_information.class), RC_ADD_MOMENT);
+        Toast.makeText(this, "点击了item " + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override

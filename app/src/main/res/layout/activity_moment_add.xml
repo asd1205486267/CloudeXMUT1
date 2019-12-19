@@ -14,18 +14,51 @@
             style="@style/MatchWrap.Horizontal"
             android:layout_margin="10dp">
 
-
+            <CheckBox
+                android:id="@+id/cb_moment_add_single_choice"
+                style="@style/AutoWrap"
+                android:text="是否是单选"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
 
             <CheckBox
                 android:id="@+id/cb_moment_add_take_photo"
                 style="@style/AutoWrap"
-                android:checked="true"
                 android:text="是否开启拍照功能"
                 android:textColor="@color/colorPrimary"
                 android:textSize="12sp" />
         </LinearLayout>
 
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
+            <CheckBox
+                android:id="@+id/cb_moment_add_editable"
+                style="@style/AutoWrap"
+                android:checked="true"
+                android:text="是否可编辑"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/cb_moment_add_plus"
+                style="@style/AutoWrap"
+                android:checked="true"
+                android:text="是否显示加号"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/cb_moment_add_sortable"
+                style="@style/AutoWrap"
+                android:checked="true"
+                android:text="是否拖拽排序"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </LinearLayout>
 
         <LinearLayout
             style="@style/MatchWrap.Horizontal"
@@ -52,8 +85,8 @@
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
             android:gravity="start"
-            android:hint="说出你的话....."
-            android:lines="5"
+            android:hint="勇敢的向TA表白你的心声....."
+            android:lines="4"
             android:textColor="#AEA7B6"
             android:textColorHint="#C6C6C6" />
 
