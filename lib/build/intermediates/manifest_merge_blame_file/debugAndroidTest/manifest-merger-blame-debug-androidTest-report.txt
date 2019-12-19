@@ -3,193 +3,98 @@
 3    package="cn.bingoogolapple1.photopicker.test" >
 4
 5    <uses-sdk
-<<<<<<< HEAD
-5-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:5:5-74
+5-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:5:15-41
+6-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:5:42-71
+7-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:5:42-71
 8
 9    <instrumentation
-9-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:11:5-15:85
+9-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:11:5-15:85
 10        android:name="android.test.InstrumentationTestRunner"
-10-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:11:22-75
+10-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:11:22-75
 11        android:functionalTest="false"
-11-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:14:22-52
+11-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:14:22-52
 12        android:handleProfiling="false"
-12-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:13:22-53
+12-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:13:22-53
 13        android:label="Tests for cn.bingoogolapple1.photopicker.test"
-13-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:15:22-83
+13-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:15:22-83
 14        android:targetPackage="cn.bingoogolapple1.photopicker.test" />
-14-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:12:22-81
+14-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:12:22-81
 15
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-80
-16-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-77
+16-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-80
+16-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
-17-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
+17-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
+17-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
 18    <uses-permission android:name="android.permission.CAMERA" />
-18-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-65
-18-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-62
+18-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-65
+18-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-62
 19
 20    <application
-20-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:7:5-9:19
+20-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:7:5-9:19
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+21-->[androidx.core:core:1.1.0] C:\Users\南方的笙箫\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 22        android:debuggable="true" >
-22-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:7:18-43
+22-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:7:18-43
 23        <uses-library android:name="android.test.runner" />
-23-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:8:9-60
-23-->D:\zyj123\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5319384453608145035.xml:8:23-57
+23-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:8:9-60
+23-->D:\CloudeXMUT\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4476341078220455063.xml:8:23-57
 24        <!-- 图片预览界面 -->
 25        <activity
-25-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-21:63
+25-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-21:63
 26            android:name="cn.bingoogolapple1.photopicker.activity.BGAPhotoPreviewActivity"
-26-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-91
+26-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-91
 27            android:configChanges="keyboardHidden|orientation|screenSize"
-27-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-74
+27-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-74
 28            android:screenOrientation="portrait"
-28-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-49
+28-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-49
 29            android:theme="@style/BGAPPTheme"
-29-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-46
+29-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-46
 30            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 图片选择界面 -->
-30-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-60
+30-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-60
 31        <activity
-31-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-29:63
+31-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-29:63
 32            android:name="cn.bingoogolapple1.photopicker.activity.BGAPhotoPickerActivity"
-32-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-90
+32-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-90
 33            android:configChanges="keyboardHidden|orientation|screenSize"
-33-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-74
+33-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-74
 34            android:screenOrientation="portrait"
-34-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-49
+34-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-49
 35            android:theme="@style/BGAPPTheme"
-35-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-46
+35-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-46
 36            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 图片选择预览界面 -->
-36-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-60
+36-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-60
 37        <activity
-37-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:9-37:63
+37-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:9-37:63
 38            android:name="cn.bingoogolapple1.photopicker.activity.BGAPhotoPickerPreviewActivity"
-38-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-97
+38-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-97
 39            android:configChanges="keyboardHidden|orientation|screenSize"
-39-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-74
+39-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-74
 40            android:screenOrientation="portrait"
-40-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-49
+40-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-49
 41            android:theme="@style/BGAPPTheme"
-41-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-46
+41-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-46
 42            android:windowSoftInputMode="stateAlwaysHidden" />
-42-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-60
+42-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-60
 43
 44        <provider
-44-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-47:20
+44-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-47:20
 45            android:name="cn.bingoogolapple1.photopicker.util.BGAPhotoFileProvider"
-45-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-84
+45-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-84
 46            android:authorities="cn.bingoogolapple1.photopicker.test.bga_photo_picker.file_provider"
-46-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-82
+46-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-82
 47            android:exported="false"
-47-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
+47-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
 48            android:grantUriPermissions="true" >
-48-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-47
+48-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-47
 49            <meta-data
-49-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-46:71
+49-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-46:71
 50                android:name="android.support.FILE_PROVIDER_PATHS"
-50-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:17-67
+50-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:17-67
 51                android:resource="@xml/bga_photo_picker_file_paths" />
-51-->[__tested_artifact__::lib] D:\zyj123\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:17-68
-=======
-5-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:5:5-74
-6        android:minSdkVersion="21"
-6-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:5:15-41
-7        android:targetSdkVersion="29" />
-7-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:5:42-71
-8
-9    <instrumentation
-9-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:11:5-15:85
-10        android:name="android.test.InstrumentationTestRunner"
-10-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:11:22-75
-11        android:functionalTest="false"
-11-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:14:22-52
-12        android:handleProfiling="false"
-12-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:13:22-53
-13        android:label="Tests for cn.bingoogolapple1.photopicker.test"
-13-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:15:22-83
-14        android:targetPackage="cn.bingoogolapple1.photopicker.test" />
-14-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:12:22-81
-15
-16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-80
-16-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-77
-17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
-17-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
-18    <uses-permission android:name="android.permission.CAMERA" />
-18-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-65
-18-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-62
-19
-20    <application
-20-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:7:5-9:19
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.1.0] C:\Users\张泽林\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
-22        android:debuggable="true" >
-22-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:7:18-43
-23        <uses-library android:name="android.test.runner" />
-23-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:8:9-60
-23-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7514768089826408460.xml:8:23-57
-24        <!-- 图片预览界面 -->
-25        <activity
-25-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-21:63
-26            android:name="cn.bingoogolapple1.photopicker.activity.BGAPhotoPreviewActivity"
-26-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-91
-27            android:configChanges="keyboardHidden|orientation|screenSize"
-27-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-74
-28            android:screenOrientation="portrait"
-28-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-49
-29            android:theme="@style/BGAPPTheme"
-29-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-46
-30            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 图片选择界面 -->
-30-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-60
-31        <activity
-31-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-29:63
-32            android:name="cn.bingoogolapple1.photopicker.activity.BGAPhotoPickerActivity"
-32-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-90
-33            android:configChanges="keyboardHidden|orientation|screenSize"
-33-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-74
-34            android:screenOrientation="portrait"
-34-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-49
-35            android:theme="@style/BGAPPTheme"
-35-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-46
-36            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 图片选择预览界面 -->
-36-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-60
-37        <activity
-37-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:9-37:63
-38            android:name="cn.bingoogolapple1.photopicker.activity.BGAPhotoPickerPreviewActivity"
-38-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-97
-39            android:configChanges="keyboardHidden|orientation|screenSize"
-39-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-74
-40            android:screenOrientation="portrait"
-40-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-49
-41            android:theme="@style/BGAPPTheme"
-41-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-46
-42            android:windowSoftInputMode="stateAlwaysHidden" />
-42-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-60
-43
-44        <provider
-44-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-47:20
-45            android:name="cn.bingoogolapple1.photopicker.util.BGAPhotoFileProvider"
-45-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-84
-46            android:authorities="cn.bingoogolapple1.photopicker.test.bga_photo_picker.file_provider"
-46-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-82
-47            android:exported="false"
-47-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
-48            android:grantUriPermissions="true" >
-48-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-47
-49            <meta-data
-49-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-46:71
-50                android:name="android.support.FILE_PROVIDER_PATHS"
-50-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:17-67
-51                android:resource="@xml/bga_photo_picker_file_paths" />
-51-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:17-68
->>>>>>> 2ab5cbd043c46aa555d9f31e67ba782883893d4c
+51-->[__tested_artifact__::lib] D:\CloudeXMUT\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:17-68
 52        </provider>
 53    </application>
 54
