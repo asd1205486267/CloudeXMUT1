@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import cn.bmob.v3.Bmob;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.im.android.api.JMessageClient;
 
@@ -58,6 +59,10 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bmob.initialize(this, "e1cf33d15512e685b3a8e5689bb999e4");//bmob初始化
+
+
 
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);  //极光推送

@@ -56,18 +56,18 @@
                     android:text="@string/actionbar_chatroom_btn"/>
             </FrameLayout>
 
-<!--            <FrameLayout-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1">-->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
-<!--                <Button-->
-<!--                    android:id="@+id/main_icon"-->
-<!--                    style="@style/ActionBarItem"-->
-<!--                    android:drawableTop="@drawable/main_withoutcolor"-->
-<!--                    android:text="主页"/>-->
+                <Button
+                    android:id="@+id/main_icon"
+                    style="@style/ActionBarItem"
+                    android:drawableTop="@drawable/main_withoutcolor"
+                    android:text="主页"/>
 
-<!--            </FrameLayout>-->
+            </FrameLayout>
 
             <FrameLayout
                 android:layout_width="0dp"

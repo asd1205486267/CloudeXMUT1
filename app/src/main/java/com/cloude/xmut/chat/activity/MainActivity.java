@@ -2,7 +2,6 @@ package com.cloude.xmut.chat.activity;
 
 import android.Manifest;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;

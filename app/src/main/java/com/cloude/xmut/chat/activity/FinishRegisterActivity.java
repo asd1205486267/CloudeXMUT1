@@ -2,6 +2,7 @@ package com.cloude.xmut.chat.activity;
 
 import android.Manifest;
 import android.app.Dialog;
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -194,11 +196,11 @@ public class FinishRegisterActivity extends BaseActivity {
         @Override
         public void onTextChanged(CharSequence cs, int start, int before,
                                   int count) {
-//            if (!TextUtils.isEmpty(mNickNameEt.getText().toString())) {
-//                mFinishBtn.setEnabled(true);
-//            } else {
-//                mFinishBtn.setEnabled(false);
-//            }
+            if (!TextUtils.isEmpty(mNickNameEt.getText().toString())) {
+                mFinishBtn.setEnabled(true);
+            } else {
+                mFinishBtn.setEnabled(false);
+            }
         }
     }
 }

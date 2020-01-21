@@ -3,24 +3,24 @@
 3    package="cn.bingoogolapple1.photopicker.test" >
 4
 5    <uses-sdk
-5-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:5:5-74
+5-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:5:15-41
-7        android:targetSdkVersion="29" />
-7-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:5:42-71
+6-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:5:15-41
+7        android:targetSdkVersion="26" />
+7-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:5:42-71
 8
 9    <instrumentation
-9-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:11:5-15:85
+9-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:11:5-15:85
 10        android:name="android.test.InstrumentationTestRunner"
-10-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:11:22-75
+10-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:11:22-75
 11        android:functionalTest="false"
-11-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:14:22-52
+11-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:14:22-52
 12        android:handleProfiling="false"
-12-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:13:22-53
+12-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:13:22-53
 13        android:label="Tests for cn.bingoogolapple1.photopicker.test"
-13-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:15:22-83
+13-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:15:22-83
 14        android:targetPackage="cn.bingoogolapple1.photopicker.test" />
-14-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:12:22-81
+14-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:12:22-81
 15
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 16-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-80
@@ -33,14 +33,14 @@
 18-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-62
 19
 20    <application
-20-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:7:5-9:19
+20-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:7:5-9:19
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.1.0] C:\Users\张泽林\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 22        android:debuggable="true" >
-22-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:7:18-43
+22-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:7:18-43
 23        <uses-library android:name="android.test.runner" />
-23-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:8:9-60
-23-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8482334491697540309.xml:8:23-57
+23-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:8:9-60
+23-->H:\Android\CloudeXmut1\lib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6667251512958421143.xml:8:23-57
 24        <!-- 图片预览界面 -->
 25        <activity
 25-->[__tested_artifact__::lib] H:\Android\CloudeXmut1\lib\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-21:63

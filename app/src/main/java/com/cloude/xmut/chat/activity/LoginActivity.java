@@ -248,7 +248,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         if (bitmap != null) {
             mDe_login_logo.setImageBitmap(bitmap);
         } else {
-            mDe_login_logo.setImageResource(R.drawable.no_avatar);
+            mDe_login_logo.setImageResource(R.mipmap.icon);
         }
         mLogin_userName.setText(userName);
         if (userName != null)

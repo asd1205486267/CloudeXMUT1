@@ -15,6 +15,6 @@
         android:layout_marginRight="10dp"
         android:horizontalSpacing="10dip"
         android:listSelector="@android:color/transparent"
-        android:numColumns="4"
-        android:verticalSpacing="30dip" />
+        android:numColumns="auto_fit"
+        android:verticalSpacing="0dip" />
 </merge>
