@@ -15,6 +15,12 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.cloude.xmut.R;
+import com.cloude.xmut.UserManage.User;
+import com.google.android.material.snackbar.Snackbar;
+
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 
 public class RegisterActivity extends Activity{
     private Button button;
@@ -37,9 +43,9 @@ public class RegisterActivity extends Activity{
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                final String user_name=account.getText().toString().trim();
-                String key1=password1.getText().toString().trim();
-                String key2=password2.getText().toString().trim();
+                String user_name=account.getText().toString();
+                String key1=password1.getText().toString();
+                String key2=password2.getText().toString();
                 if(user_name.equals("")) {
                     account.setError("账号不能为空！");
                 }
@@ -53,42 +59,26 @@ public class RegisterActivity extends Activity{
                 } else if(!key1.equals(key2)) {
                     password2.setError("两次输入的密码不一致！");
                 }else {
-                    final Handler myHandler = new Handler(){
-                        public void handleMessage(Message msg){
-                            String responseResult = (String)msg.obj;
-                            //注册失败
-                            if(responseResult.equals("false")){
-                                System.out.print("fail");
-                                Toast.makeText(RegisterActivity.this, "用户名已被注册！", Toast.LENGTH_LONG).show();
-                            }
-                            //注册成功
-                            else if(responseResult.equals("true")){
-                                SharedPreferences sp=getSharedPreferences("New",MODE_PRIVATE);
-                                SharedPreferences.Editor editor=sp.edit();
-                                editor.putString("newname",user_name);
-                                editor.commit();
-                                Toast.makeText(RegisterActivity.this, "注册成功！", Toast.LENGTH_LONG).show();
+                    User user=new User();
+                    user.setUsername(user_name);
+                    user.setPassword(key1);
+                    user.setAge(18);
+                    user.setNickname(user_name);
+                    user.setGender(0);
+                  //  user.setAvatar(R.drawable.no_avatar);
+                    user.signUp(new SaveListener<User>() {
+                        @Override
+                        public void done(User user, BmobException e) {
+                            if (e == null) {
+                                Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
                                 Intent intent=new Intent (RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "尚未失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         }
-                    };
+                    });
 
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Post_to_register guestToServer_1 = new Post_to_register();
-                            try {
-                                String result = guestToServer_1.doPost(account.getText().toString().trim(), password1.getText().toString().trim());
-                                Message msg = new Message();
-                                msg.obj = result;
-                                myHandler.sendMessage(msg);
-
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }).start();
                 }
             }
         });
