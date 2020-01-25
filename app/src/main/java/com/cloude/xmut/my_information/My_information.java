@@ -40,11 +40,11 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.cloude.xmut.change_person_information.ensure_address;
-import com.cloude.xmut.change_person_information.ensure_age;
-import com.cloude.xmut.change_person_information.ensure_name;
-import com.cloude.xmut.change_person_information.ensure_self_sign;
-import com.cloude.xmut.change_person_information.ensure_sex;
+//import com.cloude.xmut.change_person_information.ensure_address;
+//import com.cloude.xmut.change_person_information.ensure_age;
+//import com.cloude.xmut.change_person_information.ensure_name;
+//import com.cloude.xmut.change_person_information.ensure_self_sign;
+//import com.cloude.xmut.change_person_information.ensure_sex;
 import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.love.MomentListActivity;
 
@@ -276,57 +276,57 @@ public class My_information extends MainActivity {
 
 
 
-        Button change_name_button = (Button) findViewById(R.id.change_name);  //修改昵称
-        change_name_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(My_information.this, ensure_name.class);
-
-                startActivityForResult(intent,change_name );
-            }
-        });
-
-
-        Button change_sex_button = (Button) findViewById(R.id.change_sex);  //修改性别
-        change_sex_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(My_information.this, ensure_sex.class);
-
-                startActivity(intent);
-            }
-        });
-
-
-        Button change_age_button = (Button) findViewById(R.id.change_age);  //修改年龄
-        change_age_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(My_information.this, ensure_age.class);
-
-                startActivity(intent);
-            }
-        });
-
-        Button change_address_button = (Button) findViewById(R.id.change_address);  //修改地区
-        change_address_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(My_information.this, ensure_address.class);
-
-                startActivity(intent);
-            }
-        });
-
-        Button change_self_sign_button = (Button) findViewById(R.id.change_self_sign);  //修改个性签名
-        change_self_sign_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(My_information.this, ensure_self_sign.class);
-
-                startActivity(intent);
-            }
-        });
+//        Button change_name_button = (Button) findViewById(R.id.change_name);  //修改昵称
+//        change_name_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(My_information.this, ensure_name.class);
+//
+//                startActivityForResult(intent,change_name );
+//            }
+//        });
+//
+//
+//        Button change_sex_button = (Button) findViewById(R.id.change_sex);  //修改性别
+//        change_sex_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(My_information.this, ensure_sex.class);
+//
+//                startActivity(intent);
+//            }
+//        });
+//
+//
+//        Button change_age_button = (Button) findViewById(R.id.change_age);  //修改年龄
+//        change_age_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(My_information.this, ensure_age.class);
+//
+//                startActivity(intent);
+//            }
+//        });
+//
+//        Button change_address_button = (Button) findViewById(R.id.change_address);  //修改地区
+//        change_address_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(My_information.this, ensure_address.class);
+//
+//                startActivity(intent);
+//            }
+//        });
+//
+//        Button change_self_sign_button = (Button) findViewById(R.id.change_self_sign);  //修改个性签名
+//        change_self_sign_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(My_information.this, ensure_self_sign.class);
+//
+//                startActivity(intent);
+//            }
+//        });
         Button exit_information_button = (Button) findViewById(R.id.exit_information);  //退出登录
         exit_information_button.setOnClickListener(new View.OnClickListener() {
             @Override

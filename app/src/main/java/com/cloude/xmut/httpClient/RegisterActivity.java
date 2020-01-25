@@ -62,7 +62,7 @@ public class RegisterActivity extends Activity{
                     User user=new User();
                     user.setUsername(user_name);
                     user.setPassword(key1);
-                    user.setAge(18);
+                    user.setAge(99);
                     user.setNickname(user_name);
                     user.setGender(0);
                   //  user.setAvatar(R.drawable.no_avatar);
@@ -74,7 +74,7 @@ public class RegisterActivity extends Activity{
                                 Intent intent=new Intent (RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(RegisterActivity.this, "尚未失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegisterActivity.this, "失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         }
                     });
