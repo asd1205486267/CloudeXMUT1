@@ -25,6 +25,9 @@
   <dimen name="half_padding">4dip</dimen>
 
 
+<!--  文字大小-->
+
+  <dimen name="my_information_size">20sp</dimen>
 
 
   <!-- 全局使用的大小 -->

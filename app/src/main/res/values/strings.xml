@@ -3,6 +3,12 @@
 
     <!-- Strings related to login -->
 
+    <string name="nick_name">昵称:</string>
+    <string name="gender">性别:</string>
+    <string name="age">年龄:</string>
+    <string name="personal_note">个人说明:</string>
+    <string name="change_password">修改密码</string>
+    <string name="login_out">退出登录</string>
     <!-- Strings related to main -->
     <string name="college">厦理</string>
 
@@ -361,7 +367,7 @@
     <string name="finish">完成</string>
     <string name="upload_avatar_title">请选择上传头像方式</string>
     <string name="setting">设置</string>
-    <string name="login_out">退出登录</string>
+
     <string name="add_to_friend">加为好友</string>
     <string name="setting_username_hit">昵称</string>
     <string name="setting_username_big_hit">更改名字</string>
@@ -382,7 +388,6 @@
     <string name="man">男</string>
     <string name="woman">女</string>
     <string name="unknown">未知</string>
-    <string name="change_password">修改密码</string>
     <string name="jmui_change_pwd_tip">修改密码前请输入原密码</string>
     <string name="jmui_input_password_error_toast">输入密码错误，请重新输入</string>
     <string name="change_password_title">设置密码</string>

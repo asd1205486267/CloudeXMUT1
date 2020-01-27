@@ -37,7 +37,6 @@ public class RegisterActivity extends Activity{
         setActionBar(toolbar);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,6 +64,7 @@ public class RegisterActivity extends Activity{
                     user.setAge(99);
                     user.setNickname(user_name);
                     user.setGender(0);
+                    user.setPerson_note("此用户未填写");
                   //  user.setAvatar(R.drawable.no_avatar);
                     user.signUp(new SaveListener<User>() {
                         @Override

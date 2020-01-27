@@ -1,32 +1,24 @@
 package com.cloude.xmut.httpClient;
 
 import android.app.Activity;
-import java.io.IOException;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.Menu;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-import java.util.List;
-import org.apache.http.cookie.Cookie;
-import org.apache.http.client.CookieStore;
-import org.apache.http.impl.client.DefaultHttpClient;
-import com.cloude.xmut.MainActivity;
+
 import com.cloude.xmut.UserManage.User;
 import com.cloude.xmut.my_information.My_information;
 import com.cloude.xmut.R;
 
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FetchUserInfoListener;
 import cn.bmob.v3.listener.SaveListener;
 
 public class LoginActivity extends Activity {
@@ -34,25 +26,13 @@ public class LoginActivity extends Activity {
     private EditText pwd;			//登录密码输入框
     private Button button1;			//登录按钮
     private Button button2;			//注册按钮
-//    public static String name_sql="null";
-//    public static String sex_sql="null";
-//    public static String age_sql="null";
-//    public static String city_sql="null";
-//    public static String sign_sql="null";
-//    private TextView textView;
-//    private DefaultHttpClient httpClient;
-//    private  String ress;
-//    public static  String test="null";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
         init();
-//        SharedPreferences sp=getSharedPreferences("New",MODE_PRIVATE);
-//        String p=sp.getString("newname","");
-//        name.setText(p);
-        button1.setOnClickListener(new View.OnClickListener() {
 
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -68,6 +48,7 @@ public class LoginActivity extends Activity {
                         if (e == null) {
                             User user = User.getCurrentUser(User.class);
                             Toast.makeText(LoginActivity.this, "登录成功：" + user.getUsername(), Toast.LENGTH_LONG).show();
+                            fetchUserInfo();
                             Intent intent=new Intent (LoginActivity.this, My_information.class);
                             startActivity(intent);
                         } else {
@@ -88,12 +69,25 @@ public class LoginActivity extends Activity {
         });
 
     }
+    private void fetchUserInfo() {
+        User.fetchUserInfo(new FetchUserInfoListener<BmobUser>() {
+            @Override
+            public void done(BmobUser user, BmobException e) {
+                if (e == null) {
+                    final User myUser = User.getCurrentUser(User.class);
+                    //Toast.makeText(LoginActivity.this, "更新用户本地缓存信息成功："+myUser.getUsername(), Toast.LENGTH_LONG).show();
+                } else {
+                    Log.e("error",e.getMessage());
+                    Toast.makeText(LoginActivity.this, "更新用户本地缓存信息失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
     private void init() {
         name = (EditText)findViewById(R.id.account);
         pwd = (EditText)findViewById(R.id.password);
         button1 = (Button)findViewById(R.id.login);
         button2 = (Button)findViewById(R.id.Register);
-//       textView=(TextView)findViewById(R.id.textview);
 
         Toolbar toolbar =(Toolbar)findViewById(R.id.login_toolbar);
         setActionBar(toolbar);

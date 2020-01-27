@@ -1,14 +1,10 @@
 package com.cloude.xmut.my_information;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.CursorLoader;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -21,7 +17,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -33,18 +28,17 @@ import android.widget.Button;
 import com.cloude.xmut.MainActivity;
 import com.cloude.xmut.R;
 
+import android.widget.EditText;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-//import com.cloude.xmut.change_person_information.ensure_address;
-//import com.cloude.xmut.change_person_information.ensure_age;
-//import com.cloude.xmut.change_person_information.ensure_name;
-//import com.cloude.xmut.change_person_information.ensure_self_sign;
-//import com.cloude.xmut.change_person_information.ensure_sex;
+import com.cloude.xmut.UserManage.User;
 import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.love.MomentListActivity;
 
@@ -54,7 +48,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class My_information extends MainActivity {
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.UpdateListener;
+
+public class My_information extends MainActivity  {
 
     public  String path0=null;
     public  String pathm=null;
@@ -69,64 +67,186 @@ public class My_information extends MainActivity {
     private int photo_0=0;
     private int photo_1=1;
     private int photo_2=2;
-    private int change_name=0;
 
+
+
+    private TextView Nick_Name_Value;
+    private TextView Gender_Value;
+    private TextView Age_Value;
+    private TextView Personal_Note_Value;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_infor);
-        my_information_button();
+//        my_information_button();
         photo_select_button();
        delete_strict_model();
 
-        ensure_namex();
-        ensure_sexx();
-        ensure_agex();
-        ensure_addressx();
-        ensure_self_signx();
         head_image();
-    }
 
 
-    private void ensure_namex(){
-        TextView nameTV=(TextView)findViewById(R.id.name1);
-        SharedPreferences sp=getSharedPreferences("username",MODE_PRIVATE);
-        String name=sp.getString("name","xx");
-        nameTV.setText(name);
+        update_information();
 
     }
 
-    private void ensure_sexx(){
-        TextView sexTV=(TextView)findViewById(R.id.sex1);
-        SharedPreferences sp=getSharedPreferences("user_sex",MODE_PRIVATE);
-        String sex=sp.getString("sex","xx");
-        sexTV.setText(sex);
 
+
+
+
+    private void getid()
+    {
+        Nick_Name_Value=(TextView)findViewById(R.id.Nick_Name_Value);
+        Gender_Value=(TextView)findViewById(R.id.Gender_Value);
+        Age_Value=(TextView)findViewById(R.id.Age_Value);
+        Personal_Note_Value=(TextView)findViewById(R.id.Personal_Note_Value);
+    }
+    private void update_information()
+    {
+        getid();
+        User user=User.getCurrentUser(User.class);
+//        Toast.makeText(My_information.this,user.getGender().toString(),Toast.LENGTH_SHORT).show();
+        Nick_Name_Value.setText(user.getNickname());
+        if(user.getGender()==1)
+            Gender_Value.setText("靓仔");
+        else if (user.getGender()==2)
+            Gender_Value.setText("靓妹");
+        else Gender_Value.setText("未设置");
+        Age_Value.setText(user.getAge().toString());
+        Personal_Note_Value.setText(user.getPerson_note());
     }
 
-    private void ensure_agex(){
-        TextView ageTV=(TextView)findViewById(R.id.age1);
-        SharedPreferences sp=getSharedPreferences("user_age",MODE_PRIVATE);
-        String age=sp.getString("age","xx");
-        ageTV.setText(age);
+
+
+    public void Nick_Name_Click(View v){
+        final EditText et = new EditText(this);
+        new AlertDialog.Builder(this).setTitle("请输入新的昵称")
+                .setView(et)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //按下确定键后的事件
+                        if(et.getText().toString().length()<15&&!et.getText().toString().equals(Nick_Name_Value.getText().toString()))
+                        {
+                            User user = BmobUser.getCurrentUser(User.class);
+                            user.setNickname(et.getText().toString());
+                            user.update(new UpdateListener() {
+                                @Override
+                                public void done(BmobException e) {
+                                    if (e == null) {
+                                        Toast.makeText(My_information.this, "更新昵称成功为：" + et.getText().toString(), Toast.LENGTH_LONG).show();
+                                        Nick_Name_Value.setText(et.getText().toString());
+                                    } else {
+                                        Toast.makeText(My_information.this, "更新失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                        Log.e("error", e.getMessage());
+                                    }
+                                }
+                            });
+                        }
+                        else if (et.getText().toString().equals(Nick_Name_Value.getText().toString())) ;
+                        else Toast.makeText(My_information.this,"不能取这么长的名字哦~",Toast.LENGTH_SHORT).show();
+                    }
+                }).setNegativeButton("取消",null).show();
+    }
+    int index=0;
+    public void Gender_Click(View v){
+        final String[] gender={"靓仔","靓妹"};
+        final User user = BmobUser.getCurrentUser(User.class);
+        new AlertDialog.Builder(this).setTitle("请选择你的性别")
+                .setSingleChoiceItems(gender, index, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        index = which;
+                    }
+                })
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //按下确定键后的事件
+                        if (!gender[index].equals(Gender_Value.getText().toString()))
+                        {
+                            user.setGender(index+1);
+                            user.update(new UpdateListener() {
+                                @Override
+                                public void done(BmobException e) {
+                                    if (e == null) {
+                                        Toast.makeText(My_information.this, "更新性别成功为：" + gender[index], Toast.LENGTH_LONG).show();
+                                        Gender_Value.setText(gender[index]);
+                                    } else {
+                                        Toast.makeText(My_information.this, "更新失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                        Log.e("error", e.getMessage());
+                                    }
+                                }
+                            });
+                        }
+                    }
+                }).setNegativeButton("取消",null).show();
+    }
+    public void Age_Click(View v){
+        final EditText et = new EditText(this);
+        new AlertDialog.Builder(this).setTitle("请输入新的年龄")
+                .setView(et)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //按下确定键后的事件
+                        if (Integer.parseInt(et.getText().toString())>0&&Integer.parseInt(et.getText().toString())<99&&!et.getText().toString().equals(Age_Value.getText().toString()))
+                        {
+                            User user = BmobUser.getCurrentUser(User.class);
+                            user.setAge(Integer.parseInt(et.getText().toString()));
+                            user.update(new UpdateListener() {
+                                @Override
+                                public void done(BmobException e) {
+                                    if (e == null) {
+                                        Toast.makeText(My_information.this, "更新年龄成功为：" + Integer.parseInt(et.getText().toString()), Toast.LENGTH_LONG).show();
+                                        Age_Value.setText(et.getText().toString());
+                                    } else {
+                                        Toast.makeText(My_information.this, "更新失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                        Log.e("error", e.getMessage());
+                                    }
+                                }
+                            });
+                        }
+                        else if (et.getText().toString().equals(Age_Value.getText().toString()));
+                        else Toast.makeText(My_information.this,"请输入正确的年龄",Toast.LENGTH_SHORT).show();
+                    }
+                }).setNegativeButton("取消",null).show();
 
     }
-    private void ensure_addressx(){
-        TextView addressTV=(TextView)findViewById(R.id.address1);
-        SharedPreferences sp=getSharedPreferences("user_address",MODE_PRIVATE);
-        String address=sp.getString("address","xx xx");
-        addressTV.setText(address);
+    public void Personal_Note_Click(View v){
+        final EditText et = new EditText(this);
 
+        new AlertDialog.Builder(this).setTitle("请输入新的个人说明")
+                .setView(et)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //按下确定键后的事件
+                        if(et.getText().toString().length()<15&&!et.getText().toString().equals(Personal_Note_Value.getText().toString()))
+                        {
+                            User user = BmobUser.getCurrentUser(User.class);
+                            user.setPerson_note(et.getText().toString());
+                            user.update(new UpdateListener() {
+                                @Override
+                                public void done(BmobException e) {
+                                    if (e == null) {
+                                        Toast.makeText(My_information.this, "更新成功：" + et.getText().toString(), Toast.LENGTH_LONG).show();
+                                        Personal_Note_Value.setText(et.getText().toString());
+                                    } else {
+                                        Toast.makeText(My_information.this, "更新失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                        Log.e("error", e.getMessage());
+                                    }
+                                }
+                            });
+                        }
+                        else if (et.getText().toString().equals(Personal_Note_Value.getText().toString()));
+                        else Toast.makeText(My_information.this,"写这么长没人看的哦~",Toast.LENGTH_SHORT).show();
+                    }
+                }).setNegativeButton("取消",null).show();
     }
-    private void ensure_self_signx(){
-        TextView self_signTV=(TextView)findViewById(R.id.self_signal);
-        SharedPreferences sp=getSharedPreferences("user_self_sign",MODE_PRIVATE);
-        String self_sign=sp.getString("self_sign","点击左侧标签修改个人信息~");
-        self_signTV.setText(self_sign);
 
-    }
+
 
     private void head_image(){
         RoundImageView roundImageView = (RoundImageView)findViewById(R.id.roundImageView);
@@ -150,88 +270,7 @@ public class My_information extends MainActivity {
 
 
 
-    private void photo_select_button(){
-        //获取组件
-        RoundImageView roundImageView = (RoundImageView)findViewById(R.id.roundImageView);
-        //绑定监听
-        roundImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                //PopupWindow----START-----这里开始到下面标记的地方是实现点击头像弹出PopupWindow，实现用户从PopupWindow中选择更换头像的方式
-
-                if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.CAMERA}, 5);
-                }
-
-
-
-                    backgroundAlpha(0.3f);
-                View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.popu_view, null);
-                final PopupWindow popupWindow = new PopupWindow(view, ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
-                popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                popupWindow.setOutsideTouchable(true);
-                popupWindow.setFocusable(true);
-                //获取屏幕宽度
-                DisplayMetrics dm = new DisplayMetrics();
-                getWindowManager().getDefaultDisplay().getMetrics(dm);
-                popupWindow.setWidth(dm.widthPixels);
-                popupWindow.setAnimationStyle(R.style.AnimHorizontal);
-                //显示位置
-                popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
-                popupWindow.setOnDismissListener(new poponDismissListener());
-                //PopupWindow-----END
-
-
-
-                        //PopupWindow中对应的选择按钮
-                        Button button = (Button) view.findViewById(R.id.take_photo);//通过拍照的方式
-                        Button button1 = (Button) view.findViewById(R.id.all_photo);//通过相册的方式
-                        Button button2 = (Button) view.findViewById(R.id.out);//取消按钮
-                        button2.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                backgroundAlpha(1f);
-                                popupWindow.dismiss();
-                            }
-                        });
-                        button1.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.WRITE_EXTERNAL_STORAGE ) != PackageManager.PERMISSION_GRANTED) {
-                                    ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 5);
-                                }
-                                backgroundAlpha(1f);
-                                popupWindow.dismiss();
-                                //调用手机相册的方法,该方法在下面有具体实现
-                                allPhoto();
-                            }
-                        });
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                backgroundAlpha(1f);
-
-                                popupWindow.dismiss();
-                                //调用手机照相机的方法,通过Intent调用系统相机完成拍照，并调用系统裁剪器裁剪照片
-                                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                                //创建文件路径,头像保存的路径
-                                File file = FileUitlity.getInstance(getApplicationContext()).makeDir("head_image");
-                                //定义图片路径和名称
-                                path0 = file.getParent() + "/head_image/" + System.currentTimeMillis() + ".jpg";
-                                //图片质量
-                                intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
-                                //保存图片到Intent中，并通过Intent将照片传给系统裁剪器
-                                uri1 = Uri.fromFile(new File(path0));
-                                intent.putExtra(MediaStore.EXTRA_OUTPUT, uri1);
-                                //启动有返回的Intent，即返回裁剪好的图片到RoundImageView组件中显示
-                                startActivityForResult(intent, photo_1);
-                            }
-                        });
-            }
-        });
-
-    }
 
 
     private void my_information_button(){
@@ -276,68 +315,18 @@ public class My_information extends MainActivity {
 
 
 
-//        Button change_name_button = (Button) findViewById(R.id.change_name);  //修改昵称
-//        change_name_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(My_information.this, ensure_name.class);
-//
-//                startActivityForResult(intent,change_name );
-//            }
-//        });
-//
-//
-//        Button change_sex_button = (Button) findViewById(R.id.change_sex);  //修改性别
-//        change_sex_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(My_information.this, ensure_sex.class);
-//
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//        Button change_age_button = (Button) findViewById(R.id.change_age);  //修改年龄
-//        change_age_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(My_information.this, ensure_age.class);
-//
-//                startActivity(intent);
-//            }
-//        });
-//
-//        Button change_address_button = (Button) findViewById(R.id.change_address);  //修改地区
-//        change_address_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(My_information.this, ensure_address.class);
-//
-//                startActivity(intent);
-//            }
-//        });
-//
-//        Button change_self_sign_button = (Button) findViewById(R.id.change_self_sign);  //修改个性签名
-//        change_self_sign_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(My_information.this, ensure_self_sign.class);
-//
-//                startActivity(intent);
-//            }
-//        });
         Button exit_information_button = (Button) findViewById(R.id.exit_information);  //退出登录
         exit_information_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                BmobUser.logOut();
                 Intent intent = new Intent(My_information.this, LoginActivity.class);
-
                 startActivity(intent);
             }
         });
 
-        Button change_head_image_button = (Button) findViewById(R.id.head_button);  //修改头像
+
+        Button change_head_image_button = (Button) findViewById(R.id.roundImageView);  //修改头像
         change_head_image_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -419,6 +408,89 @@ public class My_information extends MainActivity {
 
     }
 
+
+        private void photo_select_button(){
+            //获取组件
+            RoundImageView roundImageView = (RoundImageView)findViewById(R.id.roundImageView);
+            //绑定监听
+            roundImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    //PopupWindow----START-----这里开始到下面标记的地方是实现点击头像弹出PopupWindow，实现用户从PopupWindow中选择更换头像的方式
+
+                    if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.CAMERA}, 5);
+                    }
+
+
+
+                    backgroundAlpha(0.3f);
+                    View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.popu_view, null);
+                    final PopupWindow popupWindow = new PopupWindow(view, ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+                    popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    popupWindow.setOutsideTouchable(true);
+                    popupWindow.setFocusable(true);
+                    //获取屏幕宽度
+                    DisplayMetrics dm = new DisplayMetrics();
+                    getWindowManager().getDefaultDisplay().getMetrics(dm);
+                    popupWindow.setWidth(dm.widthPixels);
+                    popupWindow.setAnimationStyle(R.style.AnimHorizontal);
+                    //显示位置
+                    popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+                    popupWindow.setOnDismissListener(new poponDismissListener());
+                    //PopupWindow-----END
+
+
+
+                    //PopupWindow中对应的选择按钮
+                    Button button = (Button) view.findViewById(R.id.take_photo);//通过拍照的方式
+                    Button button1 = (Button) view.findViewById(R.id.all_photo);//通过相册的方式
+                    Button button2 = (Button) view.findViewById(R.id.out);//取消按钮
+                    button2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            backgroundAlpha(1f);
+                            popupWindow.dismiss();
+                        }
+                    });
+                    button1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (ContextCompat.checkSelfPermission(My_information.this, Manifest.permission.WRITE_EXTERNAL_STORAGE ) != PackageManager.PERMISSION_GRANTED) {
+                                ActivityCompat.requestPermissions(My_information.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 5);
+                            }
+                            backgroundAlpha(1f);
+                            popupWindow.dismiss();
+                            //调用手机相册的方法,该方法在下面有具体实现
+                            allPhoto();
+                        }
+                    });
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            backgroundAlpha(1f);
+
+                            popupWindow.dismiss();
+                            //调用手机照相机的方法,通过Intent调用系统相机完成拍照，并调用系统裁剪器裁剪照片
+                            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                            //创建文件路径,头像保存的路径
+                            File file = FileUitlity.getInstance(getApplicationContext()).makeDir("head_image");
+                            //定义图片路径和名称
+                            path0 = file.getParent() + "/head_image/" + System.currentTimeMillis() + ".jpg";
+                            //图片质量
+                            intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+                            //保存图片到Intent中，并通过Intent将照片传给系统裁剪器
+                            uri1 = Uri.fromFile(new File(path0));
+                            intent.putExtra(MediaStore.EXTRA_OUTPUT, uri1);
+                            //启动有返回的Intent，即返回裁剪好的图片到RoundImageView组件中显示
+                            startActivityForResult(intent, photo_1);
+                        }
+                    });
+                }
+            });
+
+        }
 
     //调用手机相册
     private void allPhoto(){

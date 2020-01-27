@@ -13,6 +13,13 @@ public class User extends BmobUser {
     private String nickname;
 
     /**
+     * 个人说明
+     */
+
+    private String person_note;
+
+
+    /**
      * 年龄
      */
     private Integer age;
@@ -93,5 +100,13 @@ public class User extends BmobUser {
     public User setAlias(List<String> alias) {
         this.alias = alias;
         return this;
+    }
+
+    public String getPerson_note() {
+        return person_note;
+    }
+
+    public void setPerson_note(String person_note) {
+        this.person_note = person_note;
     }
 }
