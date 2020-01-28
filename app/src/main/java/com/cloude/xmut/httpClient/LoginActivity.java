@@ -75,7 +75,7 @@ public class LoginActivity extends Activity {
             public void done(BmobUser user, BmobException e) {
                 if (e == null) {
                     final User myUser = User.getCurrentUser(User.class);
-                    //Toast.makeText(LoginActivity.this, "更新用户本地缓存信息成功："+myUser.getUsername(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "更新用户本地缓存信息成功："+myUser.getUsername(), Toast.LENGTH_LONG).show();
                 } else {
                     Log.e("error",e.getMessage());
                     Toast.makeText(LoginActivity.this, "更新用户本地缓存信息失败：" + e.getMessage(), Toast.LENGTH_LONG).show();

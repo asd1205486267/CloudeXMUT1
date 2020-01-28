@@ -18,8 +18,8 @@
         <com.cloude.xmut.my_information.RoundImageView
             android:id="@+id/roundImageView"
             android:src="@drawable/image1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
             android:background="@color/nocolor"
             android:layout_centerInParent="true" />
     </RelativeLayout>

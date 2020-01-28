@@ -16,7 +16,7 @@ public class User extends BmobUser {
      * 个人说明
      */
 
-    private String person_note;
+    private String personal_note;
 
 
     /**
@@ -102,11 +102,11 @@ public class User extends BmobUser {
         return this;
     }
 
-    public String getPerson_note() {
-        return person_note;
+    public String getPersonal_note() {
+        return personal_note;
     }
 
-    public void setPerson_note(String person_note) {
-        this.person_note = person_note;
+    public void setPersonal_note(String personal_note) {
+        this.personal_note = personal_note;
     }
 }

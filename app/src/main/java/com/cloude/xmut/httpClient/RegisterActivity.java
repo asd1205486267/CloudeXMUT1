@@ -1,6 +1,10 @@
 package com.cloude.xmut.httpClient;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -19,8 +23,10 @@ import com.cloude.xmut.UserManage.User;
 import com.google.android.material.snackbar.Snackbar;
 
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.listener.UploadFileListener;
 
 public class RegisterActivity extends Activity{
     private Button button;
@@ -59,12 +65,28 @@ public class RegisterActivity extends Activity{
                     password2.setError("两次输入的密码不一致！");
                 }else {
                     User user=new User();
+                  /*  String path= ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + getResources().getResourcePackageName(R.drawable.no_avatar) + "/" +
+                            getResources().getResourceTypeName(R.drawable.no_avatar) + "/" + getResources().getResourceEntryName(R.drawable.no_avatar);
+                    BmobFile avatar=new BmobFile(new File(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + getResources().getResourcePackageName(R.drawable.no_avatar) + "/" +
+                            getResources().getResourceTypeName(R.drawable.no_avatar) + "/" + getResources().getResourceEntryName(R.drawable.no_avatar)));
+                    avatar.upload(new UploadFileListener() {
+                        @Override
+                        public void done(BmobException e) {
+                            if (e==null)
+                            {
+                                user.setAvatar(avatar);
+                                Toast.makeText(RegisterActivity.this,"success",Toast.LENGTH_SHORT).show();
+                            }
+                        }  这里是头像测试
+                    });*/
+
                     user.setUsername(user_name);
                     user.setPassword(key1);
                     user.setAge(99);
                     user.setNickname(user_name);
                     user.setGender(0);
-                    user.setPerson_note("此用户未填写");
+                    user.setPersonal_note("此用户未填写");
+
                   //  user.setAvatar(R.drawable.no_avatar);
                     user.signUp(new SaveListener<User>() {
                         @Override

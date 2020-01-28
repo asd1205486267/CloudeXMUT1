@@ -47,8 +47,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.attribute.FileTime;
 
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
@@ -74,6 +76,7 @@ public class My_information extends MainActivity  {
     private TextView Gender_Value;
     private TextView Age_Value;
     private TextView Personal_Note_Value;
+    private RoundImageView Avatar;
 
 
     @Override
@@ -101,6 +104,7 @@ public class My_information extends MainActivity  {
         Gender_Value=(TextView)findViewById(R.id.Gender_Value);
         Age_Value=(TextView)findViewById(R.id.Age_Value);
         Personal_Note_Value=(TextView)findViewById(R.id.Personal_Note_Value);
+        Avatar=(RoundImageView)findViewById(R.id.roundImageView);
     }
     private void update_information()
     {
@@ -114,7 +118,8 @@ public class My_information extends MainActivity  {
             Gender_Value.setText("靓妹");
         else Gender_Value.setText("未设置");
         Age_Value.setText(user.getAge().toString());
-        Personal_Note_Value.setText(user.getPerson_note());
+        Personal_Note_Value.setText(user.getPersonal_note());
+       // Avatar.setImageBitmap(user.getAvatar());
     }
 
 
@@ -129,7 +134,7 @@ public class My_information extends MainActivity  {
                         //按下确定键后的事件
                         if(et.getText().toString().length()<15&&!et.getText().toString().equals(Nick_Name_Value.getText().toString()))
                         {
-                            User user = BmobUser.getCurrentUser(User.class);
+                            User user = User.getCurrentUser(User.class);
                             user.setNickname(et.getText().toString());
                             user.update(new UpdateListener() {
                                 @Override
@@ -152,7 +157,7 @@ public class My_information extends MainActivity  {
     int index=0;
     public void Gender_Click(View v){
         final String[] gender={"靓仔","靓妹"};
-        final User user = BmobUser.getCurrentUser(User.class);
+        final User user = User.getCurrentUser(User.class);
         new AlertDialog.Builder(this).setTitle("请选择你的性别")
                 .setSingleChoiceItems(gender, index, new DialogInterface.OnClickListener() {
                     @Override
@@ -193,7 +198,7 @@ public class My_information extends MainActivity  {
                         //按下确定键后的事件
                         if (Integer.parseInt(et.getText().toString())>0&&Integer.parseInt(et.getText().toString())<99&&!et.getText().toString().equals(Age_Value.getText().toString()))
                         {
-                            User user = BmobUser.getCurrentUser(User.class);
+                            User user = User.getCurrentUser(User.class);
                             user.setAge(Integer.parseInt(et.getText().toString()));
                             user.update(new UpdateListener() {
                                 @Override
@@ -225,8 +230,8 @@ public class My_information extends MainActivity  {
                         //按下确定键后的事件
                         if(et.getText().toString().length()<15&&!et.getText().toString().equals(Personal_Note_Value.getText().toString()))
                         {
-                            User user = BmobUser.getCurrentUser(User.class);
-                            user.setPerson_note(et.getText().toString());
+                            User user = User.getCurrentUser(User.class);
+                            user.setPersonal_note(et.getText().toString());
                             user.update(new UpdateListener() {
                                 @Override
                                 public void done(BmobException e) {
@@ -250,10 +255,14 @@ public class My_information extends MainActivity  {
 
     private void head_image(){
         RoundImageView roundImageView = (RoundImageView)findViewById(R.id.roundImageView);
-            String path = Environment.getExternalStorageDirectory() + "/w65/icon_bitmap/" + "myicon.jpg";
-            if (path != null) {
-                roundImageView.setImageBitmap(getDiskBitmap(path));
-            }
+        String path = Environment.getExternalStorageDirectory() + "/w65/icon_bitmap/" + "myicon.jpg";
+
+        if (path != null) {
+            roundImageView.setImageBitmap(getDiskBitmap(path));
+           /*BmobFile bmobFile=new BmobFile(new File(path));
+            User user = User.getCurrentUser(User.class);
+            user.setAvatar(bmobFile);*/
+        }
 
     }
 
@@ -650,6 +659,7 @@ public class My_information extends MainActivity  {
             }
 
             roundImageView.setImageBitmap(bp);
+
         /*
             //设置裁剪返回的位图
             Bundle bundle = data.getExtras();
