@@ -10,17 +10,17 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <LinearLayout
-            style="@style/MatchWrap.Horizontal"
-            android:layout_margin="10dp">
-            <CheckBox
-                android:id="@+id/cb_moment_add_take_photo"
-                style="@style/AutoWrap"
-                android:checked="true"
-                android:text="是否开启拍照功能"
-                android:textColor="@color/colorPrimary"
-                android:textSize="12sp" />
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            style="@style/MatchWrap.Horizontal"-->
+<!--            android:layout_margin="10dp">-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/cb_moment_add_take_photo"-->
+<!--                style="@style/AutoWrap"-->
+<!--                android:checked="true"-->
+<!--                android:text="是否开启拍照功能"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="12sp" />-->
+<!--        </LinearLayout>-->
 
 
 

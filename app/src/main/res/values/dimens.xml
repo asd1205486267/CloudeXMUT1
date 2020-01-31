@@ -20,6 +20,7 @@
   <dimen name="normal_small_large_padding">75dip</dimen>
   <dimen name="normal_double_padding">60dip</dimen>
   <dimen name="normal_padding">30dip</dimen>
+  <dimen name="love_image_padding">30</dimen>
   <dimen name="half_normal_padding">15dip</dimen>
   <dimen name="standard_padding">8dip</dimen>
   <dimen name="half_padding">4dip</dimen>

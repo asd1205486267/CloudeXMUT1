@@ -66,6 +66,7 @@ dependencies {
 
     implementation 'com.android.support:design:29.0.0'
 
+    implementation 'com.ldoublem.thumbUplib:ThumbUplib:0.5'//点赞动画
     //这里是BMOB
     implementation 'cn.bmob.android:bmob-sdk:3.7.4'
     implementation "io.reactivex.rxjava2:rxjava:2.2.2"

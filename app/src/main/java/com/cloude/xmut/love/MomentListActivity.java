@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.cloude.xmut.R;
+import com.cloude.xmut.UserManage.Post;
+import com.cloude.xmut.UserManage.User;
 import com.cloude.xmut.model.Moment;
 
 import java.io.File;
@@ -28,6 +30,8 @@ import cn.bingoogolapple1.photopicker.activity.BGAPPToolbarActivity;
 import cn.bingoogolapple1.photopicker.activity.BGAPhotoPreviewActivity;
 import cn.bingoogolapple1.photopicker.imageloader.BGARVOnScrollListener;
 import cn.bingoogolapple1.photopicker.widget.BGANinePhotoLayout;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -52,6 +56,7 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
         // setContentView(R.layout.activity_moment_list);
         // mDownLoadableCb = findViewById(R.id.cb_moment_list_downloadable);
         mMomentRv = findViewById(R.id.rv_moment_list_moments);
+        getall();
     }
 
     @Override
@@ -186,16 +191,37 @@ public class MomentListActivity  extends BGAPPToolbarActivity implements EasyPer
 
         @Override
         protected void fillData(BGAViewHolderHelper helper, int position, Moment moment) {
+            User user=User.getCurrentUser(User.class);
+            String nick_name= user.getNickname();
             if (TextUtils.isEmpty(moment.content)) {
                 helper.setVisibility(R.id.tv_item_moment_content, View.GONE);
             } else {
                 helper.setVisibility(R.id.tv_item_moment_content, View.VISIBLE);
+                helper.setText(R.id.tv_item_moment_username,nick_name);
                 helper.setText(R.id.tv_item_moment_content, moment.content);
+
+                Post love = new Post();
+                love.setTitle(nick_name);
+                love.setContent(moment.content);
+                love.setAuthor(user);
+                love.save(new SaveListener<String>() {
+                    @Override
+                    public void done(String s, BmobException e) {
+                        if (e==null)
+                        {
+                            Toast.makeText(MomentListActivity.this,"成功",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
 
             BGANinePhotoLayout ninePhotoLayout = helper.getView(R.id.npl_item_moment_photos);
             ninePhotoLayout.setDelegate(MomentListActivity.this);
             ninePhotoLayout.setData(moment.photos);
         }
+    }
+
+    private void getall(){
+
     }
 }

@@ -41,7 +41,7 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     /**
      * 是否具有拍照功能「测试接口用的」
      */
-    private CheckBox mTakePhotoCb;
+//    private CheckBox mTakePhotoCb;
     // ==================================== 测试图片选择器 END ====================================
 
     // ==================================== 测试拖拽排序九宫格图片控件 START ====================================
@@ -72,48 +72,49 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_moment_add);
-        // mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
-        mTakePhotoCb = findViewById(R.id.cb_moment_add_take_photo);
+//         mSingleChoiceCb = findViewById(R.id.cb_moment_add_single_choice);
+//        mTakePhotoCb = findViewById(R.id.cb_moment_add_take_photo);
 
-        // mEditableCb = findViewById(R.id.cb_moment_add_editable);
-        // mPlusCb = findViewById(R.id.cb_moment_add_plus);
-        // mSortableCb = findViewById(R.id.cb_moment_add_sortable);
+//         mEditableCb = findViewById(R.id.cb_moment_add_editable);
+//         mPlusCb = findViewById(R.id.cb_moment_add_plus);
+//         mSortableCb = findViewById(R.id.cb_moment_add_sortable);
 
         mContentEt = findViewById(R.id.et_moment_add_content);
         mPhotosSnpl = findViewById(R.id.snpl_moment_add_photos);
+
     }
 
     @Override
     protected void setListener() {
-        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                if (checked) {
-                    mPhotosSnpl.setData(null);
-                    mPhotosSnpl.setMaxItemCount(1);
-                } else {
-                    mPhotosSnpl.setMaxItemCount(9);
-                }
-            }
-        });
-        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                mPhotosSnpl.setEditable(checked);
-            }
-        });
-        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                mPhotosSnpl.setPlusEnable(checked);
-            }
-        });
-        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                mPhotosSnpl.setSortable(checked);
-            }
-        });
+//        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+//                if (checked) {
+//                    mPhotosSnpl.setData(null);
+//                    mPhotosSnpl.setMaxItemCount(1);
+//                } else {
+//                    mPhotosSnpl.setMaxItemCount(9);
+//                }
+//            }
+//        });
+//        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+//                mPhotosSnpl.setEditable(checked);
+//            }
+//        });
+//        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+//                mPhotosSnpl.setPlusEnable(checked);
+//            }
+//        });
+//        mTakePhotoCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+//                mPhotosSnpl.setSortable(checked);
+//            }
+//        });
 
         // 设置拖拽排序控件的代理
         mPhotosSnpl.setDelegate(this);
@@ -123,9 +124,15 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     protected void processLogic(Bundle savedInstanceState) {
         setTitle("表白TA");
 
-        mTakePhotoCb.setChecked(mPhotosSnpl.isEditable());
-        mTakePhotoCb.setChecked(mPhotosSnpl.isPlusEnable());
-        mTakePhotoCb.setChecked(mPhotosSnpl.isSortable());
+        mPhotosSnpl.setData(null);
+        mPhotosSnpl.setMaxItemCount(9);
+        mPhotosSnpl.setEditable(true);
+        mPhotosSnpl.setPlusEnable(true);
+        mPhotosSnpl.setSortable(true);
+//        mPhotosSnpl.setDelegate(this);
+//        mTakePhotoCb.setChecked(mPhotosSnpl.isEditable());
+//        mTakePhotoCb.setChecked(mPhotosSnpl.isPlusEnable());
+//        mTakePhotoCb.setChecked(mPhotosSnpl.isSortable());
     }
 
     public void onClick(View v) {
@@ -162,14 +169,14 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
                 .selectedPhotos(models) // 当前已选中的图片路径集合
                 .maxChooseCount(mPhotosSnpl.getMaxItemCount()) // 图片选择张数的最大值
                 .currentPosition(position) // 当前预览图片的索引
-                .isFromTakePhoto(false) // 是否是拍完照后跳转过来
+                .isFromTakePhoto(true) // 是否是拍完照后跳转过来
                 .build();
         startActivityForResult(photoPickerPreviewIntent, RC_PHOTO_PREVIEW);
     }
 
     @Override
     public void onNinePhotoItemExchanged(BGASortableNinePhotoLayout sortableNinePhotoLayout, int fromPosition, int toPosition, ArrayList<String> models) {
-        Toast.makeText(this, "排序发生变化", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "排序发生变化", Toast.LENGTH_SHORT).show();
     }
 
     @AfterPermissionGranted(PRC_PHOTO_PICKER)
@@ -180,7 +187,8 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
             File takePhotoDir = new File(Environment.getExternalStorageDirectory(), "BGAPhotoPickerTakePhoto");
 
             Intent photoPickerIntent = new BGAPhotoPickerActivity.IntentBuilder(this)
-                    .cameraFileDir(mTakePhotoCb.isChecked() ? takePhotoDir : null) // 拍照后照片的存放目录，改成你自己拍照后要存放照片的目录。如果不传递该参数的话则不开启图库里的拍照功能
+//                    .cameraFileDir(mTakePhotoCb.isChecked() ? takePhotoDir : null) // 拍照后照片的存放目录，改成你自己拍照后要存放照片的目录。如果不传递该参数的话则不开启图库里的拍照功能
+                    .cameraFileDir(takePhotoDir)
                     .maxChooseCount(mPhotosSnpl.getMaxItemCount() - mPhotosSnpl.getItemCount()) // 图片选择张数的最大值
                     .selectedPhotos(null) // 当前已选中的图片路径集合
                     .pauseOnScroll(false) // 滚动列表时是否暂停加载图片
@@ -212,13 +220,13 @@ public class MomentAddActivity extends BGAPPToolbarActivity implements EasyPermi
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == RC_CHOOSE_PHOTO) {
-            if ( mTakePhotoCb.isChecked()) {
-                mPhotosSnpl.setData(BGAPhotoPickerActivity.getSelectedPhotos(data));
-            } else {
+//            if ( mTakePhotoCb.isChecked()) {
+//                mPhotosSnpl.setData(BGAPhotoPickerActivity.getSelectedPhotos(data));
+//            } else {
                 mPhotosSnpl.addMoreData(BGAPhotoPickerActivity.getSelectedPhotos(data));
-            }
-        } else if (requestCode == RC_PHOTO_PREVIEW) {
-            mPhotosSnpl.setData(BGAPhotoPickerPreviewActivity.getSelectedPhotos(data));
+//            }
+//        } else if (requestCode == RC_PHOTO_PREVIEW) {
+//            mPhotosSnpl.setData(BGAPhotoPickerPreviewActivity.getSelectedPhotos(data));
         }
     }
 }

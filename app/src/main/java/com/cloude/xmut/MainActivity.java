@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
+import com.cloude.xmut.UserManage.User;
 import com.cloude.xmut.chat.activity.WelcomeActivity;
 import com.cloude.xmut.httpClient.LoginActivity;
 import com.cloude.xmut.my_information.My_information;
@@ -860,8 +861,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
           chat_button.setOnClickListener(new View.OnClickListener() {
               @Override
              public void onClick(View view) {
-                  Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
-                  startActivity(intent);
+//                  Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+//                  startActivity(intent);
 
            }
          });
@@ -870,8 +871,8 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
 
             }
         });
@@ -902,9 +903,7 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         my_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences sp=getSharedPreferences("Coo",MODE_PRIVATE);
-                String p=sp.getString("uname","000");
-                if (!p.equals("000")){
+                if (User.isLogin()){
                     Intent intent10=new Intent (MainActivity.this, My_information.class);
                     startActivity(intent10);
                 }else {

@@ -171,10 +171,27 @@
 
 
     <RelativeLayout
-        android:id="@+id/change_password"
+        android:id="@+id/about_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/normal_padding">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22000000" />
+        <TextView
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aboutus"
+            android:textSize="@dimen/my_information_size"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -213,22 +230,17 @@
 
 
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="vertical"
-        >
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#22000000" />
-        <include
-            layout="@layout/home_main"
-            android:id="@+id/home_main1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        android:layout_height="1dp"
+        android:background="#22000000" />
+
+    <include
+        layout="@layout/home_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
 
 
 
