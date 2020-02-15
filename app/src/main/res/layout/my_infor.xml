@@ -214,7 +214,37 @@
         app:layout_constraintTop_toBottomOf="@id/self_signal"
         android:layout_marginTop="15dp" />
 
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/more_information"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divide6"
+        app:layout_constraintTop_toTopOf="@id/divide6"
+        app:layout_constraintBottom_toBottomOf="@id/divide7"
+        android:layout_marginLeft="16dp"
+        android:text="关于APP"   />
+    <TextView
 
+        android:id="@+id/more_white"
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/divide6"
+        app:layout_constraintTop_toTopOf="@id/divide6"
+        app:layout_constraintBottom_toBottomOf="@id/divide7"
+        android:layout_marginRight="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide7"
+        android:background="#22000000"
+        app:layout_constraintTop_toBottomOf="@id/more_white"
+        android:layout_marginTop="15dp" />
 
     <Button
         style="?android:attr/borderlessButtonStyle"
@@ -223,12 +253,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="@id/divide6"
-        app:layout_constraintLeft_toLeftOf="@id/divide6"
+        app:layout_constraintTop_toTopOf="@id/divide7"
+        app:layout_constraintLeft_toLeftOf="@id/divide7"
         android:layout_marginTop="7dp"
         android:layout_marginLeft="5dp"
         android:text="退出"
         android:textSize="20sp"  />
+
 
 
 

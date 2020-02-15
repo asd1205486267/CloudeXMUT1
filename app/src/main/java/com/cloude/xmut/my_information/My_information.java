@@ -40,6 +40,7 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.cloude.xmut.change_person_information.about_app;
 import com.cloude.xmut.change_person_information.ensure_address;
 import com.cloude.xmut.change_person_information.ensure_age;
 import com.cloude.xmut.change_person_information.ensure_name;
@@ -87,6 +88,7 @@ public class My_information extends MainActivity {
         ensure_addressx();
         ensure_self_signx();
         head_image();
+
     }
 
 
@@ -120,6 +122,9 @@ public class My_information extends MainActivity {
         addressTV.setText(address);
 
     }
+
+
+
     private void ensure_self_signx(){
         TextView self_signTV=(TextView)findViewById(R.id.self_signal);
         SharedPreferences sp=getSharedPreferences("user_self_sign",MODE_PRIVATE);
@@ -317,6 +322,19 @@ public class My_information extends MainActivity {
                 startActivity(intent);
             }
         });
+
+        Button about_app_button = (Button) findViewById(R.id.more_information);  //关于APP
+        about_app_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(My_information.this, about_app.class);
+
+                startActivity(intent);
+            }
+        });
+
+
+
 
         Button change_self_sign_button = (Button) findViewById(R.id.change_self_sign);  //修改个性签名
         change_self_sign_button.setOnClickListener(new View.OnClickListener() {

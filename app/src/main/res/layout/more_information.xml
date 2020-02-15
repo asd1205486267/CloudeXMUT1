@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navigationBarColor"/>
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon" />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="云上理工"
+       android:layout_gravity="center"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide1"
+        android:background="#22000000"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+
+        android:id="@+id/function"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="功能介绍"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+
+
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="一.校园功能类：学校主页、教务系统、图书馆、小吐槽、实验中心、课程中心等众多校园内主要网站"
+        />
+    <TextView
+
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="二.拓展功能类：聊天功能、表白墙、个人信息"
+        />
+    <TextView
+
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="这个APP主要用来帮大家节省时间，避免浪费时间在寻找校内网站和校内资源，搜集了校内的所有可用资源，同时提供了聊天功能和表白墙功能，有些地方暂时不够完善，之后会继续改进。"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide2"
+        android:background="#22000000"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+
+        android:id="@+id/introduce"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="作者介绍"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="黄耀宗 计算机与信息工程学院 17级学生"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="张泽林 计算机与信息工程学院 17级学生"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="吴少聪 计算机与信息工程学院 17级学生"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="赵永杰 计算机与信息工程学院 17级学生"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide3"
+        android:background="#22000000"
+        android:layout_marginTop="5dp" />
+    <TextView
+
+        android:id="@+id/contact_information"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系方式"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="黄耀宗 QQ：1205486267"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="张泽林 QQ：17188809140"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="吴少聪 QQ：1778763617"
+        />
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/DimGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="赵永杰 QQ：2564836240"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divide4"
+        android:background="#22000000"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>
